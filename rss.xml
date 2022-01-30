@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Cooper&#39;s Zone</title>
-        <link>https://coopers.zone/</link>
+        <link>https://baohengtao.com/</link>
         <description>Happy Everyday</description>
         <generator>Hugo 0.92.0 https://gohugo.io/</generator>
         
@@ -17,15 +17,15 @@
         
         
         
-        <lastBuildDate>Thu, 27 Jan 2022 00:13:45 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 30 Jan 2022 14:49:30 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://coopers.zone/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
         
             <item>
                 <title>Rsync工具使用</title>
-                <link>https://coopers.zone/tech/use-rsync/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/use-rsync/</guid>
+                <link>https://baohengtao.com/tech/use-rsync/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/use-rsync/</guid>
                 <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -248,7 +248,7 @@ ln -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -263,13 +263,13 @@ ln -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/linux/">linux</category>
+                                    <category domain="https://baohengtao.com/tags/linux/">linux</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/rsync/">rsync</category>
+                                    <category domain="https://baohengtao.com/tags/rsync/">rsync</category>
                                 
                             
                         
@@ -281,8 +281,8 @@ ln -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s
         
             <item>
                 <title>配置Linux</title>
-                <link>https://coopers.zone/tech/linux-setup/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/linux-setup/</guid>
+                <link>https://baohengtao.com/tech/linux-setup/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/linux-setup/</guid>
                 <pubDate>Mon, 31 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -463,7 +463,7 @@ ln -f ~/.config/tmux/tmux.conf .tmux.conf
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -478,13 +478,13 @@ ln -f ~/.config/tmux/tmux.conf .tmux.conf
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/linux/">linux</category>
+                                    <category domain="https://baohengtao.com/tags/linux/">linux</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/arch/">arch</category>
+                                    <category domain="https://baohengtao.com/tags/arch/">arch</category>
                                 
                             
                         
@@ -496,8 +496,8 @@ ln -f ~/.config/tmux/tmux.conf .tmux.conf
         
             <item>
                 <title>在 hugo 中嵌入 PDF</title>
-                <link>https://coopers.zone/tech/hugo-pdf/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/hugo-pdf/</guid>
+                <link>https://baohengtao.com/tech/hugo-pdf/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/hugo-pdf/</guid>
                 <pubDate>Wed, 26 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -527,7 +527,7 @@ ln -f ~/.config/tmux/tmux.conf .tmux.conf
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;embed-pdf&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;./path/to/pdf/file/example.pdf&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://coopers.zone/js/pdf-js/build/pdf.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://baohengtao.com/js/pdf-js/build/pdf.js&#34;&gt;&lt;/script&gt;
 &lt;style&gt;
 #the-canvas {
   border: 1px solid black;
@@ -555,14 +555,14 @@ ln -f ~/.config/tmux/tmux.conf .tmux.conf
 window.onload = function() {
 
 
-var url = &#34;https:\/\/coopers.zone\/&#34; + &#39;\/latex\/note.pdf&#39;;
+var url = &#34;https:\/\/baohengtao.com\/&#34; + &#39;\/latex\/note.pdf&#39;;
 var hidePaginator = &#34;&#34;;
 
 
 var pdfjsLib = window[&#39;pdfjs-dist/build/pdf&#39;];
 
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = &#34;https:\/\/coopers.zone\/&#34; + &#39;/js/pdf-js/build/pdf.worker.js&#39;;
+pdfjsLib.GlobalWorkerOptions.workerSrc = &#34;https:\/\/baohengtao.com\/&#34; + &#39;/js/pdf-js/build/pdf.worker.js&#39;;
 
 
 var pdfDoc = null,
@@ -667,7 +667,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -682,7 +682,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/hugo/">Hugo</category>
+                                    <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
                         
@@ -694,8 +694,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         
             <item>
                 <title>添加相册功能</title>
-                <link>https://coopers.zone/tech/add-gallery-to-hugo/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/add-gallery-to-hugo/</guid>
+                <link>https://baohengtao.com/tech/add-gallery-to-hugo/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/add-gallery-to-hugo/</guid>
                 <pubDate>Wed, 26 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -727,73 +727,73 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;效果:&lt;/p&gt;
 &lt;p&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://coopers.zone/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://baohengtao.com/css/hugo-easy-gallery.css&#34; /&gt;
 
 &lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
 				&lt;div class=&#34;box&#34;&gt;
 				  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://coopers.zone//photos//2.jpeg&#39;);&#34; &gt;
-				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone//photos//2.jpeg&#34; alt=&#34;2nd&#34; /&gt;
+				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://baohengtao.com//photos//2.jpeg&#39;);&#34; &gt;
+				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com//photos//2.jpeg&#34; alt=&#34;2nd&#34; /&gt;
 				    &lt;/div&gt;
 			      &lt;figcaption&gt;
 		          &lt;p&gt;2nd&lt;/p&gt;
 			      &lt;/figcaption&gt;
-				    &lt;a href=&#34;https://coopers.zone//photos//2.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+				    &lt;a href=&#34;https://baohengtao.com//photos//2.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 				  &lt;/figure&gt;
 				&lt;/div&gt;
 				&lt;div class=&#34;box&#34;&gt;
 				  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://coopers.zone//photos//3.jpeg&#39;);&#34; &gt;
-				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone//photos//3.jpeg&#34; alt=&#34;3rd&#34; /&gt;
+				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://baohengtao.com//photos//3.jpeg&#39;);&#34; &gt;
+				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com//photos//3.jpeg&#34; alt=&#34;3rd&#34; /&gt;
 				    &lt;/div&gt;
 			      &lt;figcaption&gt;
 		          &lt;p&gt;3rd&lt;/p&gt;
 			      &lt;/figcaption&gt;
-				    &lt;a href=&#34;https://coopers.zone//photos//3.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+				    &lt;a href=&#34;https://baohengtao.com//photos//3.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 				  &lt;/figure&gt;
 				&lt;/div&gt;
 				&lt;div class=&#34;box&#34;&gt;
 				  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://coopers.zone//photos//4.jpeg&#39;);&#34; &gt;
-				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone//photos//4.jpeg&#34; alt=&#34;4th&#34; /&gt;
+				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://baohengtao.com//photos//4.jpeg&#39;);&#34; &gt;
+				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com//photos//4.jpeg&#34; alt=&#34;4th&#34; /&gt;
 				    &lt;/div&gt;
 			      &lt;figcaption&gt;
 		          &lt;p&gt;4th&lt;/p&gt;
 			      &lt;/figcaption&gt;
-				    &lt;a href=&#34;https://coopers.zone//photos//4.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+				    &lt;a href=&#34;https://baohengtao.com//photos//4.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 				  &lt;/figure&gt;
 				&lt;/div&gt;
 				&lt;div class=&#34;box&#34;&gt;
 				  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://coopers.zone//photos//5.jpeg&#39;);&#34; &gt;
-				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone//photos//5.jpeg&#34; alt=&#34;5th&#34; /&gt;
+				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://baohengtao.com//photos//5.jpeg&#39;);&#34; &gt;
+				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com//photos//5.jpeg&#34; alt=&#34;5th&#34; /&gt;
 				    &lt;/div&gt;
 			      &lt;figcaption&gt;
 		          &lt;p&gt;5th&lt;/p&gt;
 			      &lt;/figcaption&gt;
-				    &lt;a href=&#34;https://coopers.zone//photos//5.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+				    &lt;a href=&#34;https://baohengtao.com//photos//5.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 				  &lt;/figure&gt;
 				&lt;/div&gt;
 				&lt;div class=&#34;box&#34;&gt;
 				  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://coopers.zone//photos//ah.jpeg&#39;);&#34; &gt;
-				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone//photos//ah.jpeg&#34; alt=&#34;Ah&#34; /&gt;
+				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://baohengtao.com//photos//ah.jpeg&#39;);&#34; &gt;
+				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com//photos//ah.jpeg&#34; alt=&#34;Ah&#34; /&gt;
 				    &lt;/div&gt;
 			      &lt;figcaption&gt;
 		          &lt;p&gt;Ah&lt;/p&gt;
 			      &lt;/figcaption&gt;
-				    &lt;a href=&#34;https://coopers.zone//photos//ah.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+				    &lt;a href=&#34;https://baohengtao.com//photos//ah.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 				  &lt;/figure&gt;
 				&lt;/div&gt;
 				&lt;div class=&#34;box&#34;&gt;
 				  &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://coopers.zone//photos//em.jpeg&#39;);&#34; &gt;
-				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone//photos//em.jpeg&#34; alt=&#34;Em&#34; /&gt;
+				    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://baohengtao.com//photos//em.jpeg&#39;);&#34; &gt;
+				      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com//photos//em.jpeg&#34; alt=&#34;Em&#34; /&gt;
 				    &lt;/div&gt;
 			      &lt;figcaption&gt;
 		          &lt;p&gt;Em&lt;/p&gt;
 			      &lt;/figcaption&gt;
-				    &lt;a href=&#34;https://coopers.zone//photos//em.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+				    &lt;a href=&#34;https://baohengtao.com//photos//em.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 				  &lt;/figure&gt;
 				&lt;/div&gt;
 &lt;/div&gt;
@@ -805,7 +805,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 
 
 &lt;script src=&#34;https://code.jquery.com/jquery-1.12.4.min.js&#34; integrity=&#34;sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://coopers.zone/js/load-photoswipe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://baohengtao.com/js/load-photoswipe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css&#34; integrity=&#34;sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=&#34; crossorigin=&#34;anonymous&#34; /&gt;
@@ -886,9 +886,9 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 &lt;div class=&#34;box&#34; &gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
     &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/photos/4.jpeg&#39;);&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone/photos/4.jpeg&#34; alt=&#34;cap&#34;/&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com/photos/4.jpeg&#34; alt=&#34;cap&#34;/&gt;
     &lt;/div&gt;
-    &lt;a href=&#34;https://coopers.zone/photos/4.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://baohengtao.com/photos/4.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
       &lt;figcaption&gt;
           &lt;p&gt;cap&lt;/p&gt;
       &lt;/figcaption&gt;
@@ -901,9 +901,9 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 &lt;div class=&#34;box&#34; &gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
     &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/photos/3.jpeg&#39;);&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone/photos/3.jpeg&#34; alt=&#34;cap&#34;/&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com/photos/3.jpeg&#34; alt=&#34;cap&#34;/&gt;
     &lt;/div&gt;
-    &lt;a href=&#34;https://coopers.zone/photos/3.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://baohengtao.com/photos/3.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
       &lt;figcaption&gt;
           &lt;p&gt;cap&lt;/p&gt;
       &lt;/figcaption&gt;
@@ -916,9 +916,9 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 &lt;div class=&#34;box&#34; &gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
     &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/photos/2.jpeg&#39;);&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://coopers.zone/photos/2.jpeg&#34; alt=&#34;cap&#34;/&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://baohengtao.com/photos/2.jpeg&#34; alt=&#34;cap&#34;/&gt;
     &lt;/div&gt;
-    &lt;a href=&#34;https://coopers.zone/photos/2.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://baohengtao.com/photos/2.jpeg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
       &lt;figcaption&gt;
           &lt;p&gt;cap&lt;/p&gt;
       &lt;/figcaption&gt;
@@ -949,7 +949,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -964,7 +964,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/hugo/">Hugo</category>
+                                    <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
                         
@@ -976,8 +976,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         
             <item>
                 <title>博客的定位</title>
-                <link>https://coopers.zone/life/blog-how/</link>
-                <guid isPermaLink="true">https://coopers.zone/life/blog-how/</guid>
+                <link>https://baohengtao.com/life/blog-how/</link>
+                <guid isPermaLink="true">https://baohengtao.com/life/blog-how/</guid>
                 <pubDate>Tue, 25 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1005,7 +1005,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                         
                             
-                                <category domain="https://coopers.zone/life/">life</category>
+                                <category domain="https://baohengtao.com/life/">life</category>
                             
                         
                     
@@ -1020,7 +1020,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/%E6%97%A5%E8%AE%B0/">日记</category>
+                                    <category domain="https://baohengtao.com/tags/%E6%97%A5%E8%AE%B0/">日记</category>
                                 
                             
                         
@@ -1032,8 +1032,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         
             <item>
                 <title>因果关系的三个层级</title>
-                <link>https://coopers.zone/study/thebookofwhy/</link>
-                <guid isPermaLink="true">https://coopers.zone/study/thebookofwhy/</guid>
+                <link>https://baohengtao.com/study/thebookofwhy/</link>
+                <guid isPermaLink="true">https://baohengtao.com/study/thebookofwhy/</guid>
                 <pubDate>Tue, 25 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1053,7 +1053,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                         
                             
-                                <category domain="https://coopers.zone/study/">study</category>
+                                <category domain="https://baohengtao.com/study/">study</category>
                             
                         
                     
@@ -1068,7 +1068,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/the-book-of-why/">The Book of Why</category>
+                                    <category domain="https://baohengtao.com/tags/the-book-of-why/">The Book of Why</category>
                                 
                             
                         
@@ -1078,7 +1078,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/todo/%E9%98%85%E8%AF%BB/">阅读</category>
+                                    <category domain="https://baohengtao.com/todo/%E9%98%85%E8%AF%BB/">阅读</category>
                                 
                             
                         
@@ -1088,8 +1088,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         
             <item>
                 <title>自定义 Hugo Shortcodes 简码</title>
-                <link>https://coopers.zone/tech/hugo-shortcodes/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/hugo-shortcodes/</guid>
+                <link>https://baohengtao.com/tech/hugo-shortcodes/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/hugo-shortcodes/</guid>
                 <pubDate>Tue, 25 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1356,7 +1356,7 @@ To see a world in a grain of sand. And a heaven in a wild flower. Hold infinity 
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -1371,7 +1371,7 @@ To see a world in a grain of sand. And a heaven in a wild flower. Hold infinity 
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/hugo/">Hugo</category>
+                                    <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
                         
@@ -1383,8 +1383,8 @@ To see a world in a grain of sand. And a heaven in a wild flower. Hold infinity 
         
             <item>
                 <title>Github Repo</title>
-                <link>https://coopers.zone/tech/ah/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/ah/</guid>
+                <link>https://baohengtao.com/tech/ah/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/ah/</guid>
                 <pubDate>Mon, 24 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1483,7 +1483,7 @@ To see a world in a grain of sand. And a heaven in a wild flower. Hold infinity 
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -1502,8 +1502,8 @@ To see a world in a grain of sand. And a heaven in a wild flower. Hold infinity 
         
             <item>
                 <title>Hugo Front Matter</title>
-                <link>https://coopers.zone/tech/hugo-front-matter/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/hugo-front-matter/</guid>
+                <link>https://baohengtao.com/tech/hugo-front-matter/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/hugo-front-matter/</guid>
                 <pubDate>Mon, 24 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1573,7 +1573,7 @@ tocNum: on
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -1588,7 +1588,7 @@ tocNum: on
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/hugo/">Hugo</category>
+                                    <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
                         
@@ -1600,8 +1600,8 @@ tocNum: on
         
             <item>
                 <title>随便写点</title>
-                <link>https://coopers.zone/life/%E9%9A%8F%E7%AC%940524/</link>
-                <guid isPermaLink="true">https://coopers.zone/life/%E9%9A%8F%E7%AC%940524/</guid>
+                <link>https://baohengtao.com/life/%E9%9A%8F%E7%AC%940524/</link>
+                <guid isPermaLink="true">https://baohengtao.com/life/%E9%9A%8F%E7%AC%940524/</guid>
                 <pubDate>Mon, 24 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1625,7 +1625,7 @@ tocNum: on
                         
                         
                             
-                                <category domain="https://coopers.zone/life/">life</category>
+                                <category domain="https://baohengtao.com/life/">life</category>
                             
                         
                     
@@ -1640,7 +1640,7 @@ tocNum: on
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/%E6%97%A5%E8%AE%B0/">日记</category>
+                                    <category domain="https://baohengtao.com/tags/%E6%97%A5%E8%AE%B0/">日记</category>
                                 
                             
                         
@@ -1652,8 +1652,8 @@ tocNum: on
         
             <item>
                 <title>Pacman使用</title>
-                <link>https://coopers.zone/tech/pacman/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/pacman/</guid>
+                <link>https://baohengtao.com/tech/pacman/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/pacman/</guid>
                 <pubDate>Fri, 21 May 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1797,7 +1797,7 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -1810,7 +1810,7 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -1820,7 +1820,7 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/linux/">linux</category>
+                                    <category domain="https://baohengtao.com/tags/linux/">linux</category>
                                 
                             
                         
@@ -1832,8 +1832,8 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
         
             <item>
                 <title>Shell Cases</title>
-                <link>https://coopers.zone/tech/shell-case/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/shell-case/</guid>
+                <link>https://baohengtao.com/tech/shell-case/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/shell-case/</guid>
                 <pubDate>Thu, 22 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -1868,7 +1868,7 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -1881,7 +1881,7 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -1891,7 +1891,7 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/shell/">shell</category>
+                                    <category domain="https://baohengtao.com/tags/shell/">shell</category>
                                 
                             
                         
@@ -1903,8 +1903,8 @@ $ sudo smbpasswd -a cooper &lt;span class=&#34;c1&#34;&gt;# 添加用户&lt;/spa
         
             <item>
                 <title>ZSH 插件配置2.0</title>
-                <link>https://coopers.zone/tech/zsh2/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/zsh2/</guid>
+                <link>https://baohengtao.com/tech/zsh2/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/zsh2/</guid>
                 <pubDate>Wed, 21 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -2316,7 +2316,7 @@ _fzf_compgen_dir&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#3
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -2329,7 +2329,7 @@ _fzf_compgen_dir&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#3
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -2339,7 +2339,7 @@ _fzf_compgen_dir&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#3
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/shell/">shell</category>
+                                    <category domain="https://baohengtao.com/tags/shell/">shell</category>
                                 
                             
                         
@@ -2351,8 +2351,8 @@ _fzf_compgen_dir&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#3
         
             <item>
                 <title>Archlinux 从安装到弃坑</title>
-                <link>https://coopers.zone/tech/archlinux/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/archlinux/</guid>
+                <link>https://baohengtao.com/tech/archlinux/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/archlinux/</guid>
                 <pubDate>Thu, 15 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -2615,7 +2615,7 @@ systemctl start sshd
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -2628,7 +2628,7 @@ systemctl start sshd
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -2638,7 +2638,7 @@ systemctl start sshd
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/linux/">linux</category>
+                                    <category domain="https://baohengtao.com/tags/linux/">linux</category>
                                 
                             
                         
@@ -2650,8 +2650,8 @@ systemctl start sshd
         
             <item>
                 <title>Emacs Cheatsheet</title>
-                <link>https://coopers.zone/tech/emacs/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/emacs/</guid>
+                <link>https://baohengtao.com/tech/emacs/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/emacs/</guid>
                 <pubDate>Tue, 13 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -2906,7 +2906,7 @@ systemctl start sshd
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -2919,7 +2919,7 @@ systemctl start sshd
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -2929,7 +2929,7 @@ systemctl start sshd
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/emacs/">emacs</category>
+                                    <category domain="https://baohengtao.com/tags/emacs/">emacs</category>
                                 
                             
                         
@@ -2941,8 +2941,8 @@ systemctl start sshd
         
             <item>
                 <title>Shortcut</title>
-                <link>https://coopers.zone/tech/shortcut/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/shortcut/</guid>
+                <link>https://baohengtao.com/tech/shortcut/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/shortcut/</guid>
                 <pubDate>Tue, 13 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -3088,7 +3088,7 @@ takes you away from the home row.&lt;/p&gt;
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -3101,7 +3101,7 @@ takes you away from the home row.&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -3111,7 +3111,7 @@ takes you away from the home row.&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/shortcut/">shortcut</category>
+                                    <category domain="https://baohengtao.com/tags/shortcut/">shortcut</category>
                                 
                             
                         
@@ -3123,8 +3123,8 @@ takes you away from the home row.&lt;/p&gt;
         
             <item>
                 <title>Vim 手册</title>
-                <link>https://coopers.zone/tech/vim/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/vim/</guid>
+                <link>https://baohengtao.com/tech/vim/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/vim/</guid>
                 <pubDate>Tue, 13 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -3541,7 +3541,7 @@ takes you away from the home row.&lt;/p&gt;
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -3556,7 +3556,7 @@ takes you away from the home row.&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/vim/">Vim</category>
+                                    <category domain="https://baohengtao.com/tags/vim/">Vim</category>
                                 
                             
                         
@@ -3568,8 +3568,8 @@ takes you away from the home row.&lt;/p&gt;
         
             <item>
                 <title>Vim 和 Emacs 配置文件路径</title>
-                <link>https://coopers.zone/tech/emacs_vim_path/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/emacs_vim_path/</guid>
+                <link>https://baohengtao.com/tech/emacs_vim_path/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/emacs_vim_path/</guid>
                 <pubDate>Mon, 12 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -3681,7 +3681,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -3694,7 +3694,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -3704,13 +3704,13 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/emacs/">emacs</category>
+                                    <category domain="https://baohengtao.com/tags/emacs/">emacs</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/vim/">Vim</category>
+                                    <category domain="https://baohengtao.com/tags/vim/">Vim</category>
                                 
                             
                         
@@ -3722,8 +3722,8 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
         
             <item>
                 <title>Git Manual</title>
-                <link>https://coopers.zone/tech/git/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/git/</guid>
+                <link>https://baohengtao.com/tech/git/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/git/</guid>
                 <pubDate>Sun, 04 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -4295,7 +4295,7 @@ $ git clone &lt;span class=&#34;nv&#34;&gt;$GIT&lt;/span&gt;/codproj.git
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -4308,7 +4308,7 @@ $ git clone &lt;span class=&#34;nv&#34;&gt;$GIT&lt;/span&gt;/codproj.git
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -4318,7 +4318,7 @@ $ git clone &lt;span class=&#34;nv&#34;&gt;$GIT&lt;/span&gt;/codproj.git
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/git/">Git</category>
+                                    <category domain="https://baohengtao.com/tags/git/">Git</category>
                                 
                             
                         
@@ -4330,13 +4330,13 @@ $ git clone &lt;span class=&#34;nv&#34;&gt;$GIT&lt;/span&gt;/codproj.git
         
             <item>
                 <title>Tmux Cheetsheet</title>
-                <link>https://coopers.zone/tech/tmux/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/tmux/</guid>
+                <link>https://baohengtao.com/tech/tmux/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/tmux/</guid>
                 <pubDate>Sun, 04 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
                 
-                    <description>&lt;h3 id=&#34;tmux快捷键&#34;&gt;Tmux快捷键&lt;/h3&gt;
+                    <description>&lt;h2 id=&#34;tmux快捷键&#34;&gt;Tmux快捷键&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;帮助&lt;/strong&gt;: &lt;code&gt;?&lt;/code&gt; 显示快捷键; &lt;code&gt;d&lt;/code&gt; 分离会话 ；&lt;code&gt;s&lt;/code&gt; 列出所有会话; &lt;code&gt;$&lt;/code&gt; 重命名会话&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;窗口&lt;/strong&gt;:  &lt;code&gt;c&lt;/code&gt;创建窗口; &lt;code&gt;p&lt;/code&gt; &lt;code&gt;n&lt;/code&gt; &lt;code&gt;&amp;lt;num&amp;gt;&lt;/code&gt;切换窗口; &lt;code&gt;w&lt;/code&gt;：选择窗口&lt;code&gt;,&lt;/code&gt;：窗口重命名。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;窗格&lt;/strong&gt;: &lt;code&gt;%&lt;/code&gt;左右划分;  &lt;code&gt;&amp;quot;&lt;/code&gt;上下划分; &lt;code&gt;{&lt;/code&gt; &lt;code&gt;}&lt;/code&gt;交换位置;  &lt;code&gt;Ctrl+o&lt;/code&gt; &lt;code&gt;Alt+o&lt;/code&gt; 移动位置;&lt;/p&gt;
@@ -4345,8 +4345,8 @@ $ git clone &lt;span class=&#34;nv&#34;&gt;$GIT&lt;/span&gt;/codproj.git
 &lt;p&gt;&lt;strong&gt;转化:&lt;/strong&gt; &lt;code&gt;!&lt;/code&gt;：将当前窗格拆分为一个独立窗口。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;关闭&lt;/strong&gt;：&lt;code&gt;x&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;q&lt;/code&gt;：显示窗格编号。&lt;/p&gt;
-&lt;h3 id=&#34;tmux-命令&#34;&gt;Tmux 命令&lt;/h3&gt;
-&lt;h4 id=&#34;会话&#34;&gt;会话&lt;/h4&gt;
+&lt;h2 id=&#34;tmux-命令&#34;&gt;Tmux 命令&lt;/h2&gt;
+&lt;h3 id=&#34;会话&#34;&gt;会话&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4385,7 +4385,7 @@ tmux kill-session -t &amp;lt;session-name&amp;gt;
 tmux kill-session -a  &lt;span class=&#34;c1&#34;&gt;# 所有进程&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;窗口&#34;&gt;窗口&lt;/h4&gt;
+&lt;/div&gt;&lt;h3 id=&#34;窗口&#34;&gt;窗口&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -4411,7 +4411,7 @@ tmux rename-window &amp;lt;new-name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;窗格&#34;&gt;窗格&lt;/h4&gt;
+&lt;h3 id=&#34;窗格&#34;&gt;窗格&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4444,7 +4444,7 @@ tmux swap-pane -U &lt;span class=&#34;c1&#34;&gt;# 当前窗格上移&lt;/span&g
 tmux swap-pane -D &lt;span class=&#34;c1&#34;&gt;# 当前窗格下移&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;信息&#34;&gt;信息&lt;/h4&gt;
+&lt;/div&gt;&lt;h3 id=&#34;信息&#34;&gt;信息&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -4478,7 +4478,7 @@ $ tmux source-file ~/.tmux.conf
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -4491,7 +4491,7 @@ $ tmux source-file ~/.tmux.conf
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -4501,7 +4501,7 @@ $ tmux source-file ~/.tmux.conf
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/shell/">shell</category>
+                                    <category domain="https://baohengtao.com/tags/shell/">shell</category>
                                 
                             
                         
@@ -4513,8 +4513,8 @@ $ tmux source-file ~/.tmux.conf
         
             <item>
                 <title>随手记</title>
-                <link>https://coopers.zone/tech/%E9%9A%8F%E6%89%8B%E8%AE%B0.skip/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/%E9%9A%8F%E6%89%8B%E8%AE%B0.skip/</guid>
+                <link>https://baohengtao.com/tech/%E9%9A%8F%E6%89%8B%E8%AE%B0.skip/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/%E9%9A%8F%E6%89%8B%E8%AE%B0.skip/</guid>
                 <pubDate>Fri, 02 Apr 2021 17:15:48 &#43;0000</pubDate>
                 
                 
@@ -4612,7 +4612,7 @@ Any content (support inline tags too).
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -4625,7 +4625,7 @@ Any content (support inline tags too).
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -4639,8 +4639,8 @@ Any content (support inline tags too).
         
             <item>
                 <title>SSL/TLS 协议</title>
-                <link>https://coopers.zone/tech/https/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/https/</guid>
+                <link>https://baohengtao.com/tech/https/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/https/</guid>
                 <pubDate>Wed, 31 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -4787,7 +4787,7 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -4800,7 +4800,7 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
+                                    <category domain="https://baohengtao.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
                                 
                             
                         
@@ -4810,7 +4810,7 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
+                                    <category domain="https://baohengtao.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
                                 
                             
                         
@@ -4822,8 +4822,8 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
         
             <item>
                 <title>iTerm配置</title>
-                <link>https://coopers.zone/tech/iterm/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/iterm/</guid>
+                <link>https://baohengtao.com/tech/iterm/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/iterm/</guid>
                 <pubDate>Tue, 30 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -4864,7 +4864,7 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -4877,7 +4877,7 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -4891,8 +4891,8 @@ openssl x509 -req -in &lt;span class=&#34;nv&#34;&gt;$NAME&lt;/span&gt;.csr &lt;
         
             <item>
                 <title>Nginx Manual</title>
-                <link>https://coopers.zone/tech/nginx_manul/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/nginx_manul/</guid>
+                <link>https://baohengtao.com/tech/nginx_manul/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/nginx_manul/</guid>
                 <pubDate>Tue, 30 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -5063,7 +5063,7 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -5076,7 +5076,7 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -5086,7 +5086,7 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/nginx/">Nginx</category>
+                                    <category domain="https://baohengtao.com/tags/nginx/">Nginx</category>
                                 
                             
                         
@@ -5098,8 +5098,8 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
         
             <item>
                 <title>Typora中的路径设置</title>
-                <link>https://coopers.zone/tech/typora-image/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/typora-image/</guid>
+                <link>https://baohengtao.com/tech/typora-image/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/typora-image/</guid>
                 <pubDate>Mon, 29 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -5187,7 +5187,7 @@ typora-root-url: ../
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -5200,7 +5200,7 @@ typora-root-url: ../
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -5210,7 +5210,7 @@ typora-root-url: ../
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/markdown/">markdown</category>
+                                    <category domain="https://baohengtao.com/tags/markdown/">markdown</category>
                                 
                             
                         
@@ -5222,8 +5222,8 @@ typora-root-url: ../
         
             <item>
                 <title>当下</title>
-                <link>https://coopers.zone/life/%E5%BD%93%E4%B8%8B/</link>
-                <guid isPermaLink="true">https://coopers.zone/life/%E5%BD%93%E4%B8%8B/</guid>
+                <link>https://baohengtao.com/life/%E5%BD%93%E4%B8%8B/</link>
+                <guid isPermaLink="true">https://baohengtao.com/life/%E5%BD%93%E4%B8%8B/</guid>
                 <pubDate>Mon, 29 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -5264,7 +5264,7 @@ typora-root-url: ../
                         
                         
                             
-                                <category domain="https://coopers.zone/life/">life</category>
+                                <category domain="https://baohengtao.com/life/">life</category>
                             
                         
                     
@@ -5277,7 +5277,7 @@ typora-root-url: ../
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E8%AE%B0%E5%BD%95/">记录</category>
+                                    <category domain="https://baohengtao.com/categories/%E8%AE%B0%E5%BD%95/">记录</category>
                                 
                             
                         
@@ -5287,7 +5287,7 @@ typora-root-url: ../
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/%E6%96%B0%E9%97%BB/">新闻</category>
+                                    <category domain="https://baohengtao.com/tags/%E6%96%B0%E9%97%BB/">新闻</category>
                                 
                             
                         
@@ -5299,8 +5299,8 @@ typora-root-url: ../
         
             <item>
                 <title>macOS 应用列表</title>
-                <link>https://coopers.zone/tech/mac_app/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/mac_app/</guid>
+                <link>https://baohengtao.com/tech/mac_app/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/mac_app/</guid>
                 <pubDate>Fri, 26 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -5554,7 +5554,7 @@ typora-root-url: ../
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -5567,7 +5567,7 @@ typora-root-url: ../
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -5577,7 +5577,7 @@ typora-root-url: ../
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/macos/">macOS</category>
+                                    <category domain="https://baohengtao.com/tags/macos/">macOS</category>
                                 
                             
                         
@@ -5589,8 +5589,8 @@ typora-root-url: ../
         
             <item>
                 <title>Hexo中的Markdown写作</title>
-                <link>https://coopers.zone/tech/writing-in-hexo/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/writing-in-hexo/</guid>
+                <link>https://baohengtao.com/tech/writing-in-hexo/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/writing-in-hexo/</guid>
                 <pubDate>Thu, 25 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -6175,7 +6175,7 @@ content
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -6188,7 +6188,7 @@ content
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -6198,7 +6198,7 @@ content
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/markdown/">markdown</category>
+                                    <category domain="https://baohengtao.com/tags/markdown/">markdown</category>
                                 
                             
                         
@@ -6210,14 +6210,14 @@ content
         
             <item>
                 <title>Typora 使用</title>
-                <link>https://coopers.zone/tech/typora/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/typora/</guid>
+                <link>https://baohengtao.com/tech/typora/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/typora/</guid>
                 <pubDate>Thu, 25 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
                 
                     <description>&lt;p&gt;Typora是一款强大的markdown编辑器, 支持数学公式直接输入, 支持「所见即所得」. 「数学公式」+「所见即所得」直接让TeXpad吃灰了.  最最最重要的是可以自己用CSS写主题, 这点很赞, 颜值即正义😎&lt;/p&gt;
-&lt;p&gt;语法部分见&lt;a href=&#34;https://coopers.zone/posts/hexo-writing&#34;&gt;Hexo中的Markdown写作&lt;/a&gt;; 不过好像把语法部分拿走后这篇也没啥价值了... Anyway, 语法和软件的使用还是分开写比较好...&lt;/p&gt;
+&lt;p&gt;语法部分见&lt;a href=&#34;https://baohengtao.com/posts/hexo-writing&#34;&gt;Hexo中的Markdown写作&lt;/a&gt;; 不过好像把语法部分拿走后这篇也没啥价值了... Anyway, 语法和软件的使用还是分开写比较好...&lt;/p&gt;
 &lt;h2 id=&#34;macos-特性&#34;&gt;macOS 特性&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;按住command和顶部文件名, 可以快速打开上级文件夹.&lt;/li&gt;
@@ -6244,7 +6244,7 @@ content
 &lt;li&gt;插入行: &lt;code&gt;Command+Ctrl+Enter&lt;/code&gt; ,&lt;/li&gt;
 &lt;li&gt;删除行: &lt;code&gt;Shift+Command+L&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;上下移动: 将鼠标放在表格左侧边框&lt;/li&gt;
-&lt;li&gt;Touchbar 支持表格编辑&lt;img src=&#34;https://coopers.zone/images.public/TouchBarShot.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Touchbar 支持表格编辑&lt;img src=&#34;https://baohengtao.com/images.public/TouchBarShot.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;在终端打开&#34;&gt;在终端打开&lt;/h3&gt;
 &lt;p&gt;在 &lt;code&gt;~/.zshrc&lt;/code&gt; 中添加如下配置:&lt;/p&gt;
@@ -6450,7 +6450,7 @@ content
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -6463,7 +6463,7 @@ content
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -6473,7 +6473,7 @@ content
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/markdown/">markdown</category>
+                                    <category domain="https://baohengtao.com/tags/markdown/">markdown</category>
                                 
                             
                         
@@ -6485,8 +6485,8 @@ content
         
             <item>
                 <title>Unix系统中的inode</title>
-                <link>https://coopers.zone/tech/inode-understand/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/inode-understand/</guid>
+                <link>https://baohengtao.com/tech/inode-understand/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/inode-understand/</guid>
                 <pubDate>Sat, 20 Mar 2021 23:06:56 &#43;0000</pubDate>
                 
                 
@@ -6536,7 +6536,7 @@ content
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -6549,7 +6549,7 @@ content
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
+                                    <category domain="https://baohengtao.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
                                 
                             
                         
@@ -6559,7 +6559,7 @@ content
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
+                                    <category domain="https://baohengtao.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
                                 
                             
                         
@@ -6571,8 +6571,8 @@ content
         
             <item>
                 <title>Exiftool 使用手册</title>
-                <link>https://coopers.zone/tech/exiftool-manual/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/exiftool-manual/</guid>
+                <link>https://baohengtao.com/tech/exiftool-manual/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/exiftool-manual/</guid>
                 <pubDate>Wed, 17 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -7169,7 +7169,7 @@ exiftool &lt;span class=&#34;s1&#34;&gt;&amp;#39;-filename&amp;lt;$title%-c.%e&a
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -7182,7 +7182,7 @@ exiftool &lt;span class=&#34;s1&#34;&gt;&amp;#39;-filename&amp;lt;$title%-c.%e&a
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -7192,7 +7192,7 @@ exiftool &lt;span class=&#34;s1&#34;&gt;&amp;#39;-filename&amp;lt;$title%-c.%e&a
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/exiftool/">ExifTool</category>
+                                    <category domain="https://baohengtao.com/tags/exiftool/">ExifTool</category>
                                 
                             
                         
@@ -7204,8 +7204,8 @@ exiftool &lt;span class=&#34;s1&#34;&gt;&amp;#39;-filename&amp;lt;$title%-c.%e&a
         
             <item>
                 <title>小纸片</title>
-                <link>https://coopers.zone/tech/%E5%B0%8F%E7%BA%B8%E7%89%87/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/%E5%B0%8F%E7%BA%B8%E7%89%87/</guid>
+                <link>https://baohengtao.com/tech/%E5%B0%8F%E7%BA%B8%E7%89%87/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/%E5%B0%8F%E7%BA%B8%E7%89%87/</guid>
                 <pubDate>Fri, 05 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -7335,6 +7335,8 @@ exiftool &lt;span class=&#34;s1&#34;&gt;&amp;#39;-filename&amp;lt;$title%-c.%e&a
 &lt;p&gt;将id_rsa_key.pub 的内容拷贝至服务器的文件&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt; 中，&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;若 仍需输入密码， 则可通过查看日志&lt;code&gt;rpi:/var/log/auth.log&lt;/code&gt;发现原因。
+group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
 &lt;h2 id=&#34;字体&#34;&gt;字体&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -7566,7 +7568,7 @@ valuable there.
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -7579,7 +7581,7 @@ valuable there.
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -7589,7 +7591,7 @@ valuable there.
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/%E5%B0%8F%E7%BA%B8%E7%89%87/">小纸片</category>
+                                    <category domain="https://baohengtao.com/tags/%E5%B0%8F%E7%BA%B8%E7%89%87/">小纸片</category>
                                 
                             
                         
@@ -7601,8 +7603,8 @@ valuable there.
         
             <item>
                 <title>命令行工具</title>
-                <link>https://coopers.zone/tech/shell-tool/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/shell-tool/</guid>
+                <link>https://baohengtao.com/tech/shell-tool/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/shell-tool/</guid>
                 <pubDate>Thu, 04 Mar 2021 21:59:07 &#43;0000</pubDate>
                 
                 
@@ -7706,7 +7708,7 @@ omw -g
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -7719,7 +7721,7 @@ omw -g
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -7729,7 +7731,7 @@ omw -g
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/shell/">shell</category>
+                                    <category domain="https://baohengtao.com/tags/shell/">shell</category>
                                 
                             
                         
@@ -7741,8 +7743,8 @@ omw -g
         
             <item>
                 <title>ZSH 插件列表</title>
-                <link>https://coopers.zone/tech/zshv1/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/zshv1/</guid>
+                <link>https://baohengtao.com/tech/zshv1/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/zshv1/</guid>
                 <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -7999,7 +8001,7 @@ bindkey &lt;span class=&#34;s1&#34;&gt;&amp;#39;^j&amp;#39;&lt;/span&gt; autosug
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -8012,7 +8014,7 @@ bindkey &lt;span class=&#34;s1&#34;&gt;&amp;#39;^j&amp;#39;&lt;/span&gt; autosug
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -8022,7 +8024,7 @@ bindkey &lt;span class=&#34;s1&#34;&gt;&amp;#39;^j&amp;#39;&lt;/span&gt; autosug
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/shell/">shell</category>
+                                    <category domain="https://baohengtao.com/tags/shell/">shell</category>
                                 
                             
                         
@@ -8034,8 +8036,8 @@ bindkey &lt;span class=&#34;s1&#34;&gt;&amp;#39;^j&amp;#39;&lt;/span&gt; autosug
         
             <item>
                 <title>树莓派配置</title>
-                <link>https://coopers.zone/tech/rpi/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/rpi/</guid>
+                <link>https://baohengtao.com/tech/rpi/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/rpi/</guid>
                 <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -8098,6 +8100,12 @@ deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# locale&lt;/span&gt;
@@ -8108,13 +8116,116 @@ sudo sh get-docker.sh
 sudo pip3 install docker-compose
 sudo usermod -aG docker &lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# shell &lt;/span&gt;
-sudo apt install vim zsh
+sudo apt install zsh
 &lt;span class=&#34;c1&#34;&gt;# service&lt;/span&gt;
 sudo apt install nginx samba
+sudo smbpasswd -a pi
+sudo service smbd start
+&lt;span class=&#34;c1&#34;&gt;#neovim&lt;/span&gt;
+sudo apt install snapd
+sudo snap install --classic nvim
+
 &lt;span class=&#34;c1&#34;&gt;# application&lt;/span&gt;
 sudo apt install qbittorrent 
-sudo apt install realvnc-vnc-server realvnc-vnc-viewer
+sudo apt install realvnc-vnc-server 
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;磁盘管理&#34;&gt;磁盘管理&lt;/h2&gt;
+&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo parted -a optimal /dev/sda &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ENTER&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+parted&amp;gt;&amp;gt; mklabel gpt 
+parted&amp;gt;&amp;gt; mkpart primary &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ext4&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 0% 1TB
+parted&amp;gt;&amp;gt; align-check optimal &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+parted&amp;gt;&amp;gt; name &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; test_name
+parted&amp;gt;&amp;gt; rm &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# remove partition&lt;/span&gt;
+parted&amp;gt;&amp;gt; print
+parted &amp;gt;&amp;gt; quit
+sudo mkfs.ext4 /dev/sda1
+&lt;span class=&#34;c1&#34;&gt;# label disk&lt;/span&gt;
+sudo e2label /dev/sda1 SeaPlus
+
+&lt;span class=&#34;c1&#34;&gt;# 查看磁盘情况&lt;/span&gt;
+$ fdisk -l
+$ fdisk /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;磁盘状态&#34;&gt;磁盘状态&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo blkid
+sudo parted -l
+sudo fdisk -l  &lt;span class=&#34;c1&#34;&gt;# 查看分区&lt;/span&gt;
+sudo lsblk -o PATH,SIZE,RO,TYPE,MOUNTPOINT,UUID,MODEL
+hwinfo
+ls -l /dev/disk/by-label
+df -h &lt;span class=&#34;c1&#34;&gt;# 磁盘空间状态&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;自动挂载&#34;&gt;自动挂载&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Add line to /etc/fstab &lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;LABEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;SeaPlus /mnt/seaplus ext4 defaultssu &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#mount manually&lt;/span&gt;
+sudo mount -a
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;samba&#34;&gt;Samba&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;infuse]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;comment = seagate&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;path = &amp;#34;/home/pi/infuse&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;writeable = yes&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;guest ok = yes&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;create mask = 0777&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;directory mask = 0777&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;force user = pi, root&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
                 
@@ -8127,7 +8238,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -8140,7 +8251,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -8150,7 +8261,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/linux/">linux</category>
+                                    <category domain="https://baohengtao.com/tags/linux/">linux</category>
                                 
                             
                         
@@ -8162,8 +8273,8 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
         
             <item>
                 <title>Start Blogging</title>
-                <link>https://coopers.zone/life/start-blogging/</link>
-                <guid isPermaLink="true">https://coopers.zone/life/start-blogging/</guid>
+                <link>https://baohengtao.com/life/start-blogging/</link>
+                <guid isPermaLink="true">https://baohengtao.com/life/start-blogging/</guid>
                 <pubDate>Tue, 02 Feb 2021 17:15:48 &#43;0000</pubDate>
                 
                 
@@ -8214,7 +8325,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                         
                         
                             
-                                <category domain="https://coopers.zone/life/">life</category>
+                                <category domain="https://baohengtao.com/life/">life</category>
                             
                         
                     
@@ -8227,7 +8338,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E8%AE%B0%E5%BD%95/">记录</category>
+                                    <category domain="https://baohengtao.com/categories/%E8%AE%B0%E5%BD%95/">记录</category>
                                 
                             
                         
@@ -8241,8 +8352,8 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
         
             <item>
                 <title>阅读笔记</title>
-                <link>https://coopers.zone/life/reading-note/</link>
-                <guid isPermaLink="true">https://coopers.zone/life/reading-note/</guid>
+                <link>https://baohengtao.com/life/reading-note/</link>
+                <guid isPermaLink="true">https://baohengtao.com/life/reading-note/</guid>
                 <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -8289,7 +8400,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                         
                         
                             
-                                <category domain="https://coopers.zone/life/">life</category>
+                                <category domain="https://baohengtao.com/life/">life</category>
                             
                         
                     
@@ -8302,7 +8413,7 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E8%AE%B0%E5%BD%95/">记录</category>
+                                    <category domain="https://baohengtao.com/categories/%E8%AE%B0%E5%BD%95/">记录</category>
                                 
                             
                         
@@ -8316,8 +8427,8 @@ sudo apt install realvnc-vnc-server realvnc-vnc-viewer
         
             <item>
                 <title>心理学与生活</title>
-                <link>https://coopers.zone/life/psycholoy-in-life/</link>
-                <guid isPermaLink="true">https://coopers.zone/life/psycholoy-in-life/</guid>
+                <link>https://baohengtao.com/life/psycholoy-in-life/</link>
+                <guid isPermaLink="true">https://baohengtao.com/life/psycholoy-in-life/</guid>
                 <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -8590,7 +8701,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/uPic/psy_3_14.png&#34; alt=&#34;psy_3_14&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The Brain Stem, Thalamus, and Cerebellum&lt;/em&gt;&lt;/p&gt;
-  &lt;img src=&#34;https://coopers.zone/images.public/psy_3_15.png&#34; alt=&#34;psy_3_15&#34; style=&#34;zoom:50%;&#34; /&gt;
+  &lt;img src=&#34;https://baohengtao.com/images.public/psy_3_15.png&#34; alt=&#34;psy_3_15&#34; style=&#34;zoom:50%;&#34; /&gt;
 - brain stem（脑干）: The brain structure that regulates the body’s basic life processes.
  - medulla（延髓）: The region of the brain stem that regulates breathing, walking, and heartbeat.
  - pons（桥脑）: The region of the brain stem that connects the spinal cord with the brain and links parts of the brain to one another.
@@ -9953,7 +10064,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                         
                         
                             
-                                <category domain="https://coopers.zone/life/">life</category>
+                                <category domain="https://baohengtao.com/life/">life</category>
                             
                         
                     
@@ -9966,7 +10077,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E8%AE%B0%E5%BD%95/">记录</category>
+                                    <category domain="https://baohengtao.com/categories/%E8%AE%B0%E5%BD%95/">记录</category>
                                 
                             
                         
@@ -9980,8 +10091,8 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
         
             <item>
                 <title>Jupyter中的快捷键</title>
-                <link>https://coopers.zone/tech/jupyter-shortcut/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/jupyter-shortcut/</guid>
+                <link>https://baohengtao.com/tech/jupyter-shortcut/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/jupyter-shortcut/</guid>
                 <pubDate>Mon, 01 Jan 1900 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -10055,7 +10166,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -10068,7 +10179,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -10078,7 +10189,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/jupyter/">Jupyter</category>
+                                    <category domain="https://baohengtao.com/tags/jupyter/">Jupyter</category>
                                 
                             
                         
@@ -10090,8 +10201,8 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
         
             <item>
                 <title>Python 环境配置</title>
-                <link>https://coopers.zone/tech/python/</link>
-                <guid isPermaLink="true">https://coopers.zone/tech/python/</guid>
+                <link>https://baohengtao.com/tech/python/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/python/</guid>
                 <pubDate>Mon, 01 Jan 1900 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -10227,7 +10338,7 @@ fuser -k 8888/tcp : &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; jupyter not
                         
                         
                             
-                                <category domain="https://coopers.zone/tech/">tech</category>
+                                <category domain="https://baohengtao.com/tech/">tech</category>
                             
                         
                     
@@ -10240,7 +10351,7 @@ fuser -k 8888/tcp : &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; jupyter not
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
+                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
                                 
                             
                         
@@ -10250,7 +10361,7 @@ fuser -k 8888/tcp : &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; jupyter not
                                 
                                 
                                 
-                                    <category domain="https://coopers.zone/tags/python/">Python</category>
+                                    <category domain="https://baohengtao.com/tags/python/">Python</category>
                                 
                             
                         
