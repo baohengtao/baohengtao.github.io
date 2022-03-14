@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Mon, 14 Mar 2022 16:09:11 &#43;0000</lastBuildDate>
+        <lastBuildDate>Mon, 14 Mar 2022 16:25:44 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -8367,8 +8367,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
         
             <item>
                 <title>阅读笔记</title>
-                <link>https://baohengtao.com/life/reading-note/</link>
-                <guid isPermaLink="true">https://baohengtao.com/life/reading-note/</guid>
+                <link>https://baohengtao.com/study/reading-note/</link>
+                <guid isPermaLink="true">https://baohengtao.com/study/reading-note/</guid>
                 <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -8415,7 +8415,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                         
                         
                             
-                                <category domain="https://baohengtao.com/life/">life</category>
+                                <category domain="https://baohengtao.com/study/">study</category>
                             
                         
                     
@@ -8442,8 +8442,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
         
             <item>
                 <title>心理学与生活</title>
-                <link>https://baohengtao.com/life/psycholoy-in-life/</link>
-                <guid isPermaLink="true">https://baohengtao.com/life/psycholoy-in-life/</guid>
+                <link>https://baohengtao.com/study/psycholoy-in-life/</link>
+                <guid isPermaLink="true">https://baohengtao.com/study/psycholoy-in-life/</guid>
                 <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -10079,7 +10079,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                         
                         
                             
-                                <category domain="https://baohengtao.com/life/">life</category>
+                                <category domain="https://baohengtao.com/study/">study</category>
                             
                         
                     
