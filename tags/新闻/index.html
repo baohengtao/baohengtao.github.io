@@ -3,7 +3,10 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.94.2" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>Tags: 新闻 | Cooper&#39;s Zone</title>
 
-    <link rel="stylesheet" href="/css/meme.min.b46feb8b725772ecb59f62e313bc5babb8e67a9ec3fc7109f4deec09232aa868.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d43e5213d9acc9bf232ec4dfff1b701e121d64da68266c63d98e9ecfd293df42.css"/>
 
     
     
-        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.39bf827092c6bd8037bc3a745b342ec0e4bdb7454f0cb827f37aa1144d691a74.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.bb07d60f063a9ba6cf9d5caedac3959f57e8d35c012e5aa417cf281144c5bd55.js"></script>
 
     
 
@@ -54,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2021-01-20T20:17:43+00:00",
-        "dateModified": "2022-01-26T20:19:20+08:00",
+        "dateModified": "2021-03-29T00:00:00+00:00",
         "url": "https://baohengtao.com/tags/%E6%96%B0%E9%97%BB/",
         "name": "Tags: 新闻",
         "description": "Happy Everyday",
@@ -220,7 +223,6 @@
 
             
             
-    
         <main class="main list" id="main">
             <div class="main-inner">
                 <div class="content list-group">
@@ -336,7 +338,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

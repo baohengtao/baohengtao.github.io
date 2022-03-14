@@ -3,7 +3,10 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.94.2" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>Rsync工具使用 | Cooper&#39;s Zone</title>
 
-    <link rel="stylesheet" href="/css/meme.min.b46feb8b725772ecb59f62e313bc5babb8e67a9ec3fc7109f4deec09232aa868.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d43e5213d9acc9bf232ec4dfff1b701e121d64da68266c63d98e9ecfd293df42.css"/>
 
     
     
-        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.39bf827092c6bd8037bc3a745b342ec0e4bdb7454f0cb827f37aa1144d691a74.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.bb07d60f063a9ba6cf9d5caedac3959f57e8d35c012e5aa417cf281144c5bd55.js"></script>
 
     
 
@@ -54,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-06-01T00:00:00+00:00",
-        "dateModified": "2022-01-26T20:19:20+08:00",
+        "dateModified": "2022-03-15T00:31:50+08:00",
         "url": "https://baohengtao.com/tech/use-rsync/",
         "headline": "Rsync工具使用",
         "description": "整理文件 将fold-rsync 进行同步, 得到 remote/fold-rsync 将fold-rsync 硬链接到 fold-work, 在 fo……",
@@ -102,7 +105,7 @@
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://baohengtao.com/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-06-01T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2022-01-26T20:19:20&#43;08:00" />
+    <meta property="article:modified_time" content="2022-03-15T00:31:50&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -259,7 +262,7 @@
     
     
         
-        <time datetime="2022-01-26T20:19:20&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.1.26</time>
+        <time datetime="2022-03-15T00:31:50&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.3.15</time>
     
     
     
@@ -335,14 +338,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ gcp -al Weibo Weibo-tmp <span class="c1"># local:  Weibo-tmp =&gt; Weibo</span>
-$ rsync-synchronize Weibo Weibo-tmp rpi:/seagate/ <span class="c1"># server:  Weibo-tmp =&gt; Weibo</span>
-$ rm rpi:/seagate/Weibo <span class="c1">#  server:  Weibo-tmp</span>
-$ tidy Weibo
-<span class="c1"># fd .    **/原创微博图片  -td -x  echo mv  -v &#34;{}&#34; &#34;{//}/../..&#34;</span>
-$ rsync-synchronize Weibo Weibo-tmp rpi:/seagate/  <span class="c1">#  server:  Weibo same as local but hardlink from Weibo-tmp</span>
-$ rm Weibo-tmp rpi:/seagate/weibo-tmp
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ gcp -al Weibo Weibo-tmp <span class="c1"># local:  Weibo-tmp =&gt; Weibo</span>
+</span></span><span class="line"><span class="cl">$ rsync-synchronize Weibo Weibo-tmp rpi:/seagate/ <span class="c1"># server:  Weibo-tmp =&gt; Weibo</span>
+</span></span><span class="line"><span class="cl">$ rm rpi:/seagate/Weibo <span class="c1">#  server:  Weibo-tmp</span>
+</span></span><span class="line"><span class="cl">$ tidy Weibo
+</span></span><span class="line"><span class="cl"><span class="c1"># fd .    **/原创微博图片  -td -x  echo mv  -v &#34;{}&#34; &#34;{//}/../..&#34;</span>
+</span></span><span class="line"><span class="cl">$ rsync-synchronize Weibo Weibo-tmp rpi:/seagate/  <span class="c1">#  server:  Weibo same as local but hardlink from Weibo-tmp</span>
+</span></span><span class="line"><span class="cl">$ rm Weibo-tmp rpi:/seagate/weibo-tmp
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="rsync-重命名"><a href="#rsync-重命名" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Rsync 重命名</h2>
 <div class="highlight"><div class="chroma">
@@ -353,11 +356,11 @@ $ rm Weibo-tmp rpi:/seagate/weibo-tmp
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ rsync -avHP --delete-after ~/family/Photos remotebox:backups
-$ <span class="nb">cd</span> ~/family
-$ gcp -rlp Photos Photos-work
-$ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-work remotebox:backups
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ rsync -avHP --delete-after ~/family/Photos remotebox:backups
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> ~/family
+</span></span><span class="line"><span class="cl">$ gcp -rlp Photos Photos-work
+</span></span><span class="line"><span class="cl">$ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-work remotebox:backups
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="rsync-选项"><a href="#rsync-选项" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Rsync 选项</h2>
 <ul>
@@ -423,8 +426,8 @@ $ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ rsync -av source/ 192.168.122.32::module/destination
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rsync -av source/ 192.168.122.32::module/destination
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>注意，上面地址中的<code>module</code>并不是实际路径名，而是 rsync 守护程序指定的一个资源名，由管理员分配。</p>
 <p>如果想知道 rsync 守护程序分配的所有 module 列表，可以执行下面命令。</p>
@@ -433,8 +436,8 @@ $ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ rsync rsync://192.168.122.32
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rsync rsync://192.168.122.32
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>rsync 协议除了使用双冒号，也可以直接用<code>rsync://</code>协议指定地址。</p>
 <div class="highlight"><div class="chroma">
@@ -442,8 +445,8 @@ $ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ rsync -av source/ rsync://192.168.122.32/module/destination
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rsync -av source/ rsync://192.168.122.32/module/destination
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="基准目录"><a href="#基准目录" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>基准目录</h2>
 <p>rsync 的最大特点就是它可以完成增量备份，也就是默认只复制有变动的文件。</p>
@@ -455,8 +458,8 @@ $ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ rsync -a --delete --link-dest /compare/path /source/path /target/path
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rsync -a --delete --link-dest /compare/path /source/path /target/path
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>上面命令中，<code>--link-dest</code>参数指定基准目录<code>/compare/path</code>，然后源目录<code>/source/path</code>跟基准目录进行比较，找出变动的文件，将它们拷贝到目标目录<code>/target/path</code>。那些没变动的文件则会生成硬链接。这个命令的第一次备份时是全量备份，后面就都是增量备份了。</p>
 <p>下面是一个脚本示例，备份用户的主目录。</p>
@@ -488,31 +491,31 @@ $ rsync -avHP --delete-after --no-inc-recursive ~/family/Photos ~/family/Photos-
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="c1"># A script to perform incremental backups using rsync</span>
-
-<span class="nb">set</span> -o errexit
-<span class="nb">set</span> -o nounset
-<span class="nb">set</span> -o pipefail
-
-<span class="nb">readonly</span> <span class="nv">SOURCE_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">&#34;</span>
-<span class="nb">readonly</span> <span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">&#34;/mnt/data/backups&#34;</span>
-<span class="nb">readonly</span> <span class="nv">DATETIME</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>date <span class="s1">&#39;+%Y-%m-%d_%H:%M:%S&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
-<span class="nb">readonly</span> <span class="nv">BACKUP_PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_DIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">DATETIME</span><span class="si">}</span><span class="s2">&#34;</span>
-<span class="nb">readonly</span> <span class="nv">LATEST_LINK</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_DIR</span><span class="si">}</span><span class="s2">/latest&#34;</span>
-
-mkdir -p <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_DIR</span><span class="si">}</span><span class="s2">&#34;</span>
-
-rsync -av --delete <span class="se">\
-</span><span class="se"></span>  <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SOURCE_DIR</span><span class="si">}</span><span class="s2">/&#34;</span> <span class="se">\
-</span><span class="se"></span>  --link-dest <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LATEST_LINK</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
-</span><span class="se"></span>  --exclude<span class="o">=</span><span class="s2">&#34;.cache&#34;</span> <span class="se">\
-</span><span class="se"></span>  <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_PATH</span><span class="si">}</span><span class="s2">&#34;</span>
-
-rm -rf <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LATEST_LINK</span><span class="si">}</span><span class="s2">&#34;</span>
-ln -s <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_PATH</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LATEST_LINK</span><span class="si">}</span><span class="s2">&#34;</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># A script to perform incremental backups using rsync</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -o errexit
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -o nounset
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -o pipefail
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">readonly</span> <span class="nv">SOURCE_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">readonly</span> <span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">&#34;/mnt/data/backups&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">readonly</span> <span class="nv">DATETIME</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>date <span class="s1">&#39;+%Y-%m-%d_%H:%M:%S&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">readonly</span> <span class="nv">BACKUP_PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_DIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">DATETIME</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">readonly</span> <span class="nv">LATEST_LINK</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_DIR</span><span class="si">}</span><span class="s2">/latest&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir -p <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_DIR</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rsync -av --delete <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SOURCE_DIR</span><span class="si">}</span><span class="s2">/&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --link-dest <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LATEST_LINK</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --exclude<span class="o">=</span><span class="s2">&#34;.cache&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_PATH</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm -rf <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LATEST_LINK</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">ln -s <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BACKUP_PATH</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LATEST_LINK</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>上面脚本中，每一次同步都会生成一个新目录<code>${BACKUP_DIR}/${DATETIME}</code>，并将软链接<code>${BACKUP_DIR}/latest</code>指向这个目录。下一次备份时，就将<code>${BACKUP_DIR}/latest</code>作为基准目录，生成新的备份目录。最后，再将软链接<code>${BACKUP_DIR}/latest</code>指向新的备份目录。</p>
 
@@ -527,9 +530,9 @@ ln -s <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BA
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2022-01-26 20:19:20 CST" style="cursor:help">
+        <span title="Updated @ 2022-03-15 00:31:50 &#43;0800" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-01-26</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-01-26</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-03-15</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-03-15</text></g></svg>
         </span></div>
 
 
@@ -540,11 +543,11 @@ ln -s <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BA
             
                 <div class="post-gitinfo-left">
                     
-                        <div class="gitinfo-item commit"><a href="https://github.com/baohengtao/baohengtao.github.io/commit/459fa2945321e1e49aa0bb037f767c99890c2d90" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon git-icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>459fa29</a></div>
+                        <div class="gitinfo-item commit"><a href="https://github.com/baohengtao/baohengtao.github.io/commit/2a101f612e29d4e8e066763f408f441736b9e49d" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon git-icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>2a101f6</a></div>
                     
                     
                         
-                            <div class="gitinfo-item commit-msg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon msg-icon"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>regular update</div>
+                            <div class="gitinfo-item commit-msg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon msg-icon"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>Update main.yml</div>
                         
                     
                 </div>
@@ -795,7 +798,10 @@ ln -s <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BA
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

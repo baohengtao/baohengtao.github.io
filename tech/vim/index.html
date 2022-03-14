@@ -3,7 +3,10 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.94.2" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>Vim 手册 | Cooper&#39;s Zone</title>
 
-    <link rel="stylesheet" href="/css/meme.min.b46feb8b725772ecb59f62e313bc5babb8e67a9ec3fc7109f4deec09232aa868.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d43e5213d9acc9bf232ec4dfff1b701e121d64da68266c63d98e9ecfd293df42.css"/>
 
     
     
-        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.39bf827092c6bd8037bc3a745b342ec0e4bdb7454f0cb827f37aa1144d691a74.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.bb07d60f063a9ba6cf9d5caedac3959f57e8d35c012e5aa417cf281144c5bd55.js"></script>
 
     
 
@@ -79,13 +82,13 @@ cc dd yy 作用与整行
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-04-13T00:00:00+00:00",
-        "dateModified": "2022-01-26T20:19:20+08:00",
+        "dateModified": "2022-03-15T00:31:50+08:00",
         "url": "https://baohengtao.com/tech/vim/",
         "headline": "Vim 手册",
         "description": "Tip  使用 CTRL-[ 代替 ，左手小指 CTRL，右手小指 [ 熟练后很方便 SecureCRT 中使用 Vim 8 内嵌终端如看到奇怪字符，使用 :set t_RS= t_SH= 解决 SecureCRT 中使用 NeoVim 如看到奇怪字符，使用 :set guicursor= 解决 * 和 # （以及 g*/g#）是十分重要的查找命令 多使用 ciw, ci[, ci\", ci( 以及 diw, di[, di\", di( 命令来快速改写/删除文本 使用 @: 重复执行上一次 Ex 命令，比如 :nohl, @:, @:, @: SHIFT 相当于移动加速键， w b e 移动光标很慢，但是 W B E 走的很快 移动到行首非空字符时用 0w 命令比 ^ 命令更容易输入 在空白行使用 dip 命令可以删除所有临近的空白行 在空白区使用 viw 可以选择所有空白字符 缩进时使用 \u003e8j \u003e} \u003cap =i} == 会方便很多 越重复的工作，越需要努力的将其自动化 编程时可以使用 [{ 和 ]} 快速在函数间移动 插入模式下，当你发现一个单词写错了，应该多用 CTRL-W 这比  快 插入模式下，CTRL-X CTRL-F 可以方便的补全当前目录的文件名 插入模式下，可用 CTRL-V u 输入 unicode，如 u1234 输入16进制 unicoode 插入模式下，CTRL-R = 可以用来简单计算，比如 =12*3.5/10 会插入 4.2 如果在插入模式下移动光标，那么就不能使用 . 来重复之前的插入了 y d c 命令可以很好结合 f t 和 /X 比如 dt) 和 y/end c d x 命令会自动填充寄存器 \"1 到 \"9 , y 命令会自动填充 \"0 寄存器 用 v 命令选择文本时，可以用 o 掉头选择，有时很有用 ca) 和 yi} 很容易记忆，但是他们等同于 cab yiB 后者很容易输入 写文章时，可以写一段代码块，然后选中后执行 :!python 代码块就会被替换成结果 搜索后经常使用 :nohl 来消除高亮，使用很频繁，可以 map 到  上 搜索时可以用 CTRL-R CTRL-W 插入光标下的单词 Vim 有一千零一种移动光标的方法，有时候就连 H M L 也是很有用的 不需要记忆上一次选择区域，'\u003c 和 '\u003e 可以跳到上次选择的开始和结束 如需编辑同一个文件的不同地方，可以用 :vs 或者 :split 将文件分为两个窗口 有六种方法来改变一个布尔设置: :set list nolist list! invlist list? list\u0026 映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map 当你觉得做某事很低效时，你应该停下来，u u u u 然后思考正确的高效方式来完成 用 y复制文本后，命令模式中 CTRL-R 然后按双引号 \" 可以插入之前复制内容 如果你想全屏阅读帮助的话，使用 :tab help  命令 粘贴文本时应该思考下前后是否包含空格 :x 和 ZZ 命令和 :wq 类似，但是不会写入没有改变的文件，并且更快 多阅读 :h index 学习新的快捷键，让你更加高效 Vim 帮助系统里有一个使用技巧集合，使用 :h tips 阅读 Windows 下的 GVim 可以用 CTRL-INSERT 和 SHIFT-INSERT 操作系统剪贴板 思考题：知道下面控制代码 ^I ^M ^J ^[ ^H ^@ 分别代表什么意思么？  快捷键   C-o： Insert -\u003e Insert Normal Mode\n  C-[ Normal Mode;\n  Visual Mode\n  gv Reselect the last visual selection\n  o Go to other end of highlighted text\n  窗口管理 窗口 窗口划分C-w: s v屏幕分割；\n窗口移动C-w:  w在窗口间进行移动；h/j/k/l焦点移动HJKL位置移动\n窗口关闭C-w: c :clo 关闭激活的窗口；o :on 只保留当前窗口\n窗口大小: C-w = 使窗口等大\n标签页 建立\n:tabe {file}在新标签页中打开文件；:tabc关闭标签页；:tabo只保留当前标签页；C-w T将当前窗口移动到新标签页中。\n切换\n:tabn g t 切换到下一个标签页；:tabp g T切换到上一个标签页；\n重新排列\n:tabmove [N] 将当前标签页移动到第 N 个；如果省略 N, 则移动到最后\nBuffer Buffer 列表\n:ls列出当前激活的 buffer, 其符号含义如下\n % 表示该 buffer 在当前窗口中；# 表示该 buffer 可用通过C-^ :e #切换。 a 已加载并可看见的 buffer; h 已加载但不可见的 hidden buffer + 已修改的 buffer  Buffer 切换\n  \u003cC-^在当前文件和备选文件间切换；\n  :bn :bp :bf :bl next/prev/first/last\n  :b N/name 跳转到指定的 buffer\n  :sb add s to split\n  :bdelete N1 N2 N3 删除 buffer N1 N2 N3; :N,M bdelete 删除第 N 个到第 M 个之间的 buffer.\n  模式 正常模式 (Normal mode) 移动  词间移动：单词开头w b; 单词结尾e ge; 使用大写字符跳过标点。 行间移动：0 ^ $; 使用g前缀作用于 visual line。 文章移动：^b ^f 翻页；{ }段落跳转 行跳转：gg  G 10G f t F T 搜索移动 ; , 重复  操作  C c$: 删除当前位置到行尾的内容 =\u003e Insert Mode s S: 替换当前字符或当前行 =\u003e Insert Mode R r gR gr : 替换模式；使用 g 可将 TAB 当成空格。 g~ gu gU: 切换大小写  在以上操作中，c d y 是“及物动词”， 也就是需要加上操作对象。\ncc dd yy 作用与整行\n命令  !: Filter {motion} lines through an external program *: Search for each occurrence ……",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  2801 ,
+        "wordCount":  2800 ,
         "image": "https://baohengtao.com/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -152,7 +155,7 @@ cc dd yy 作用与整行
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://baohengtao.com/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-04-13T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2022-01-26T20:19:20&#43;08:00" />
+    <meta property="article:modified_time" content="2022-03-15T00:31:50&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -309,7 +312,7 @@ cc dd yy 作用与整行
     
     
         
-        <time datetime="2022-01-26T20:19:20&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.1.26</time>
+        <time datetime="2022-03-15T00:31:50&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.3.15</time>
     
     
     
@@ -340,7 +343,7 @@ cc dd yy 作用与整行
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2801</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2800</span>
     
     
         
@@ -587,9 +590,9 @@ cc dd yy 作用与整行
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">:nmap &lt;space&gt; :echo <span class="s2">&#34;foo&#34;</span>&lt;cr&gt; <span class="s2">&#34;为空格键定义映射
-</span><span class="s2">:nunmap &lt;space&gt; &#34;</span>取消空格键的映射
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">:nmap &lt;space&gt; :echo <span class="s2">&#34;foo&#34;</span>&lt;cr&gt; <span class="s2">&#34;为空格键定义映射
+</span></span></span><span class="line"><span class="cl"><span class="s2">:nunmap &lt;space&gt; &#34;</span>取消空格键的映射
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div></li>
 </ul>
@@ -629,12 +632,12 @@ cc dd yy 作用与整行
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ex" data-lang="ex"><span class="p">:</span><span class="mi">6</span><span class="n">t</span><span class="o">.</span><span class="c1"># 将第 6 行内容复制到当前位置</span>
-<span class="ss">:t6</span> <span class="c1"># 将当前行复制到第六行下方</span>
-<span class="ss">:t</span><span class="o">.</span> <span class="c1"># 复制当前行</span>
-<span class="ss">:t</span><span class="err">$</span> <span class="c1"># 将当前行复制到文章末尾</span>
-<span class="ss">:&#39;&lt;,&#39;</span><span class="o">&gt;</span><span class="n">m0</span> <span class="c1"># 将当前选择区域内容移动到文章开始</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-ex" data-lang="ex"><span class="line"><span class="cl"><span class="p">:</span><span class="mi">6</span><span class="n">t</span><span class="o">.</span><span class="c1"># 将第 6 行内容复制到当前位置</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:t6</span> <span class="c1"># 将当前行复制到第六行下方</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:t</span><span class="o">.</span> <span class="c1"># 复制当前行</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:t</span><span class="err">$</span> <span class="c1"># 将当前行复制到文章末尾</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:&#39;&lt;,&#39;</span><span class="o">&gt;</span><span class="n">m0</span> <span class="c1"># 将当前选择区域内容移动到文章开始</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><strong>Register</strong>:</p>
 <ul>
@@ -655,8 +658,8 @@ cc dd yy 作用与整行
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">:%s/content/copy/g  <span class="c1"># 将 content 换为 copy</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">:%s/content/copy/g  <span class="c1"># 将 content 换为 copy</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="untidied"><a href="#untidied" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:untidied" class="headings">Untidied</a></h1>
 <h3 id="shortcut"><a href="#shortcut" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:shortcut" class="headings">Shortcut</a></h3>
@@ -754,9 +757,9 @@ cc dd yy 作用与整行
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="nx">indent</span><span class="p">,</span><span class="nx">eol</span><span class="p">,</span><span class="nx">start</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">history</span><span class="p">=</span><span class="m">200</span><span class="err">
-</span></code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="nx">indent</span><span class="p">,</span><span class="nx">eol</span><span class="p">,</span><span class="nx">start</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">history</span><span class="p">=</span><span class="m">200</span><span class="err">
+</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="vim-practical"><a href="#vim-practical" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:vim-practical" class="headings">Vim Practical</a></h1>
 <ul>
@@ -791,16 +794,14 @@ cc dd yy 作用与整行
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">set</span> ignorecase <span class="s2">&#34;turn feature on
-</span><span class="s2">set noignorecase &#34;</span>turn feature off
-<span class="nb">set</span> ignorecase! <span class="s2">&#34;toggle the setting
-</span><span class="s2">set ignorecase? &#34;</span>query current state
-<span class="nb">set</span> ignorecase<span class="p">&amp;</span> <span class="s2">&#34;reset to default
-</span><span class="s2">
-</span></code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">set</span> ignorecase <span class="s2">&#34;turn feature on
+</span></span></span><span class="line"><span class="cl"><span class="s2">set noignorecase &#34;</span>turn feature off
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> ignorecase! <span class="s2">&#34;toggle the setting
+</span></span></span><span class="line"><span class="cl"><span class="s2">set ignorecase? &#34;</span>query current state
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> ignorecase<span class="p">&amp;</span> <span class="s2">&#34;reset to default
+</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div>
             </div>
@@ -814,9 +815,9 @@ cc dd yy 作用与整行
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2022-01-26 20:19:20 CST" style="cursor:help">
+        <span title="Updated @ 2022-03-15 00:31:50 &#43;0800" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-01-26</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-01-26</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-03-15</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-03-15</text></g></svg>
         </span></div>
 
 
@@ -827,11 +828,11 @@ cc dd yy 作用与整行
             
                 <div class="post-gitinfo-left">
                     
-                        <div class="gitinfo-item commit"><a href="https://github.com/baohengtao/baohengtao.github.io/commit/459fa2945321e1e49aa0bb037f767c99890c2d90" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon git-icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>459fa29</a></div>
+                        <div class="gitinfo-item commit"><a href="https://github.com/baohengtao/baohengtao.github.io/commit/2a101f612e29d4e8e066763f408f441736b9e49d" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon git-icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>2a101f6</a></div>
                     
                     
                         
-                            <div class="gitinfo-item commit-msg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon msg-icon"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>regular update</div>
+                            <div class="gitinfo-item commit-msg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon msg-icon"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>Update main.yml</div>
                         
                     
                 </div>
@@ -1070,7 +1071,10 @@ cc dd yy 作用与整行
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
