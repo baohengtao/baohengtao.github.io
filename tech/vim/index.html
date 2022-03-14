@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.94.2" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>Vim 手册 | Cooper&#39;s Zone</title>
+
+    <link rel="stylesheet" href="/css/meme.min.d43e5213d9acc9bf232ec4dfff1b701e121d64da68266c63d98e9ecfd293df42.css"/>
+
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.bb07d60f063a9ba6cf9d5caedac3959f57e8d35c012e5aa417cf281144c5bd55.js"></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Cinzel&#43;Decorative:wght@700&amp;family=PT&#43;Serif&#43;Caption&amp;family=Lobster&amp;family=DM&#43;Serif&#43;Text&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Cinzel&#43;Decorative:wght@700&amp;family=PT&#43;Serif&#43;Caption&amp;family=Lobster&amp;family=DM&#43;Serif&#43;Text&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Bao Hengtao" /><meta name="description" content="Tip  使用 CTRL-[ 代替 ，左手小指 CTRL，右手小指 [ 熟练后很方便 SecureCRT 中使用 Vim 8 内嵌终端如看到奇怪字符，使用 :set t_RS= t_SH= 解决 SecureCRT 中使用 NeoVim 如看到奇怪字符，使用 :set guicursor= 解决 * 和 # （以及 g*/g#）是十分重要的查找命令 多使用 ciw, ci[, ci&#34;, ci( 以及 diw, di[, di&#34;, di( 命令来快速改写/删除文本 使用 @: 重复执行上一次 Ex 命令，比如 :nohl, @:, @:, @: SHIFT 相当于移动加速键， w b e 移动光标很慢，但是 W B E 走的很快 移动到行首非空字符时用 0w 命令比 ^ 命令更容易输入 在空白行使用 dip 命令可以删除所有临近的空白行 在空白区使用 viw 可以选择所有空白字符 缩进时使用 &gt;8j &gt;} &lt;ap =i} == 会方便很多 越重复的工作，越需要努力的将其自动化 编程时可以使用 [{ 和 ]} 快速在函数间移动 插入模式下，当你发现一个单词写错了，应该多用 CTRL-W 这比  快 插入模式下，CTRL-X CTRL-F 可以方便的补全当前目录的文件名 插入模式下，可用 CTRL-V u 输入 unicode，如 u1234 输入16进制 unicoode 插入模式下，CTRL-R = 可以用来简单计算，比如 =12*3.5/10 会插入 4.2 如果在插入模式下移动光标，那么就不能使用 . 来重复之前的插入了 y d c 命令可以很好结合 f t 和 /X 比如 dt) 和 y/end c d x 命令会自动填充寄存器 &#34;1 到 &#34;9 , y 命令会自动填充 &#34;0 寄存器 用 v 命令选择文本时，可以用 o 掉头选择，有时很有用 ca) 和 yi} 很容易记忆，但是他们等同于 cab yiB 后者很容易输入 写文章时，可以写一段代码块，然后选中后执行 :!python 代码块就会被替换成结果 搜索后经常使用 :nohl 来消除高亮，使用很频繁，可以 map 到  上 搜索时可以用 CTRL-R CTRL-W 插入光标下的单词 Vim 有一千零一种移动光标的方法，有时候就连 H M L 也是很有用的 不需要记忆上一次选择区域，&#39;&lt; 和 &#39;&gt; 可以跳到上次选择的开始和结束 如需编辑同一个文件的不同地方，可以用 :vs 或者 :split 将文件分为两个窗口 有六种方法来改变一个布尔设置: :set list nolist list! invlist list? list&amp; 映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map 当你觉得做某事很低效时，你应该停下来，u u u u 然后思考正确的高效方式来完成 用 y复制文本后，命令模式中 CTRL-R 然后按双引号 &#34; 可以插入之前复制内容 如果你想全屏阅读帮助的话，使用 :tab help  命令 粘贴文本时应该思考下前后是否包含空格 :x 和 ZZ 命令和 :wq 类似，但是不会写入没有改变的文件，并且更快 多阅读 :h index 学习新的快捷键，让你更加高效 Vim 帮助系统里有一个使用技巧集合，使用 :h tips 阅读 Windows 下的 GVim 可以用 CTRL-INSERT 和 SHIFT-INSERT 操作系统剪贴板 思考题：知道下面控制代码 ^I ^M ^J ^[ ^H ^@ 分别代表什么意思么？  快捷键   C-o： Insert -&gt; Insert Normal Mode
+  C-[ Normal Mode;
+  Visual Mode
+  gv Reselect the last visual selection
+  o Go to other end of highlighted text
+  窗口管理 窗口 窗口划分C-w: s v屏幕分割；
+窗口移动C-w:  w在窗口间进行移动；h/j/k/l焦点移动HJKL位置移动
+窗口关闭C-w: c :clo 关闭激活的窗口；o :on 只保留当前窗口
+窗口大小: C-w = 使窗口等大
+标签页 建立
+:tabe {file}在新标签页中打开文件；:tabc关闭标签页；:tabo只保留当前标签页；C-w T将当前窗口移动到新标签页中。
+切换
+:tabn g t 切换到下一个标签页；:tabp g T切换到上一个标签页；
+重新排列
+:tabmove [N] 将当前标签页移动到第 N 个；如果省略 N, 则移动到最后
+Buffer Buffer 列表
+:ls列出当前激活的 buffer, 其符号含义如下
+ % 表示该 buffer 在当前窗口中；# 表示该 buffer 可用通过C-^ :e #切换。 a 已加载并可看见的 buffer; h 已加载但不可见的 hidden buffer &#43; 已修改的 buffer  Buffer 切换
+  &lt;C-^在当前文件和备选文件间切换；
+  :bn :bp :bf :bl next/prev/first/last
+  :b N/name 跳转到指定的 buffer
+  :sb add s to split
+  :bdelete N1 N2 N3 删除 buffer N1 N2 N3; :N,M bdelete 删除第 N 个到第 M 个之间的 buffer.
+  模式 正常模式 (Normal mode) 移动  词间移动：单词开头w b; 单词结尾e ge; 使用大写字符跳过标点。 行间移动：0 ^ $; 使用g前缀作用于 visual line。 文章移动：^b ^f 翻页；{ }段落跳转 行跳转：gg  G 10G f t F T 搜索移动 ; , 重复  操作  C c$: 删除当前位置到行尾的内容 =&gt; Insert Mode s S: 替换当前字符或当前行 =&gt; Insert Mode R r gR gr : 替换模式；使用 g 可将 TAB 当成空格。 g~ gu gU: 切换大小写  在以上操作中，c d y 是“及物动词”， 也就是需要加上操作对象。
+cc dd yy 作用与整行
+命令  !: Filter {motion} lines through an external program *: Search for each occurrence ……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Cooper&#39;s Zone" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Cooper&#39;s Zone" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://baohengtao.com/tech/vim/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2021-04-13T00:00:00+00:00",
+        "dateModified": "2022-03-15T00:08:33+08:00",
+        "url": "https://baohengtao.com/tech/vim/",
+        "headline": "Vim 手册",
+        "description": "Tip  使用 CTRL-[ 代替 ，左手小指 CTRL，右手小指 [ 熟练后很方便 SecureCRT 中使用 Vim 8 内嵌终端如看到奇怪字符，使用 :set t_RS= t_SH= 解决 SecureCRT 中使用 NeoVim 如看到奇怪字符，使用 :set guicursor= 解决 * 和 # （以及 g*/g#）是十分重要的查找命令 多使用 ciw, ci[, ci\", ci( 以及 diw, di[, di\", di( 命令来快速改写/删除文本 使用 @: 重复执行上一次 Ex 命令，比如 :nohl, @:, @:, @: SHIFT 相当于移动加速键， w b e 移动光标很慢，但是 W B E 走的很快 移动到行首非空字符时用 0w 命令比 ^ 命令更容易输入 在空白行使用 dip 命令可以删除所有临近的空白行 在空白区使用 viw 可以选择所有空白字符 缩进时使用 \u003e8j \u003e} \u003cap =i} == 会方便很多 越重复的工作，越需要努力的将其自动化 编程时可以使用 [{ 和 ]} 快速在函数间移动 插入模式下，当你发现一个单词写错了，应该多用 CTRL-W 这比  快 插入模式下，CTRL-X CTRL-F 可以方便的补全当前目录的文件名 插入模式下，可用 CTRL-V u 输入 unicode，如 u1234 输入16进制 unicoode 插入模式下，CTRL-R = 可以用来简单计算，比如 =12*3.5/10 会插入 4.2 如果在插入模式下移动光标，那么就不能使用 . 来重复之前的插入了 y d c 命令可以很好结合 f t 和 /X 比如 dt) 和 y/end c d x 命令会自动填充寄存器 \"1 到 \"9 , y 命令会自动填充 \"0 寄存器 用 v 命令选择文本时，可以用 o 掉头选择，有时很有用 ca) 和 yi} 很容易记忆，但是他们等同于 cab yiB 后者很容易输入 写文章时，可以写一段代码块，然后选中后执行 :!python 代码块就会被替换成结果 搜索后经常使用 :nohl 来消除高亮，使用很频繁，可以 map 到  上 搜索时可以用 CTRL-R CTRL-W 插入光标下的单词 Vim 有一千零一种移动光标的方法，有时候就连 H M L 也是很有用的 不需要记忆上一次选择区域，'\u003c 和 '\u003e 可以跳到上次选择的开始和结束 如需编辑同一个文件的不同地方，可以用 :vs 或者 :split 将文件分为两个窗口 有六种方法来改变一个布尔设置: :set list nolist list! invlist list? list\u0026 映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map 当你觉得做某事很低效时，你应该停下来，u u u u 然后思考正确的高效方式来完成 用 y复制文本后，命令模式中 CTRL-R 然后按双引号 \" 可以插入之前复制内容 如果你想全屏阅读帮助的话，使用 :tab help  命令 粘贴文本时应该思考下前后是否包含空格 :x 和 ZZ 命令和 :wq 类似，但是不会写入没有改变的文件，并且更快 多阅读 :h index 学习新的快捷键，让你更加高效 Vim 帮助系统里有一个使用技巧集合，使用 :h tips 阅读 Windows 下的 GVim 可以用 CTRL-INSERT 和 SHIFT-INSERT 操作系统剪贴板 思考题：知道下面控制代码 ^I ^M ^J ^[ ^H ^@ 分别代表什么意思么？  快捷键   C-o： Insert -\u003e Insert Normal Mode\n  C-[ Normal Mode;\n  Visual Mode\n  gv Reselect the last visual selection\n  o Go to other end of highlighted text\n  窗口管理 窗口 窗口划分C-w: s v屏幕分割；\n窗口移动C-w:  w在窗口间进行移动；h/j/k/l焦点移动HJKL位置移动\n窗口关闭C-w: c :clo 关闭激活的窗口；o :on 只保留当前窗口\n窗口大小: C-w = 使窗口等大\n标签页 建立\n:tabe {file}在新标签页中打开文件；:tabc关闭标签页；:tabo只保留当前标签页；C-w T将当前窗口移动到新标签页中。\n切换\n:tabn g t 切换到下一个标签页；:tabp g T切换到上一个标签页；\n重新排列\n:tabmove [N] 将当前标签页移动到第 N 个；如果省略 N, 则移动到最后\nBuffer Buffer 列表\n:ls列出当前激活的 buffer, 其符号含义如下\n % 表示该 buffer 在当前窗口中；# 表示该 buffer 可用通过C-^ :e #切换。 a 已加载并可看见的 buffer; h 已加载但不可见的 hidden buffer + 已修改的 buffer  Buffer 切换\n  \u003cC-^在当前文件和备选文件间切换；\n  :bn :bp :bf :bl next/prev/first/last\n  :b N/name 跳转到指定的 buffer\n  :sb add s to split\n  :bdelete N1 N2 N3 删除 buffer N1 N2 N3; :N,M bdelete 删除第 N 个到第 M 个之间的 buffer.\n  模式 正常模式 (Normal mode) 移动  词间移动：单词开头w b; 单词结尾e ge; 使用大写字符跳过标点。 行间移动：0 ^ $; 使用g前缀作用于 visual line。 文章移动：^b ^f 翻页；{ }段落跳转 行跳转：gg  G 10G f t F T 搜索移动 ; , 重复  操作  C c$: 删除当前位置到行尾的内容 =\u003e Insert Mode s S: 替换当前字符或当前行 =\u003e Insert Mode R r gR gr : 替换模式；使用 g 可将 TAB 当成空格。 g~ gu gU: 切换大小写  在以上操作中，c d y 是“及物动词”， 也就是需要加上操作对象。\ncc dd yy 作用与整行\n命令  !: Filter {motion} lines through an external program *: Search for each occurrence ……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "tech",
+        "wordCount":  2800 ,
+        "image": "https://baohengtao.com/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "image": "https://baohengtao.com/icons/apple-touch-icon.png",
+            "url": "baohengtao.com",
+            "name": "Bao Hengtao"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cooper's Zone",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://baohengtao.com/icons/apple-touch-icon.png"
+            },
+            "url": "https://baohengtao.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://baohengtao.com/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@baohengtao" />
+<meta name="twitter:creator" content="@baohengtao" />
+
+    
+
+
+
+<meta property="og:title" content="Vim 手册" />
+<meta property="og:description" content="Tip  使用 CTRL-[ 代替 ，左手小指 CTRL，右手小指 [ 熟练后很方便 SecureCRT 中使用 Vim 8 内嵌终端如看到奇怪字符，使用 :set t_RS= t_SH= 解决 SecureCRT 中使用 NeoVim 如看到奇怪字符，使用 :set guicursor= 解决 * 和 # （以及 g*/g#）是十分重要的查找命令 多使用 ciw, ci[, ci&#34;, ci( 以及 diw, di[, di&#34;, di( 命令来快速改写/删除文本 使用 @: 重复执行上一次 Ex 命令，比如 :nohl, @:, @:, @: SHIFT 相当于移动加速键， w b e 移动光标很慢，但是 W B E 走的很快 移动到行首非空字符时用 0w 命令比 ^ 命令更容易输入 在空白行使用 dip 命令可以删除所有临近的空白行 在空白区使用 viw 可以选择所有空白字符 缩进时使用 &gt;8j &gt;} &lt;ap =i} == 会方便很多 越重复的工作，越需要努力的将其自动化 编程时可以使用 [{ 和 ]} 快速在函数间移动 插入模式下，当你发现一个单词写错了，应该多用 CTRL-W 这比  快 插入模式下，CTRL-X CTRL-F 可以方便的补全当前目录的文件名 插入模式下，可用 CTRL-V u 输入 unicode，如 u1234 输入16进制 unicoode 插入模式下，CTRL-R = 可以用来简单计算，比如 =12*3.5/10 会插入 4.2 如果在插入模式下移动光标，那么就不能使用 . 来重复之前的插入了 y d c 命令可以很好结合 f t 和 /X 比如 dt) 和 y/end c d x 命令会自动填充寄存器 &#34;1 到 &#34;9 , y 命令会自动填充 &#34;0 寄存器 用 v 命令选择文本时，可以用 o 掉头选择，有时很有用 ca) 和 yi} 很容易记忆，但是他们等同于 cab yiB 后者很容易输入 写文章时，可以写一段代码块，然后选中后执行 :!python 代码块就会被替换成结果 搜索后经常使用 :nohl 来消除高亮，使用很频繁，可以 map 到  上 搜索时可以用 CTRL-R CTRL-W 插入光标下的单词 Vim 有一千零一种移动光标的方法，有时候就连 H M L 也是很有用的 不需要记忆上一次选择区域，&#39;&lt; 和 &#39;&gt; 可以跳到上次选择的开始和结束 如需编辑同一个文件的不同地方，可以用 :vs 或者 :split 将文件分为两个窗口 有六种方法来改变一个布尔设置: :set list nolist list! invlist list? list&amp; 映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map 当你觉得做某事很低效时，你应该停下来，u u u u 然后思考正确的高效方式来完成 用 y复制文本后，命令模式中 CTRL-R 然后按双引号 &#34; 可以插入之前复制内容 如果你想全屏阅读帮助的话，使用 :tab help  命令 粘贴文本时应该思考下前后是否包含空格 :x 和 ZZ 命令和 :wq 类似，但是不会写入没有改变的文件，并且更快 多阅读 :h index 学习新的快捷键，让你更加高效 Vim 帮助系统里有一个使用技巧集合，使用 :h tips 阅读 Windows 下的 GVim 可以用 CTRL-INSERT 和 SHIFT-INSERT 操作系统剪贴板 思考题：知道下面控制代码 ^I ^M ^J ^[ ^H ^@ 分别代表什么意思么？  快捷键   C-o： Insert -&gt; Insert Normal Mode
+  C-[ Normal Mode;
+  Visual Mode
+  gv Reselect the last visual selection
+  o Go to other end of highlighted text
+  窗口管理 窗口 窗口划分C-w: s v屏幕分割；
+窗口移动C-w:  w在窗口间进行移动；h/j/k/l焦点移动HJKL位置移动
+窗口关闭C-w: c :clo 关闭激活的窗口；o :on 只保留当前窗口
+窗口大小: C-w = 使窗口等大
+标签页 建立
+:tabe {file}在新标签页中打开文件；:tabc关闭标签页；:tabo只保留当前标签页；C-w T将当前窗口移动到新标签页中。
+切换
+:tabn g t 切换到下一个标签页；:tabp g T切换到上一个标签页；
+重新排列
+:tabmove [N] 将当前标签页移动到第 N 个；如果省略 N, 则移动到最后
+Buffer Buffer 列表
+:ls列出当前激活的 buffer, 其符号含义如下
+ % 表示该 buffer 在当前窗口中；# 表示该 buffer 可用通过C-^ :e #切换。 a 已加载并可看见的 buffer; h 已加载但不可见的 hidden buffer &#43; 已修改的 buffer  Buffer 切换
+  &lt;C-^在当前文件和备选文件间切换；
+  :bn :bp :bf :bl next/prev/first/last
+  :b N/name 跳转到指定的 buffer
+  :sb add s to split
+  :bdelete N1 N2 N3 删除 buffer N1 N2 N3; :N,M bdelete 删除第 N 个到第 M 个之间的 buffer.
+  模式 正常模式 (Normal mode) 移动  词间移动：单词开头w b; 单词结尾e ge; 使用大写字符跳过标点。 行间移动：0 ^ $; 使用g前缀作用于 visual line。 文章移动：^b ^f 翻页；{ }段落跳转 行跳转：gg  G 10G f t F T 搜索移动 ; , 重复  操作  C c$: 删除当前位置到行尾的内容 =&gt; Insert Mode s S: 替换当前字符或当前行 =&gt; Insert Mode R r gR gr : 替换模式；使用 g 可将 TAB 当成空格。 g~ gu gU: 切换大小写  在以上操作中，c d y 是“及物动词”， 也就是需要加上操作对象。
+cc dd yy 作用与整行
+命令  !: Filter {motion} lines through an external program *: Search for each occurrence ……" />
+<meta property="og:url" content="https://baohengtao.com/tech/vim/" />
+<meta property="og:site_name" content="Cooper&#39;s Zone" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://baohengtao.com/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2021-04-13T00:00:00&#43;00:00" />
+    <meta property="article:modified_time" content="2022-03-15T00:08:33&#43;08:00" />
+    
+    <meta property="article:section" content="tech" />
+
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+
+
+    
+    
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Cooper&#39;s Zone</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/life/"><span class="menu-item-name">生活</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/study/"><span class="menu-item-name">芝士</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tech/"><span class="menu-item-name">技术</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tags/"><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+            
+        
+            
+                <li class="menu-item search-item">
+                        <form id="search" class="search" role="search">
+    <label for="search-input"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon search-icon"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></label>
+    <input type="search" id="search-input" class="search-input">
+</form>
+
+<template id="search-result" hidden>
+    <article class="content post">
+        <h2 class="post-title"><a class="summary-title-link"></a></h2>
+        <summary class="summary"></summary>
+        <div class="read-more-container">
+            <a class="read-more-link">阅读更多 »</a>
+        </div>
+    </article>
+</template>
+
+                    </li>
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-small-caps="true" data-align="justify" data-type="tech" data-toc-num="true">
+
+            <h1 class="post-title p-name">Vim 手册</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2021-04-13T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.4.13</time>
+    
+    
+        
+        <time datetime="2022-03-15T00:08:33&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.3.15</time>
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                
+            
+            
+            
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/tech/" class="category-link p-category">Tech</a></span>
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2800</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;6&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+    
+</div>
+
+            
+
+            <nav class="contents">
+  <ol class="toc">
+    <li><a id="contents:tip" href="#tip">Tip</a></li>
+    <li><a id="contents:快捷键" href="#快捷键">快捷键</a></li>
+    <li><a id="contents:窗口管理" href="#窗口管理">窗口管理</a>
+      <ol>
+        <li><a id="contents:窗口" href="#窗口">窗口</a></li>
+        <li><a id="contents:标签页" href="#标签页">标签页</a></li>
+        <li><a id="contents:buffer" href="#buffer">Buffer</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:模式" href="#模式">模式</a>
+      <ol>
+        <li><a id="contents:正常模式-normal-mode" href="#正常模式-normal-mode">正常模式 (Normal mode)</a>
+          <ol>
+            <li><a id="contents:移动" href="#移动">移动</a></li>
+            <li><a id="contents:操作" href="#操作">操作</a></li>
+            <li><a id="contents:命令" href="#命令">命令</a></li>
+            <li><a id="contents:跳转" href="#跳转"><strong>跳转</strong></a></li>
+            <li><a id="contents:替换" href="#替换">替换</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a id="contents:快捷键-1" href="#快捷键-1">快捷键</a></li>
+    <li><a id="contents:自定义快捷键" href="#自定义快捷键">自定义快捷键</a></li>
+    <li><a id="contents:command-mode" href="#command-mode">Command mode</a></li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a id="contents:shortcut" href="#shortcut">Shortcut</a></li>
+        <li><a id="contents:excute-shell-command" href="#excute-shell-command">Excute shell command</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:files" href="#files">Files</a>
+      <ol>
+        <li><a id="contents:工作目录" href="#工作目录">工作目录</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:config" href="#config">Config</a></li>
+  </ol>
+</nav><div class="post-body e-content">
+                <h2 id="tip"><a href="#tip" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:tip" class="headings">Tip</a></h2>
+<ul>
+<li>使用 CTRL-[ 代替 <ESC>，左手小指 CTRL，右手小指 [ 熟练后很方便</li>
+<li>SecureCRT 中使用 Vim 8 内嵌终端如看到奇怪字符，使用 :set t_RS= t_SH= 解决</li>
+<li>SecureCRT 中使用 NeoVim 如看到奇怪字符，使用 :set guicursor= 解决</li>
+<li>* 和 # （以及 g*/g#）是十分重要的查找命令</li>
+<li>多使用 ciw, ci[, ci&quot;, ci( 以及 diw, di[, di&quot;, di( 命令来快速改写/删除文本</li>
+<li>使用 @: 重复执行上一次 Ex 命令，比如 :nohl<cr>, @:, @:, @:</li>
+<li>SHIFT 相当于移动加速键， w b e 移动光标很慢，但是 W B E 走的很快</li>
+<li>移动到行首非空字符时用 0w 命令比 ^ 命令更容易输入</li>
+<li>在空白行使用 dip 命令可以删除所有临近的空白行</li>
+<li>在空白区使用 viw 可以选择所有空白字符</li>
+<li>缩进时使用 &gt;8j  &gt;}  &lt;ap  =i}  == 会方便很多</li>
+<li>越重复的工作，越需要努力的将其自动化</li>
+<li>编程时可以使用 [{ 和 ]} 快速在函数间移动</li>
+<li>插入模式下，当你发现一个单词写错了，应该多用 CTRL-W 这比 <BackSpace> 快</li>
+<li>插入模式下，CTRL-X CTRL-F 可以方便的补全当前目录的文件名</li>
+<li>插入模式下，可用 CTRL-V u 输入 unicode，如 <C-V>u1234 输入16进制 unicoode</li>
+<li>插入模式下，CTRL-R = 可以用来简单计算，比如 <C-R>=12*3.5/10<cr> 会插入 4.2</li>
+<li>如果在插入模式下移动光标，那么就不能使用 . 来重复之前的插入了</li>
+<li>y d c 命令可以很好结合 f t 和 /X 比如 dt) 和 y/end<cr></li>
+<li>c d x 命令会自动填充寄存器 &quot;1 到 &quot;9 , y 命令会自动填充 &quot;0 寄存器</li>
+<li>用 v 命令选择文本时，可以用 o 掉头选择，有时很有用</li>
+<li>ca) 和 yi} 很容易记忆，但是他们等同于 cab yiB 后者很容易输入</li>
+<li>写文章时，可以写一段代码块，然后选中后执行 :!python 代码块就会被替换成结果</li>
+<li>搜索后经常使用 :nohl 来消除高亮，使用很频繁，可以 map 到 <BackSpace> 上</li>
+<li>搜索时可以用 CTRL-R CTRL-W 插入光标下的单词</li>
+<li>Vim 有一千零一种移动光标的方法，有时候就连 H M L 也是很有用的</li>
+<li>不需要记忆上一次选择区域，'&lt; 和 '&gt; 可以跳到上次选择的开始和结束</li>
+<li>如需编辑同一个文件的不同地方，可以用 :vs 或者 :split 将文件分为两个窗口</li>
+<li>有六种方法来改变一个布尔设置: :set list nolist list! invlist list? list&amp;</li>
+<li>映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map</li>
+<li>当你觉得做某事很低效时，你应该停下来，u u u u 然后思考正确的高效方式来完成</li>
+<li>用 y复制文本后，命令模式中 CTRL-R 然后按双引号 &quot; 可以插入之前复制内容</li>
+<li>如果你想全屏阅读帮助的话，使用 :tab help <keyword> 命令</li>
+<li>粘贴文本时应该思考下前后是否包含空格</li>
+<li>:x 和 ZZ 命令和 :wq 类似，但是不会写入没有改变的文件，并且更快</li>
+<li>多阅读 :h index 学习新的快捷键，让你更加高效</li>
+<li>Vim 帮助系统里有一个使用技巧集合，使用 :h tips 阅读</li>
+<li>Windows 下的 GVim 可以用 CTRL-INSERT 和 SHIFT-INSERT 操作系统剪贴板</li>
+<li>思考题：知道下面控制代码 ^I ^M ^J ^[ ^H ^@ 分别代表什么意思么？</li>
+</ul>
+<h2 id="快捷键"><a href="#快捷键" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:快捷键" class="headings">快捷键</a></h2>
+<ul>
+<li>
+<p><code>C-o</code>： Insert -&gt; Insert Normal Mode</p>
+</li>
+<li>
+<p><code>C-[</code> Normal Mode;</p>
+</li>
+</ul>
+<p><strong>Visual Mode</strong></p>
+<ul>
+<li>
+<p><code>gv</code> Reselect the last visual selection</p>
+</li>
+<li>
+<p><code>o</code> Go to other end of highlighted text</p>
+</li>
+</ul>
+<h2 id="窗口管理"><a href="#窗口管理" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:窗口管理" class="headings">窗口管理</a></h2>
+<h3 id="窗口"><a href="#窗口" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:窗口" class="headings">窗口</a></h3>
+<p><strong>窗口划分<code>C-w</code>:</strong> <code>s</code> <code>v</code>屏幕分割；</p>
+<p><strong>窗口移动<code>C-w</code>:</strong> <code> w</code>在窗口间进行移动；<code>h/j/k/l</code>焦点移动<code>HJKL</code>位置移动</p>
+<p><strong>窗口关闭<code>C-w</code>:</strong> <code>c</code> <code>:clo</code> 关闭激活的窗口；<code>o</code> <code>:on</code> 只保留当前窗口</p>
+<p><strong>窗口大小</strong>: <code>C-w =</code> 使窗口等大</p>
+<h3 id="标签页"><a href="#标签页" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:标签页" class="headings">标签页</a></h3>
+<p><strong>建立</strong></p>
+<p><code>:tabe {file}</code>在新标签页中打开文件；<code>:tabc</code>关闭标签页；<code>:tabo</code>只保留当前标签页；<code>C-w T</code>将当前窗口移动到新标签页中。</p>
+<p><strong>切换</strong></p>
+<p><code>:tabn</code> <code>g t</code> 切换到下一个标签页；<code>:tabp</code> <code>g T</code>切换到上一个标签页；</p>
+<p><strong>重新排列</strong></p>
+<p><code>:tabmove [N]</code> 将当前标签页移动到第 N 个；如果省略 N, 则移动到最后</p>
+<h3 id="buffer"><a href="#buffer" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:buffer" class="headings">Buffer</a></h3>
+<p><strong>Buffer 列表</strong></p>
+<p><code>:ls</code>列出当前激活的 buffer, 其符号含义如下</p>
+<ul>
+<li>% 表示该 buffer 在当前窗口中；# 表示该 buffer 可用通过<code>C-^</code> <code>:e #</code>切换。</li>
+<li>a 已加载并可看见的 buffer; h 已加载但不可见的 hidden buffer</li>
+<li>+ 已修改的 buffer</li>
+</ul>
+<p><strong>Buffer 切换</strong></p>
+<ul>
+<li>
+<p><code>&lt;C-^</code>在当前文件和备选文件间切换；</p>
+</li>
+<li>
+<p><code>:bn</code> <code>:bp</code> <code>:bf</code> <code>:bl</code> next/prev/first/last</p>
+</li>
+<li>
+<p><code>:b N/name</code> 跳转到指定的 buffer</p>
+</li>
+<li>
+<p><code>:sb</code> add <code>s</code> to split</p>
+</li>
+<li>
+<p><code>:bdelete N1 N2 N3</code> 删除 buffer N1 N2 N3; <code>:N,M bdelete</code> 删除第 N 个到第 M 个之间的 buffer.</p>
+</li>
+</ul>
+<h2 id="模式"><a href="#模式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:模式" class="headings">模式</a></h2>
+<h3 id="正常模式-normal-mode"><a href="#正常模式-normal-mode" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:正常模式-normal-mode" class="headings">正常模式 (Normal mode)</a></h3>
+<h4 id="移动"><a href="#移动" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:移动" class="headings">移动</a></h4>
+<ul>
+<li>词间移动：单词开头<code>w</code> <code>b</code>; 单词结尾<code>e</code> <code>ge</code>; 使用大写字符跳过标点。</li>
+<li>行间移动：<code>0</code> <code>^</code> <code>$</code>; 使用<code>g</code>前缀作用于 visual line。</li>
+<li>文章移动：<code>^b</code> <code>^f</code> 翻页；<code>{</code> <code>}</code>段落跳转</li>
+<li>行跳转：<code>gg </code> <code>G</code> <code>10G</code></li>
+<li><code>f</code> <code>t</code>  <code>F</code> <code>T</code> 搜索移动 <code>;</code> <code>,</code> 重复</li>
+</ul>
+<h4 id="操作"><a href="#操作" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:操作" class="headings">操作</a></h4>
+<ul>
+<li><code>C</code> <code>c$</code>: 删除当前位置到行尾的内容 =&gt; <strong>Insert Mode</strong></li>
+<li><code>s</code> <code>S</code>: 替换当前字符或当前行 =&gt; <strong>Insert Mode</strong></li>
+<li><code>R</code> <code>r</code> <code>gR</code> <code>gr</code> : 替换模式；使用 <code>g</code> 可将 TAB 当成空格。</li>
+<li><code>g~</code> <code>gu</code> <code>gU</code>: 切换大小写</li>
+</ul>
+<p>在以上操作中，<code>c</code> <code>d</code> <code>y</code> 是“及物动词”， 也就是需要加上操作对象。</p>
+<p><code>cc</code> <code>dd</code> <code>yy</code> 作用与整行</p>
+<h4 id="命令"><a href="#命令" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:命令" class="headings">命令</a></h4>
+<ul>
+<li><code>!</code>: Filter {motion} lines through an external program</li>
+<li><code>*</code>: Search for each occurrence</li>
+</ul>
+<p><strong>帮助</strong></p>
+<ul>
+<li><code>:help w</code></li>
+<li><code>:help c_CTRL-D</code></li>
+<li><code>:help insert-index</code></li>
+<li><code>:help user-manual</code></li>
+</ul>
+<h4 id="跳转"><a href="#跳转" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:跳转" class="headings"><strong>跳转</strong></a></h4>
+<ul>
+<li>
+<p><code>/</code> <code>?</code> 搜索；<code>n</code> <code>N</code> 跳转</p>
+</li>
+<li>
+<p><code>C-o</code> <code>C-I</code> 回到之前的位置（后退）; 回到之后的位置（前进）</p>
+</li>
+<li>
+<p><code>%</code> 在匹配的括号间跳转</p>
+</li>
+</ul>
+<h4 id="替换"><a href="#替换" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:替换" class="headings">替换</a></h4>
+<ul>
+<li><code>:[range]s/old/new</code> 只替换每行出现的第一个</li>
+<li><code>:[range]s/old/new/g</code> 全局替换</li>
+<li><code>:[range]s/old/new/gc</code> 替换前确认</li>
+</ul>
+<h2 id="快捷键-1"><a href="#快捷键-1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:快捷键-1" class="headings">快捷键</a></h2>
+<ul>
+<li><code>C-o</code> 回到之前光标在的位置；</li>
+<li><code>C-g</code> Echoes the name and status of the current file</li>
+</ul>
+<p><strong>Insert Mode</strong></p>
+<ul>
+<li><code>C-h</code> <code>C-w</code> <code>C-u</code>：删除操作</li>
+</ul>
+<p><strong>Visual Mode</strong></p>
+<ul>
+<li><code>C-g</code> Switch between <strong>VISUAL</strong> and <strong>SELECT</strong> mode</li>
+</ul>
+<h2 id="自定义快捷键"><a href="#自定义快捷键" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:自定义快捷键" class="headings">自定义快捷键</a></h2>
+<ul>
+<li>
+<p><code>map</code> <code>noremap</code> 适用于 normal, visial, operator-pending</p>
+</li>
+<li>
+<p><code>nmap</code> <code>nnoremap</code>适用与 normal;</p>
+</li>
+<li>
+<p><code>xmap</code> <code>xnoremap</code> 适用于 visual;</p>
+</li>
+<li>
+<p><code>cmap</code> <code>cnoremap</code>适用于 command-line;</p>
+</li>
+<li>
+<p><code>omap</code> <code>onoremap</code>适用于 operator-pending</p>
+</li>
+<li>
+<p><code>imap</code> <code>inoremap</code>适用于 insert</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">:nmap &lt;space&gt; :echo <span class="s2">&#34;foo&#34;</span>&lt;cr&gt; <span class="s2">&#34;为空格键定义映射
+</span></span></span><span class="line"><span class="cl"><span class="s2">:nunmap &lt;space&gt; &#34;</span>取消空格键的映射
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div></li>
+</ul>
+<h2 id="command-mode"><a href="#command-mode" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:command-mode" class="headings">Command mode</a></h2>
+<p>补全：<code>Ctrl-D</code></p>
+<p><strong>执行 Shell 命令</strong></p>
+<ul>
+<li><code>:!command</code> 执行 shell 命令</li>
+<li><code>:!rm FILENAME</code> 移除文件</li>
+<li><code>v motion :w FILENAME</code> 将选中的内容写入到文件中</li>
+<li><code>:w FILENAME</code> 将所有内容写入到文件中</li>
+<li><code>:r FILENAME</code> 将文件内容写入当前 buffer 中</li>
+<li><code>:r !ls</code> 将 shell 命令的返回结果写入文件中</li>
+<li>复制粘贴：写入剪切板<code>:w !pbcopy</code> <code>:%w !pbcopy</code> 读取剪切板 <code>:r !pbpaste</code></li>
+</ul>
+<p><strong>地址和范围</strong></p>
+<p>使用<code>:star, end</code>的方式指定<code>:[range]</code>. 其地址的声明如下：</p>
+<ul>
+<li>
+<p><code>0</code> <code>1</code>  <code>$</code> <code>.</code>: 第 0 行、第 1 行、最后一行、当前行。</p>
+</li>
+<li>
+<p><code>'m</code>: Line containing mark m</p>
+</li>
+<li>
+<p><code>:%</code>: 指代整个文件，<code>:1,$</code>的缩写</p>
+</li>
+</ul>
+<p><strong>复制</strong>和<strong>移动</strong>:</p>
+<p>复制命令为<code>copy</code>，可缩写为<code>co</code> <code>t</code>；移动命令为<code>move</code>, 可缩写为<code>m</code></p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ex" data-lang="ex"><span class="line"><span class="cl"><span class="p">:</span><span class="mi">6</span><span class="n">t</span><span class="o">.</span><span class="c1"># 将第 6 行内容复制到当前位置</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:t6</span> <span class="c1"># 将当前行复制到第六行下方</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:t</span><span class="o">.</span> <span class="c1"># 复制当前行</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:t</span><span class="err">$</span> <span class="c1"># 将当前行复制到文章末尾</span>
+</span></span><span class="line"><span class="cl"><span class="ss">:&#39;&lt;,&#39;</span><span class="o">&gt;</span><span class="n">m0</span> <span class="c1"># 将当前选择区域内容移动到文章开始</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><strong>Register</strong>:</p>
+<ul>
+<li><code>:[range]delete [x]</code>删除；<code>:[range]yank [x]</code>复制；<code>:[line]put [x]</code>粘贴；<code>:[range]join</code> 合并</li>
+<li><code>:[range]normal {commands}</code>:Execute Normal mode {commands}</li>
+<li><code>:[range]global/{pattern}/[cmd]</code>:Execute the Ex command [cmd] on all specified lines where the {pattern} matches</li>
+<li>注册区域
+<ul>
+<li><code>⌃r0</code>  paste the text that just yanked.</li>
+<li><code>⌃r=</code> Use expression register do simple arithmetic</li>
+</ul>
+</li>
+</ul>
+<p><strong>替换</strong>：</p>
+<p>替换命令为<code>:[range]s[ubstitute]/{pattern}/{string}/[flags]</code>, 它将符合{pattern}的内容替换为{string}. 该操作逐行展开。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">:%s/content/copy/g  <span class="c1"># 将 content 换为 copy</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><h1 id="untidied"><a href="#untidied" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:untidied" class="headings">Untidied</a></h1>
+<h3 id="shortcut"><a href="#shortcut" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:shortcut" class="headings">Shortcut</a></h3>
+<ul>
+<li>
+<p><code>&lt;C-d&gt;</code>: Reveal a list of possible completions</p>
+</li>
+<li>
+<p><code>&lt;Tab&gt;</code>: Autocomplete commands</p>
+</li>
+<li>
+<p><code>&lt;C-r&gt;&lt;C-w&gt;</code> : Copy the word under the cursor and inserts it at the command-line prompt</p>
+</li>
+<li>
+<p><code>q:</code>             : Open the command-line window with history of Ex commands</p>
+</li>
+<li>
+<p><code>q/</code>             : Open the command-line window with history of searches</p>
+</li>
+<li>
+<p><code>ctrl-f</code>         : Switch from Command-Line mode to the command-line window</p>
+</li>
+</ul>
+<h3 id="excute-shell-command"><a href="#excute-shell-command" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:excute-shell-command" class="headings">Excute shell command</a></h3>
+<ul>
+<li><code>:!{cmd}</code>                    : Execute {cmd} with the shell</li>
+<li>:!bash %                   : Execute current bash file. % symbol is shorthand for the current file name.</li>
+<li><code>:read !{cmd}</code>               : Execute {cmd} in the shell and insert its standard output below the cursor</li>
+<li>:[range]write !{cmd}       : Execute {cmd} in the shell with [range] lines as standard input</li>
+<li><code>:[range]!{filter}</code>          : Filter the specified [range] through external program {filter}. <strong>!{motion}</strong> operator command drop us into Command-Line mode and prepopulates the [range] with the lines covered by the specified {motion}</li>
+</ul>
+<h2 id="files"><a href="#files" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:files" class="headings">Files</a></h2>
+<ul>
+<li>Buffer     :</li>
+<li><code>:args</code>      :</li>
+<li>:next/prev : traverse the files in the argument list</li>
+<li><code>:argdo</code>     : execute the same command on each buffer in the set. The [] characters indicate which of the files in the argument list is activate</li>
+<li><code>:bufdo</code>     : Execute an Ex command in all of the buffers listed by <code>:ls</code></li>
+</ul>
+<h3 id="工作目录"><a href="#工作目录" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:工作目录" class="headings">工作目录</a></h3>
+<ul>
+<li><code>:set path+={p}</code> 将{p}添加到工作路径；<code>:set path+={p}/**</code> 将所有子目录也添加到路径中；<code>:set path-={p}</code> 将{p}从工作路径移除；</li>
+<li><code>:e {path}</code>: 打开该路径的 explorer; <code>e .</code> <code>:E</code>打开当前路径的 explorer; 打开当前文件所在路径的 explorer.  <code>Sexplore</code> <code>Vexplore</code> 在水平竖直方向切分，打开 explorer.</li>
+<li><code>:edit %</code>打开当前文件；<code>:edit %:h</code> 打开当前文件的路径；<code>h</code>修饰符去掉文件名。</li>
+</ul>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th><em>Find file</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:find {filename}</td>
+<td>Look up {filename} in <code>path</code> File explorer</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th><em>Command in Explorer</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>Open the parent directory.</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Open a new file (:h netrw-%)</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Make a new directory (:h netrw-d)</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Rename the file/directory under cursor</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Delete/Remove files and directories under cursor</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Save file</em> : To save a file with nonexistent directories, calling the external <code>mkdir</code> program by  <code>!mkdir -p %:h</code></p>
+<h2 id="config"><a href="#config" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:config" class="headings">Config</a></h2>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="nx">indent</span><span class="p">,</span><span class="nx">eol</span><span class="p">,</span><span class="nx">start</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">history</span><span class="p">=</span><span class="m">200</span><span class="err">
+</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><h1 id="vim-practical"><a href="#vim-practical" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:vim-practical" class="headings">Vim Practical</a></h1>
+<ul>
+<li>
+<p><input checked="" disabled="" type="checkbox"> Tips 60</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> Tips 61</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> Tips 62</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> Tips 63</p>
+</li>
+</ul>
+<ol>
+<li>Register:
+<ul>
+<li><code>+</code>  <a href="https://github.com/wsdjeg/vim-galore-zh_cn#%E5%89%AA%E8%B4%B4%E6%9D%BF" target="_blank" rel="noopener">剪贴板</a> 寄存器</li>
+<li><code> &quot;</code>  Unnamed 最近一次的复制或删除操作 (<code>d</code>, <code>c</code>, <code>s</code>, <code>x</code>, <code>y</code>)</li>
+<li><code>0</code> 最近一次复制;</li>
+</ul>
+</li>
+<li>用<code>m{char}</code>添加标记; ``{char}` 跳转到标记</li>
+<li><code>:source $MYVIMRC</code> reload config</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">set</span> ignorecase <span class="s2">&#34;turn feature on
+</span></span></span><span class="line"><span class="cl"><span class="s2">set noignorecase &#34;</span>turn feature off
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> ignorecase! <span class="s2">&#34;toggle the setting
+</span></span></span><span class="line"><span class="cl"><span class="s2">set ignorecase? &#34;</span>query current state
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> ignorecase<span class="p">&amp;</span> <span class="s2">&#34;reset to default
+</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div>
+            </div>
+
+            
+
+
+        </article>
+
+        
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2022-03-15 00:08:33 &#43;0800" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-03-15</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-03-15</text></g></svg>
+        </span></div>
+
+
+
+        
+    
+        <div class="post-gitinfo">
+            
+                <div class="post-gitinfo-left">
+                    
+                        <div class="gitinfo-item commit"><a href="https://github.com/baohengtao/baohengtao.github.io/commit/0513c7208b2e165b0faad92991e5eab48395f237" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon git-icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>0513c72</a></div>
+                    
+                    
+                        
+                            <div class="gitinfo-item commit-msg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon msg-icon"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>Update main.yml</div>
+                        
+                    
+                </div>
+            
+            
+                <div class="post-gitinfo-right">
+                    
+                        
+                            <div class="gitinfo-item feedback">
+                                <a href="https://github.com/baohengtao/baohengtao.github.io/issues" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon feedback-icon"><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>Feedback</a>
+                            </div>
+                        
+                    
+                    
+                        
+                            
+                            <div class="gitinfo-item edit">
+                                <a href="https://github.com/baohengtao/hugo.meme/blob/main/content/tech/vim.md" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon edit-icon"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>Edit Me?</a>
+                            </div>
+                        
+                    
+                </div>
+            
+        </div>
+    
+
+
+
+        <div class="post-share">
+
+        
+            <div class="share-text">分享：</div>
+        
+
+        <div class="share-items">
+
+            
+                <div class="share-item twitter">
+                    
+                    <a href="https://twitter.com/share?url=https://baohengtao.com/tech/vim/&amp;text=Vim%20%e6%89%8b%e5%86%8c&amp;hashtags=Vim,&amp;via=baohengtao" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="share-item telegram">
+                    
+                    <a href="https://t.me/share/url?url=https://baohengtao.com/tech/vim/&amp;text=Vim%20%e6%89%8b%e5%86%8c" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://baohengtao.com/tech/vim/&amp;title=Vim%20%e6%89%8b%e5%86%8c&amp;pic=https://baohengtao.com/icons/apple-touch-icon.png&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://baohengtao.com/tech/vim/&amp;name=Vim%20%e6%89%8b%e5%86%8c&amp;text=Tip%20%20%e4%bd%bf%e7%94%a8%20CTRL-[%20%e4%bb%a3%e6%9b%bf%20%ef%bc%8c%e5%b7%a6%e6%89%8b%e5%b0%8f%e6%8c%87%20CTRL%ef%bc%8c%e5%8f%b3%e6%89%8b%e5%b0%8f%e6%8c%87%20[%20%e7%86%9f%e7%bb%83%e5%90%8e%e5%be%88%e6%96%b9%e4%be%bf%20SecureCRT%20%e4%b8%ad%e4%bd%bf%e7%94%a8%20Vim%208%20%e5%86%85%e5%b5%8c%e7%bb%88%e7%ab%af%e5%a6%82%e7%9c%8b%e5%88%b0%e5%a5%87%e6%80%aa%e5%ad%97%e7%ac%a6%ef%bc%8c%e4%bd%bf%e7%94%a8%20:set%20t_RS=%20t_SH=%20%e8%a7%a3%e5%86%b3%20SecureCRT%20%e4%b8%ad%e4%bd%bf%e7%94%a8%20NeoVim%20%e5%a6%82%e7%9c%8b%e5%88%b0%e5%a5%87%e6%80%aa%e5%ad%97%e7%ac%a6%ef%bc%8c%e4%bd%bf%e7%94%a8%20:set%20guicursor=%20%e8%a7%a3%e5%86%b3%20*%20%e5%92%8c%20#%20%ef%bc%88%e4%bb%a5%e5%8f%8a%20g*/g#%ef%bc%89%e6%98%af%e5%8d%81%e5%88%86%e9%87%8d%e8%a6%81%e7%9a%84%e6%9f%a5%e6%89%be%e5%91%bd%e4%bb%a4%20%e5%a4%9a%e4%bd%bf%e7%94%a8%20ciw,%20ci[,%20ci%22,%20ci%28%20%e4%bb%a5%e5%8f%8a%20diw,%20di[,%20di%22,%20di%28%20%e5%91%bd%e4%bb%a4%e6%9d%a5%e5%bf%ab%e9%80%9f%e6%94%b9%e5%86%99/%e5%88%a0%e9%99%a4%e6%96%87%e6%9c%ac%20%e4%bd%bf%e7%94%a8%20@:%20%e9%87%8d%e5%a4%8d%e6%89%a7%e8%a1%8c%e4%b8%8a%e4%b8%80%e6%ac%a1%20Ex%20%e5%91%bd%e4%bb%a4%ef%bc%8c%e6%af%94%e5%a6%82%20:nohl,%20@:,%20@:,%20@:%20SHIFT%20%e7%9b%b8%e5%bd%93%e4%ba%8e%e7%a7%bb%e5%8a%a8%e5%8a%a0%e9%80%9f%e9%94%ae%ef%bc%8c%20w%20b%20e%20%e7%a7%bb%e5%8a%a8%e5%85%89%e6%a0%87%e5%be%88%e6%85%a2%ef%bc%8c%e4%bd%86%e6%98%af%20W%20B%20E%20%e8%b5%b0%e7%9a%84%e5%be%88%e5%bf%ab%20%e7%a7%bb%e5%8a%a8%e5%88%b0%e8%a1%8c%e9%a6%96%e9%9d%9e%e7%a9%ba%e5%ad%97%e7%ac%a6%e6%97%b6%e7%94%a8%200w%20%e5%91%bd%e4%bb%a4%e6%af%94%20%5e%20%e5%91%bd%e4%bb%a4%e6%9b%b4%e5%ae%b9%e6%98%93%e8%be%93%e5%85%a5%20%e5%9c%a8%e7%a9%ba%e7%99%bd%e8%a1%8c%e4%bd%bf%e7%94%a8%20dip%20%e5%91%bd%e4%bb%a4%e5%8f%af%e4%bb%a5%e5%88%a0%e9%99%a4%e6%89%80%e6%9c%89%e4%b8%b4%e8%bf%91%e7%9a%84%e7%a9%ba%e7%99%bd%e8%a1%8c%20%e5%9c%a8%e7%a9%ba%e7%99%bd%e5%8c%ba%e4%bd%bf%e7%94%a8%20viw%20%e5%8f%af%e4%bb%a5%e9%80%89%e6%8b%a9%e6%89%80%e6%9c%89%e7%a9%ba%e7%99%bd%e5%ad%97%e7%ac%a6%20%e7%bc%a9%e8%bf%9b%e6%97%b6%e4%bd%bf%e7%94%a8%20%3e8j%20%3e%7d%20%3cap%20=i%7d%20==%20%e4%bc%9a%e6%96%b9%e4%be%bf%e5%be%88%e5%a4%9a%20%e8%b6%8a%e9%87%8d%e5%a4%8d%e7%9a%84%e5%b7%a5%e4%bd%9c%ef%bc%8c%e8%b6%8a%e9%9c%80%e8%a6%81%e5%8a%aa%e5%8a%9b%e7%9a%84%e5%b0%86%e5%85%b6%e8%87%aa%e5%8a%a8%e5%8c%96%20%e7%bc%96%e7%a8%8b%e6%97%b6%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8%20[%7b%20%e5%92%8c%20]%7d%20%e5%bf%ab%e9%80%9f%e5%9c%a8%e5%87%bd%e6%95%b0%e9%97%b4%e7%a7%bb%e5%8a%a8%20%e6%8f%92%e5%85%a5%e6%a8%a1%e5%bc%8f%e4%b8%8b%ef%bc%8c%e5%bd%93%e4%bd%a0%e5%8f%91%e7%8e%b0%e4%b8%80%e4%b8%aa%e5%8d%95%e8%af%8d%e5%86%99%e9%94%99%e4%ba%86%ef%bc%8c%e5%ba%94%e8%af%a5%e5%a4%9a%e7%94%a8%20CTRL-W%20%e8%bf%99%e6%af%94%20%20%e5%bf%ab%20%e6%8f%92%e5%85%a5%e6%a8%a1%e5%bc%8f%e4%b8%8b%ef%bc%8cCTRL-X%20CTRL-F%20%e5%8f%af%e4%bb%a5%e6%96%b9%e4%be%bf%e7%9a%84%e8%a1%a5%e5%85%a8%e5%bd%93%e5%89%8d%e7%9b%ae%e5%bd%95%e7%9a%84%e6%96%87%e4%bb%b6%e5%90%8d%20%e6%8f%92%e5%85%a5%e6%a8%a1%e5%bc%8f%e4%b8%8b%ef%bc%8c%e5%8f%af%e7%94%a8%20CTRL-V%20u%20%e8%be%93%e5%85%a5%20unicode%ef%bc%8c%e5%a6%82%20u1234%20%e8%be%93%e5%85%a516%e8%bf%9b%e5%88%b6%20unicoode%20%e6%8f%92%e5%85%a5%e6%a8%a1%e5%bc%8f%e4%b8%8b%ef%bc%8cCTRL-R%20=%20%e5%8f%af%e4%bb%a5%e7%94%a8%e6%9d%a5%e7%ae%80%e5%8d%95%e8%ae%a1%e7%ae%97%ef%bc%8c%e6%af%94%e5%a6%82%20=12*3.5/10%20%e4%bc%9a%e6%8f%92%e5%85%a5%204.2%20%e5%a6%82%e6%9e%9c%e5%9c%a8%e6%8f%92%e5%85%a5%e6%a8%a1%e5%bc%8f%e4%b8%8b%e7%a7%bb%e5%8a%a8%e5%85%89%e6%a0%87%ef%bc%8c%e9%82%a3%e4%b9%88%e5%b0%b1%e4%b8%8d%e8%83%bd%e4%bd%bf%e7%94%a8%20.%20%e6%9d%a5%e9%87%8d%e5%a4%8d%e4%b9%8b%e5%89%8d%e7%9a%84%e6%8f%92%e5%85%a5%e4%ba%86%20y%20d%20c%20%e5%91%bd%e4%bb%a4%e5%8f%af%e4%bb%a5%e5%be%88%e5%a5%bd%e7%bb%93%e5%90%88%20f%20t%20%e5%92%8c%20/X%20%e6%af%94%e5%a6%82%20dt%29%20%e5%92%8c%20y/end%20c%20d%20x%20%e5%91%bd%e4%bb%a4%e4%bc%9a%e8%87%aa%e5%8a%a8%e5%a1%ab%e5%85%85%e5%af%84%e5%ad%98%e5%99%a8%20%221%20%e5%88%b0%20%229%20,%20y%20%e5%91%bd%e4%bb%a4%e4%bc%9a%e8%87%aa%e5%8a%a8%e5%a1%ab%e5%85%85%20%220%20%e5%af%84%e5%ad%98%e5%99%a8%20%e7%94%a8%20v%20%e5%91%bd%e4%bb%a4%e9%80%89%e6%8b%a9%e6%96%87%e6%9c%ac%e6%97%b6%ef%bc%8c%e5%8f%af%e4%bb%a5%e7%94%a8%20o%20%e6%8e%89%e5%a4%b4%e9%80%89%e6%8b%a9%ef%bc%8c%e6%9c%89%e6%97%b6%e5%be%88%e6%9c%89%e7%94%a8%20ca%29%20%e5%92%8c%20yi%7d%20%e5%be%88%e5%ae%b9%e6%98%93%e8%ae%b0%e5%bf%86%ef%bc%8c%e4%bd%86%e6%98%af%e4%bb%96%e4%bb%ac%e7%ad%89%e5%90%8c%e4%ba%8e%20cab%20yiB%20%e5%90%8e%e8%80%85%e5%be%88%e5%ae%b9%e6%98%93%e8%be%93%e5%85%a5%20%e5%86%99%e6%96%87%e7%ab%a0%e6%97%b6%ef%bc%8c%e5%8f%af%e4%bb%a5%e5%86%99%e4%b8%80%e6%ae%b5%e4%bb%a3%e7%a0%81%e5%9d%97%ef%bc%8c%e7%84%b6%e5%90%8e%e9%80%89%e4%b8%ad%e5%90%8e%e6%89%a7%e8%a1%8c%20:!python%20%e4%bb%a3%e7%a0%81%e5%9d%97%e5%b0%b1%e4%bc%9a%e8%a2%ab%e6%9b%bf%e6%8d%a2%e6%88%90%e7%bb%93%e6%9e%9c%20%e6%90%9c%e7%b4%a2%e5%90%8e%e7%bb%8f%e5%b8%b8%e4%bd%bf%e7%94%a8%20:nohl%20%e6%9d%a5%e6%b6%88%e9%99%a4%e9%ab%98%e4%ba%ae%ef%bc%8c%e4%bd%bf%e7%94%a8%e5%be%88%e9%a2%91%e7%b9%81%ef%bc%8c%e5%8f%af%e4%bb%a5%20map%20%e5%88%b0%20%20%e4%b8%8a%20%e6%90%9c%e7%b4%a2%e6%97%b6%e5%8f%af%e4%bb%a5%e7%94%a8%20CTRL-R%20CTRL-W%20%e6%8f%92%e5%85%a5%e5%85%89%e6%a0%87%e4%b8%8b%e7%9a%84%e5%8d%95%e8%af%8d%20Vim%20%e6%9c%89%e4%b8%80%e5%8d%83%e9%9b%b6%e4%b8%80%e7%a7%8d%e7%a7%bb%e5%8a%a8%e5%85%89%e6%a0%87%e7%9a%84%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%89%e6%97%b6%e5%80%99%e5%b0%b1%e8%bf%9e%20H%20M%20L%20%e4%b9%9f%e6%98%af%e5%be%88%e6%9c%89%e7%94%a8%e7%9a%84%20%e4%b8%8d%e9%9c%80%e8%a6%81%e8%ae%b0%e5%bf%86%e4%b8%8a%e4%b8%80%e6%ac%a1%e9%80%89%e6%8b%a9%e5%8c%ba%e5%9f%9f%ef%bc%8c%27%3c%20%e5%92%8c%20%27%3e%20%e5%8f%af%e4%bb%a5%e8%b7%b3%e5%88%b0%e4%b8%8a%e6%ac%a1%e9%80%89%e6%8b%a9%e7%9a%84%e5%bc%80%e5%a7%8b%e5%92%8c%e7%bb%93%e6%9d%9f%20%e5%a6%82%e9%9c%80%e7%bc%96%e8%be%91%e5%90%8c%e4%b8%80%e4%b8%aa%e6%96%87%e4%bb%b6%e7%9a%84%e4%b8%8d%e5%90%8c%e5%9c%b0%e6%96%b9%ef%bc%8c%e5%8f%af%e4%bb%a5%e7%94%a8%20:vs%20%e6%88%96%e8%80%85%20:split%20%e5%b0%86%e6%96%87%e4%bb%b6%e5%88%86%e4%b8%ba%e4%b8%a4%e4%b8%aa%e7%aa%97%e5%8f%a3%20%e6%9c%89%e5%85%ad%e7%a7%8d%e6%96%b9%e6%b3%95%e6%9d%a5%e6%94%b9%e5%8f%98%e4%b8%80%e4%b8%aa%e5%b8%83%e5%b0%94%e8%ae%be%e7%bd%ae:%20:set%20list%20nolist%20list!%20invlist%20list?%20list&amp;%20%e6%98%a0%e5%b0%84%e6%8c%89%e9%94%ae%e6%97%b6%ef%bc%8c%e5%ba%94%e8%af%a5%e9%bb%98%e8%ae%a4%e4%bd%bf%e7%94%a8%20noremap%20%ef%bc%8c%e5%8f%aa%e6%9c%89%e7%89%b9%e5%88%ab%e9%9c%80%e8%a6%81%e7%9a%84%e6%97%b6%e5%80%99%e4%bd%bf%e7%94%a8%20map%20%e5%bd%93%e4%bd%a0%e8%a7%89%e5%be%97%e5%81%9a%e6%9f%90%e4%ba%8b%e5%be%88%e4%bd%8e%e6%95%88%e6%97%b6%ef%bc%8c%e4%bd%a0%e5%ba%94%e8%af%a5%e5%81%9c%e4%b8%8b%e6%9d%a5%ef%bc%8cu%20u%20u%20u%20%e7%84%b6%e5%90%8e%e6%80%9d%e8%80%83%e6%ad%a3%e7%a1%ae%e7%9a%84%e9%ab%98%e6%95%88%e6%96%b9%e5%bc%8f%e6%9d%a5%e5%ae%8c%e6%88%90%20%e7%94%a8%20y%e5%a4%8d%e5%88%b6%e6%96%87%e6%9c%ac%e5%90%8e%ef%bc%8c%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e4%b8%ad%20CTRL-R%20%e7%84%b6%e5%90%8e%e6%8c%89%e5%8f%8c%e5%bc%95%e5%8f%b7%20%22%20%e5%8f%af%e4%bb%a5%e6%8f%92%e5%85%a5%e4%b9%8b%e5%89%8d%e5%a4%8d%e5%88%b6%e5%86%85%e5%ae%b9%20%e5%a6%82%e6%9e%9c%e4%bd%a0%e6%83%b3%e5%85%a8%e5%b1%8f%e9%98%85%e8%af%bb%e5%b8%ae%e5%8a%a9%e7%9a%84%e8%af%9d%ef%bc%8c%e4%bd%bf%e7%94%a8%20:tab%20help%20%20%e5%91%bd%e4%bb%a4%20%e7%b2%98%e8%b4%b4%e6%96%87%e6%9c%ac%e6%97%b6%e5%ba%94%e8%af%a5%e6%80%9d%e8%80%83%e4%b8%8b%e5%89%8d%e5%90%8e%e6%98%af%e5%90%a6%e5%8c%85%e5%90%ab%e7%a9%ba%e6%a0%bc%20:x%20%e5%92%8c%20ZZ%20%e5%91%bd%e4%bb%a4%e5%92%8c%20:wq%20%e7%b1%bb%e4%bc%bc%ef%bc%8c%e4%bd%86%e6%98%af%e4%b8%8d%e4%bc%9a%e5%86%99%e5%85%a5%e6%b2%a1%e6%9c%89%e6%94%b9%e5%8f%98%e7%9a%84%e6%96%87%e4%bb%b6%ef%bc%8c%e5%b9%b6%e4%b8%94%e6%9b%b4%e5%bf%ab%20%e5%a4%9a%e9%98%85%e8%af%bb%20:h%20index%20%e5%ad%a6%e4%b9%a0%e6%96%b0%e7%9a%84%e5%bf%ab%e6%8d%b7%e9%94%ae%ef%bc%8c%e8%ae%a9%e4%bd%a0%e6%9b%b4%e5%8a%a0%e9%ab%98%e6%95%88%20Vim%20%e5%b8%ae%e5%8a%a9%e7%b3%bb%e7%bb%9f%e9%87%8c%e6%9c%89%e4%b8%80%e4%b8%aa%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7%e9%9b%86%e5%90%88%ef%bc%8c%e4%bd%bf%e7%94%a8%20:h%20tips%20%e9%98%85%e8%af%bb%20Windows%20%e4%b8%8b%e7%9a%84%20GVim%20%e5%8f%af%e4%bb%a5%e7%94%a8%20CTRL-INSERT%20%e5%92%8c%20SHIFT-INSERT%20%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e5%89%aa%e8%b4%b4%e6%9d%bf%20%e6%80%9d%e8%80%83%e9%a2%98%ef%bc%9a%e7%9f%a5%e9%81%93%e4%b8%8b%e9%9d%a2%e6%8e%a7%e5%88%b6%e4%bb%a3%e7%a0%81%20%5eI%20%5eM%20%5eJ%20%5e[%20%5eH%20%5e@%20%e5%88%86%e5%88%ab%e4%bb%a3%e8%a1%a8%e4%bb%80%e4%b9%88%e6%84%8f%e6%80%9d%e4%b9%88%ef%bc%9f%20%20%e5%bf%ab%e6%8d%b7%e9%94%ae%20%20%20C-o%ef%bc%9a%20Insert%20-%3e%20Insert%20Normal%20Mode%0a%20%20C-[%20Normal%20Mode;%0a%20%20Visual%20Mode%0a%20%20gv%20Reselect%20the%20last%20visual%20selection%0a%20%20o%20Go%20to%20other%20end%20of%20highlighted%20text%0a%20%20%e7%aa%97%e5%8f%a3%e7%ae%a1%e7%90%86%20%e7%aa%97%e5%8f%a3%20%e7%aa%97%e5%8f%a3%e5%88%92%e5%88%86C-w:%20s%20v%e5%b1%8f%e5%b9%95%e5%88%86%e5%89%b2%ef%bc%9b%0a%e7%aa%97%e5%8f%a3%e7%a7%bb%e5%8a%a8C-w:%20%20w%e5%9c%a8%e7%aa%97%e5%8f%a3%e9%97%b4%e8%bf%9b%e8%a1%8c%e7%a7%bb%e5%8a%a8%ef%bc%9bh/j/k/l%e7%84%a6%e7%82%b9%e7%a7%bb%e5%8a%a8HJKL%e4%bd%8d%e7%bd%ae%e7%a7%bb%e5%8a%a8%0a%e7%aa%97%e5%8f%a3%e5%85%b3%e9%97%adC-w:%20c%20:clo%20%e5%85%b3%e9%97%ad%e6%bf%80%e6%b4%bb%e7%9a%84%e7%aa%97%e5%8f%a3%ef%bc%9bo%20:on%20%e5%8f%aa%e4%bf%9d%e7%95%99%e5%bd%93%e5%89%8d%e7%aa%97%e5%8f%a3%0a%e7%aa%97%e5%8f%a3%e5%a4%a7%e5%b0%8f:%20C-w%20=%20%e4%bd%bf%e7%aa%97%e5%8f%a3%e7%ad%89%e5%a4%a7%0a%e6%a0%87%e7%ad%be%e9%a1%b5%20%e5%bb%ba%e7%ab%8b%0a:tabe%20%7bfile%7d%e5%9c%a8%e6%96%b0%e6%a0%87%e7%ad%be%e9%a1%b5%e4%b8%ad%e6%89%93%e5%bc%80%e6%96%87%e4%bb%b6%ef%bc%9b:tabc%e5%85%b3%e9%97%ad%e6%a0%87%e7%ad%be%e9%a1%b5%ef%bc%9b:tabo%e5%8f%aa%e4%bf%9d%e7%95%99%e5%bd%93%e5%89%8d%e6%a0%87%e7%ad%be%e9%a1%b5%ef%bc%9bC-w%20T%e5%b0%86%e5%bd%93%e5%89%8d%e7%aa%97%e5%8f%a3%e7%a7%bb%e5%8a%a8%e5%88%b0%e6%96%b0%e6%a0%87%e7%ad%be%e9%a1%b5%e4%b8%ad%e3%80%82%0a%e5%88%87%e6%8d%a2%0a:tabn%20g%20t%20%e5%88%87%e6%8d%a2%e5%88%b0%e4%b8%8b%e4%b8%80%e4%b8%aa%e6%a0%87%e7%ad%be%e9%a1%b5%ef%bc%9b:tabp%20g%20T%e5%88%87%e6%8d%a2%e5%88%b0%e4%b8%8a%e4%b8%80%e4%b8%aa%e6%a0%87%e7%ad%be%e9%a1%b5%ef%bc%9b%0a%e9%87%8d%e6%96%b0%e6%8e%92%e5%88%97%0a:tabmove%20[N]%20%e5%b0%86%e5%bd%93%e5%89%8d%e6%a0%87%e7%ad%be%e9%a1%b5%e7%a7%bb%e5%8a%a8%e5%88%b0%e7%ac%ac%20N%20%e4%b8%aa%ef%bc%9b%e5%a6%82%e6%9e%9c%e7%9c%81%e7%95%a5%20N,%20%e5%88%99%e7%a7%bb%e5%8a%a8%e5%88%b0%e6%9c%80%e5%90%8e%0aBuffer%20Buffer%20%e5%88%97%e8%a1%a8%0a:ls%e5%88%97%e5%87%ba%e5%bd%93%e5%89%8d%e6%bf%80%e6%b4%bb%e7%9a%84%20buffer,%20%e5%85%b6%e7%ac%a6%e5%8f%b7%e5%90%ab%e4%b9%89%e5%a6%82%e4%b8%8b%0a%20%25%20%e8%a1%a8%e7%a4%ba%e8%af%a5%20buffer%20%e5%9c%a8%e5%bd%93%e5%89%8d%e7%aa%97%e5%8f%a3%e4%b8%ad%ef%bc%9b#%20%e8%a1%a8%e7%a4%ba%e8%af%a5%20buffer%20%e5%8f%af%e7%94%a8%e9%80%9a%e8%bf%87C-%5e%20:e%20#%e5%88%87%e6%8d%a2%e3%80%82%20a%20%e5%b7%b2%e5%8a%a0%e8%bd%bd%e5%b9%b6%e5%8f%af%e7%9c%8b%e8%a7%81%e7%9a%84%20buffer;%20h%20%e5%b7%b2%e5%8a%a0%e8%bd%bd%e4%bd%86%e4%b8%8d%e5%8f%af%e8%a7%81%e7%9a%84%20hidden%20buffer%20&#43;%20%e5%b7%b2%e4%bf%ae%e6%94%b9%e7%9a%84%20buffer%20%20Buffer%20%e5%88%87%e6%8d%a2%0a%20%20%3cC-%5e%e5%9c%a8%e5%bd%93%e5%89%8d%e6%96%87%e4%bb%b6%e5%92%8c%e5%a4%87%e9%80%89%e6%96%87%e4%bb%b6%e9%97%b4%e5%88%87%e6%8d%a2%ef%bc%9b%0a%20%20:bn%20:bp%20:bf%20:bl%20next/prev/first/last%0a%20%20:b%20N/name%20%e8%b7%b3%e8%bd%ac%e5%88%b0%e6%8c%87%e5%ae%9a%e7%9a%84%20buffer%0a%20%20:sb%20add%20s%20to%20split%0a%20%20:bdelete%20N1%20N2%20N3%20%e5%88%a0%e9%99%a4%20buffer%20N1%20N2%20N3;%20:N,M%20bdelete%20%e5%88%a0%e9%99%a4%e7%ac%ac%20N%20%e4%b8%aa%e5%88%b0%e7%ac%ac%20M%20%e4%b8%aa%e4%b9%8b%e9%97%b4%e7%9a%84%20buffer.%0a%20%20%e6%a8%a1%e5%bc%8f%20%e6%ad%a3%e5%b8%b8%e6%a8%a1%e5%bc%8f%20%28Normal%20mode%29%20%e7%a7%bb%e5%8a%a8%20%20%e8%af%8d%e9%97%b4%e7%a7%bb%e5%8a%a8%ef%bc%9a%e5%8d%95%e8%af%8d%e5%bc%80%e5%a4%b4w%20b;%20%e5%8d%95%e8%af%8d%e7%bb%93%e5%b0%bee%20ge;%20%e4%bd%bf%e7%94%a8%e5%a4%a7%e5%86%99%e5%ad%97%e7%ac%a6%e8%b7%b3%e8%bf%87%e6%a0%87%e7%82%b9%e3%80%82%20%e8%a1%8c%e9%97%b4%e7%a7%bb%e5%8a%a8%ef%bc%9a0%20%5e%20$;%20%e4%bd%bf%e7%94%a8g%e5%89%8d%e7%bc%80%e4%bd%9c%e7%94%a8%e4%ba%8e%20visual%20line%e3%80%82%20%e6%96%87%e7%ab%a0%e7%a7%bb%e5%8a%a8%ef%bc%9a%5eb%20%5ef%20%e7%bf%bb%e9%a1%b5%ef%bc%9b%7b%20%7d%e6%ae%b5%e8%90%bd%e8%b7%b3%e8%bd%ac%20%e8%a1%8c%e8%b7%b3%e8%bd%ac%ef%bc%9agg%20%20G%2010G%20f%20t%20F%20T%20%e6%90%9c%e7%b4%a2%e7%a7%bb%e5%8a%a8%20;%20,%20%e9%87%8d%e5%a4%8d%20%20%e6%93%8d%e4%bd%9c%20%20C%20c$:%20%e5%88%a0%e9%99%a4%e5%bd%93%e5%89%8d%e4%bd%8d%e7%bd%ae%e5%88%b0%e8%a1%8c%e5%b0%be%e7%9a%84%e5%86%85%e5%ae%b9%20=%3e%20Insert%20Mode%20s%20S:%20%e6%9b%bf%e6%8d%a2%e5%bd%93%e5%89%8d%e5%ad%97%e7%ac%a6%e6%88%96%e5%bd%93%e5%89%8d%e8%a1%8c%20=%3e%20Insert%20Mode%20R%20r%20gR%20gr%20:%20%e6%9b%bf%e6%8d%a2%e6%a8%a1%e5%bc%8f%ef%bc%9b%e4%bd%bf%e7%94%a8%20g%20%e5%8f%af%e5%b0%86%20TAB%20%e5%bd%93%e6%88%90%e7%a9%ba%e6%a0%bc%e3%80%82%20g~%20gu%20gU:%20%e5%88%87%e6%8d%a2%e5%a4%a7%e5%b0%8f%e5%86%99%20%20%e5%9c%a8%e4%bb%a5%e4%b8%8a%e6%93%8d%e4%bd%9c%e4%b8%ad%ef%bc%8cc%20d%20y%20%e6%98%af%e2%80%9c%e5%8f%8a%e7%89%a9%e5%8a%a8%e8%af%8d%e2%80%9d%ef%bc%8c%20%e4%b9%9f%e5%b0%b1%e6%98%af%e9%9c%80%e8%a6%81%e5%8a%a0%e4%b8%8a%e6%93%8d%e4%bd%9c%e5%af%b9%e8%b1%a1%e3%80%82%0acc%20dd%20yy%20%e4%bd%9c%e7%94%a8%e4%b8%8e%e6%95%b4%e8%a1%8c%0a%e5%91%bd%e4%bb%a4%20%20!:%20Filter%20%7bmotion%7d%20lines%20through%20an%20external%20program%20*:%20Search%20for%20each%20occurrence%20%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/baohengtao.com\/tech\/vim\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/tech/emacs_vim_path/" class="related-link">Vim 和 Emacs 配置文件路径</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/vim/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Vim</a>
+                
+            
+        </div>
+    
+
+
+
+        
+    <footer class="minimal-footer">
+        
+            <div class="post-tag"><a href="/tags/vim/" rel="tag" class="post-tag-link">#vim</a></div>
+        
+        
+            <div class="post-category">
+                <a href="/tech/" class="post-category-link active">tech</a> | <a href="/life/" class="post-category-link">life</a> | <a href="/study/" class="post-category-link">study</a>
+            </div>
+        
+        
+    </footer>
+
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/tech/shortcut/" rel="prev">&lt; Shortcut</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/tech/emacs_vim_path/" rel="next">Vim 和 Emacs 配置文件路径 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2021–2022&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Bao Hengtao</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"></div>
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">本站访客数&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon busuanzi-site-uv"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>&nbsp;<span id="busuanzi_value_site_uv"></span></span>&nbsp;|&nbsp;<span id="busuanzi_container_site_pv">本站访问量&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon busuanzi-site-pv"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                </div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:baohengtao@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/baohengtao" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://twitter.com/baohengtao" target="_blank" rel="external noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://t.me/cooper_u" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('\/sw.js');
+            });
+        }
+    </script>
+
+
+        
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>
