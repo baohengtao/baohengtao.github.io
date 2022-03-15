@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Mon, 14 Mar 2022 17:31:14 &#43;0000</lastBuildDate>
+        <lastBuildDate>Tue, 15 Mar 2022 03:09:46 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -104,6 +104,8 @@
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -111,8 +113,6 @@
                                     <category domain="https://baohengtao.com/tags/social-psychology/">Social Psychology</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -127,6 +127,7 @@
                 
                 
                     <description>&lt;h2 id=&#34;the-self-in-a-social-worldchp2&#34;&gt;The Self in a Social World(Chp.2)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/baohengtao/blog.img@master/uPic/image-20220315082453861.png&#34; alt=&#34;image-20220315082453861&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rehearsal&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Spotlights and Illusion： 周围的人并没有我们所想象的那么在意我们。我们知道自己的内心活动，我们觉得这些活动很明显，那是因为我们总是习惯把注意力放在自己身上。其他人更关心的是自己，而不是我。&lt;/li&gt;
@@ -315,11 +316,19 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
                                 
                                 
                                 
-                                    <category domain="https://baohengtao.com/tags/social-psychology/">Social Psychology</category>
+                                    <category domain="https://baohengtao.com/series/social-psychology/">Social Psychology</category>
                                 
                             
                         
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://baohengtao.com/tags/%E5%BF%83%E7%90%86%E5%AD%A6/">心理学</category>
+                                
+                            
                         
                     
                 
@@ -562,6 +571,8 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -575,8 +586,6 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
                                     <category domain="https://baohengtao.com/tags/rsync/">rsync</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -775,6 +784,8 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -788,8 +799,6 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
                                     <category domain="https://baohengtao.com/tags/arch/">arch</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -979,6 +988,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -986,8 +997,6 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                     <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -1261,6 +1270,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -1268,8 +1279,6 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                     <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -1317,6 +1326,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -1324,8 +1335,6 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                     <category domain="https://baohengtao.com/tags/%E6%97%A5%E8%AE%B0/">日记</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -1365,21 +1374,13 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/tags/the-book-of-why/">The Book of Why</category>
-                                
-                            
-                        
                     
                         
                             
                                 
                                 
                                 
-                                    <category domain="https://baohengtao.com/todo/%E9%98%85%E8%AF%BB/">阅读</category>
+                                    <category domain="https://baohengtao.com/tags/the-book-of-why/">The Book of Why</category>
                                 
                             
                         
@@ -1668,6 +1669,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -1675,8 +1678,6 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
                                     <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -1884,6 +1885,8 @@ tocNum: on
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -1891,8 +1894,6 @@ tocNum: on
                                     <category domain="https://baohengtao.com/tags/hugo/">Hugo</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -1936,6 +1937,8 @@ tocNum: on
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -1943,8 +1946,6 @@ tocNum: on
                                     <category domain="https://baohengtao.com/tags/%E6%97%A5%E8%AE%B0/">日记</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -2116,6 +2117,8 @@ tocNum: on
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -2125,15 +2128,13 @@ tocNum: on
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Shell Cases</title>
-                <link>https://baohengtao.com/tech/shell-case/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/shell-case/</guid>
+                <link>https://baohengtao.com/tech/shell-cases/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/shell-cases/</guid>
                 <pubDate>Thu, 22 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -2187,6 +2188,8 @@ tocNum: on
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -2196,15 +2199,13 @@ tocNum: on
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>ZSH 插件配置2.0</title>
-                <link>https://baohengtao.com/tech/zsh2/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/zsh2/</guid>
+                <link>https://baohengtao.com/tech/zsh_plugin_update/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/zsh_plugin_update/</guid>
                 <pubDate>Wed, 21 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -2633,6 +2634,8 @@ tocNum: on
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -2640,8 +2643,6 @@ tocNum: on
                                     <category domain="https://baohengtao.com/tags/shell/">shell</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -2932,6 +2933,8 @@ zh_CN.UTF-8 UTF-8
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -2941,15 +2944,13 @@ zh_CN.UTF-8 UTF-8
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Emacs Cheatsheet</title>
-                <link>https://baohengtao.com/tech/emacs/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/emacs/</guid>
+                <link>https://baohengtao.com/tech/emacs-manual/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/emacs-manual/</guid>
                 <pubDate>Tue, 13 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -3213,13 +3214,7 @@ zh_CN.UTF-8 UTF-8
                 
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
+                    
                         
                     
                         
@@ -3230,8 +3225,6 @@ zh_CN.UTF-8 UTF-8
                                     <category domain="https://baohengtao.com/tags/emacs/">emacs</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -3283,16 +3276,6 @@ zh_CN.UTF-8 UTF-8
 &lt;li&gt;分屏：上下分屏&lt;code&gt;⌘⇧D&lt;/code&gt;：左右分屏 &lt;code&gt;⌘D&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;调整大小：最大化pane&lt;code&gt;⌘⇧Enter&lt;/code&gt;；最大化窗口：&lt;code&gt;⌘Enter&lt;/code&gt;; 重置pane窗口大小：&lt;code&gt;⌃⌘Arrow&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;将命令发送打所有窗口：&lt;code&gt;⌘⌥I&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;历史记录&#34;&gt;历史记录&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;搜索：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;按住&lt;code&gt;c-r&lt;/code&gt;并输入查找内容；再次按住&lt;code&gt;c-r&lt;/code&gt;将遍历历史记录。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;按两次&lt;code&gt;c-r&lt;/code&gt;输出上次搜索到的内容&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;其它&#34;&gt;其它&lt;/h2&gt;
 &lt;table&gt;
@@ -3405,6 +3388,8 @@ takes you away from the home row.&lt;/p&gt;
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -3414,15 +3399,13 @@ takes you away from the home row.&lt;/p&gt;
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Vim 手册</title>
-                <link>https://baohengtao.com/tech/vim/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/vim/</guid>
+                <link>https://baohengtao.com/tech/vim-manual/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/vim-manual/</guid>
                 <pubDate>Tue, 13 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -3848,6 +3831,8 @@ takes you away from the home row.&lt;/p&gt;
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -3857,15 +3842,13 @@ takes you away from the home row.&lt;/p&gt;
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Vim 和 Emacs 配置文件路径</title>
-                <link>https://baohengtao.com/tech/emacs_vim_path/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/emacs_vim_path/</guid>
+                <link>https://baohengtao.com/tech/emacs-vim-config/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/emacs-vim-config/</guid>
                 <pubDate>Mon, 12 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -3986,13 +3969,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                 
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
+                    
                         
                     
                         
@@ -4011,15 +3988,13 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Git Manual</title>
-                <link>https://baohengtao.com/tech/git/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/git/</guid>
+                <link>https://baohengtao.com/tech/gitmanual/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/gitmanual/</guid>
                 <pubDate>Sun, 04 Apr 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -4598,13 +4573,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                 
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
+                    
                         
                     
                         
@@ -4615,8 +4584,6 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                                     <category domain="https://baohengtao.com/tags/git/">Git</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -4791,6 +4758,8 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -4800,141 +4769,13 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                             
                         
                     
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>随手记</title>
-                <link>https://baohengtao.com/tech/%E9%9A%8F%E6%89%8B%E8%AE%B0.skip/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/%E9%9A%8F%E6%89%8B%E8%AE%B0.skip/</guid>
-                <pubDate>Fri, 02 Apr 2021 17:15:48 &#43;0000</pubDate>
-                
-                
-                
-                    <description>&lt;h2 id=&#34;python-add-console-color-scheme&#34;&gt;Python add console color scheme&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://draculatheme.com/pygments&#34;&gt;Dark theme for Pygments and 181+ apps — Dracula&lt;/a&gt;
-&lt;a href=&#34;https://stackoverflow.com/questions/14129278/how-do-i-customize-text-color-in-ipython&#34;&gt;How do I customize text color in IPython?&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;note-tag&#34;&gt;Note Tag&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://theme-next.js.org/docs/tag-plugins/note.html&#34;&gt;Note (Bootstrap Callout)&lt;/a&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{% note [class] [no-icon] [summary] %}
-Any content (support inline tags too).
-{% endnote %}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;class option: &lt;em&gt;Optional parameter.&lt;/em&gt; Supported values: default | primary | success | info | warning | danger.&lt;/p&gt;
-&lt;h2 id=&#34;frontmatter&#34;&gt;Frontmatter&lt;/h2&gt;
-&lt;p&gt;{% tabs  frontmatter%}&lt;/p&gt;
-&lt;!-- tab Frontmatter option--&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;published date&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;updated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;updated date&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;comments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Enables comment feature for the post&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Overrides the default permalink of the post&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## provided by plugin&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;abbrlink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;abbrlink&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;mathjax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;whether turn mathjax&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 文章置顶&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;!-- endtab --&gt;
-&lt;!-- tab  Frontmatter used  --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;abbrlink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;typora-copy-images-to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;../images&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;typora-root-url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;../&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;!-- endtab --&gt;
-&lt;!-- tab Page Setting  --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;skip_render&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s2&#34;&gt;&amp;#34;_posts/*continue/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s2&#34;&gt;&amp;#34;_posts/**/*.skip.md&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s2&#34;&gt;&amp;#34;_posts/*personal/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;!-- endtab --&gt;
-&lt;p&gt;{% endtabs %}&lt;/p&gt;
-</description>
-                
-                
-                
-                    
-                    
-                    
-                        
-                        
-                        
-                            
-                                <category domain="https://baohengtao.com/tech/">tech</category>
-                            
-                        
-                    
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
-                        
-                    
-                        
-                    
-                        
-                    
                 
             </item>
         
             <item>
                 <title>SSL/TLS 协议</title>
-                <link>https://baohengtao.com/tech/https/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/https/</guid>
+                <link>https://baohengtao.com/tech/ssl-tls/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/ssl-tls/</guid>
                 <pubDate>Wed, 31 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -5090,13 +4931,7 @@ Any content (support inline tags too).
                 
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
-                                
-                            
+                    
                         
                     
                         
@@ -5107,8 +4942,6 @@ Any content (support inline tags too).
                                     <category domain="https://baohengtao.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -5166,14 +4999,6 @@ Any content (support inline tags too).
                 
                 
                     
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
                         
                     
                         
@@ -5370,6 +5195,8 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -5379,15 +5206,13 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Typora中的路径设置</title>
-                <link>https://baohengtao.com/tech/typora-image/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/typora-image/</guid>
+                <link>https://baohengtao.com/tech/path-in-typora/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/path-in-typora/</guid>
                 <pubDate>Mon, 29 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -5492,6 +5317,8 @@ typora-root-url: ../
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -5499,8 +5326,6 @@ typora-root-url: ../
                                     <category domain="https://baohengtao.com/tags/markdown/">markdown</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -5569,6 +5394,8 @@ typora-root-url: ../
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -5576,8 +5403,6 @@ typora-root-url: ../
                                     <category domain="https://baohengtao.com/tags/%E6%96%B0%E9%97%BB/">新闻</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -5859,6 +5684,8 @@ typora-root-url: ../
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -5868,15 +5695,13 @@ typora-root-url: ../
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Hexo中的Markdown写作</title>
-                <link>https://baohengtao.com/tech/writing-in-hexo/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/writing-in-hexo/</guid>
+                <link>https://baohengtao.com/tech/hexo-writing/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/hexo-writing/</guid>
                 <pubDate>Thu, 25 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -6393,7 +6218,7 @@ print(&#39;Hello world&#39;)&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;​```python main.py https://www.coopers.zone Coopers&amp;#39;ZZ
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;```python main.py https://www.coopers.zone Coopers&amp;#39;ZZ
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;print &amp;#34;Hello world&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;​```
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -6470,13 +6295,7 @@ content
                 
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
+                    
                         
                     
                         
@@ -6489,15 +6308,13 @@ content
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Typora 使用</title>
-                <link>https://baohengtao.com/tech/typora/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/typora/</guid>
+                <link>https://baohengtao.com/tech/typora-manual/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/typora-manual/</guid>
                 <pubDate>Thu, 25 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -6755,6 +6572,8 @@ content
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -6764,15 +6583,13 @@ content
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Unix系统中的inode</title>
-                <link>https://baohengtao.com/tech/inode-understand/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/inode-understand/</guid>
+                <link>https://baohengtao.com/tech/understand-inode/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/understand-inode/</guid>
                 <pubDate>Sat, 20 Mar 2021 23:06:56 &#43;0000</pubDate>
                 
                 
@@ -6841,6 +6658,8 @@ content
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -6848,8 +6667,6 @@ content
                                     <category domain="https://baohengtao.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -7474,6 +7291,8 @@ content
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -7483,22 +7302,18 @@ content
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>小纸片</title>
-                <link>https://baohengtao.com/tech/%E5%B0%8F%E7%BA%B8%E7%89%87/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/%E5%B0%8F%E7%BA%B8%E7%89%87/</guid>
+                <link>https://baohengtao.com/tech/snippet/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/snippet/</guid>
                 <pubDate>Fri, 05 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
                 
-                    <description>&lt;p&gt;一些比较杂的笔记&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;latex&#34;&gt;LaTeX&lt;/h2&gt;
+                    <description>&lt;h2 id=&#34;latex&#34;&gt;LaTeX&lt;/h2&gt;
 &lt;p&gt;可以使用  &lt;code&gt;hyperref&lt;/code&gt;  给生成度pdf添加元数据。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -7873,6 +7688,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -7880,8 +7697,6 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                                     <category domain="https://baohengtao.com/tags/%E5%B0%8F%E7%BA%B8%E7%89%87/">小纸片</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -8013,6 +7828,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -8022,15 +7839,13 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>ZSH 插件列表</title>
-                <link>https://baohengtao.com/tech/zshv1/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/zshv1/</guid>
+                <link>https://baohengtao.com/tech/zsh-plugin/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/zsh-plugin/</guid>
                 <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -8304,6 +8119,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -8313,15 +8130,13 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>树莓派配置</title>
-                <link>https://baohengtao.com/tech/rpi/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/rpi/</guid>
+                <link>https://baohengtao.com/tech/setup-rpi/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/setup-rpi/</guid>
                 <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -8575,6 +8390,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -8582,8 +8399,6 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                                     <category domain="https://baohengtao.com/tags/linux/">linux</category>
                                 
                             
-                        
-                    
                         
                     
                 
@@ -8727,17 +8542,17 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
                 
                     
                         
+                    
+                        
+                    
+                        
                             
                                 
                                 
                                 
-                                    <category domain="https://baohengtao.com/categories/%E8%AE%B0%E5%BD%95/">记录</category>
+                                    <category domain="https://baohengtao.com/tags/%E9%98%85%E8%AF%BB/">阅读</category>
                                 
                             
-                        
-                    
-                        
-                    
                         
                     
                 
@@ -8745,8 +8560,8 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
         
             <item>
                 <title>心理学与生活</title>
-                <link>https://baohengtao.com/study/psycholoy-in-life/</link>
-                <guid isPermaLink="true">https://baohengtao.com/study/psycholoy-in-life/</guid>
+                <link>https://baohengtao.com/study/psych-in-life/</link>
+                <guid isPermaLink="true">https://baohengtao.com/study/psych-in-life/</guid>
                 <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -10391,17 +10206,17 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                 
                     
                         
+                    
+                        
+                    
+                        
                             
                                 
                                 
                                 
-                                    <category domain="https://baohengtao.com/categories/%E8%AE%B0%E5%BD%95/">记录</category>
+                                    <category domain="https://baohengtao.com/tags/%E5%BF%83%E7%90%86%E5%AD%A6/">心理学</category>
                                 
                             
-                        
-                    
-                        
-                    
                         
                     
                 
@@ -10493,13 +10308,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                 
                     
                         
-                            
-                                
-                                
-                                
-                                    <category domain="https://baohengtao.com/categories/%E5%B0%8F%E6%8A%84/">小抄</category>
-                                
-                            
+                    
                         
                     
                         
@@ -10512,15 +10321,13 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                             
                         
                     
-                        
-                    
                 
             </item>
         
             <item>
                 <title>Python 环境配置</title>
-                <link>https://baohengtao.com/tech/python/</link>
-                <guid isPermaLink="true">https://baohengtao.com/tech/python/</guid>
+                <link>https://baohengtao.com/tech/setup-python/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/setup-python/</guid>
                 <pubDate>Mon, 01 Jan 1900 00:00:00 &#43;0000</pubDate>
                 
                 
@@ -10675,6 +10482,8 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                         
                     
                         
+                    
+                        
                             
                                 
                                 
@@ -10682,8 +10491,6 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
                                     <category domain="https://baohengtao.com/tags/python/">Python</category>
                                 
                             
-                        
-                    
                         
                     
                 
