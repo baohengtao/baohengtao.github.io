@@ -21,7 +21,7 @@
 
     
     
-        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.d1d2bd2568113c3900419f95a768b15aa3680b1857cef4e75b7c3c52e9b3f27e.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.807a24e03b1cf337e8685a61826427eb1fe6ecffd484af726a0b75a585adbe7d.js"></script>
 
     
 
@@ -509,6 +509,8 @@
         
 
         
+            <div id="gitalk-container"></div>
+        
     
 
 
@@ -575,6 +577,51 @@
 
         
 
+        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script>
+    function loadComments() {
+        if (typeof Gitalk === 'undefined') {
+            var getScript = (options) => {
+                var script = document.createElement('script');
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                Object.keys(options).forEach((key) => {
+                    script[key] = options[key];
+                });
+                document.body.appendChild(script);
+            };
+            getScript({
+                src: 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
+                onload: () => {
+                    newGitalk();
+                }
+            });
+        } else {
+            newGitalk();
+        }
+    }
+    function newGitalk() {
+        const gitalk = new Gitalk({
+            clientID: "21e49999387e81606e54",
+            clientSecret: "dc422b433df7dbfe34a06c28bbd048bcc69b0401",
+            repo: "baohengtao.github.io",
+            owner: "baohengtao",
+            admin: ["baohengtao"],
+            labels: ["Gitalk"],
+            distractionFreeMode:  false , 
+            perPage:  10 ,
+            language: "en",
+            pagerDirection: "last",
+            createIssueManually:  false ,
+            proxy: "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token",
+            enableHotKey:  true ,
+            id:  location.pathname
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
         
 
     
