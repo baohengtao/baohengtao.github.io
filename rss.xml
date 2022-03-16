@@ -17,10 +17,47 @@
         
         
         
-        <lastBuildDate>Wed, 16 Mar 2022 05:28:17 &#43;0000</lastBuildDate>
+        <lastBuildDate>Wed, 16 Mar 2022 05:38:02 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
+        
+            <item>
+                <title>测试下评论系统</title>
+                <link>https://baohengtao.com/tech/comment-test/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/comment-test/</guid>
+                <pubDate>Wed, 16 Mar 2022 00:00:00 &#43;0000</pubDate>
+                
+                
+                
+                    <description>&lt;p&gt;评论测试页面~➿&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://baohengtao.com/tech/">tech</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Global History</title>
