@@ -17,11 +17,11 @@
 
     <title>当下 | Cooper&#39;s Zone</title>
 
-    <link rel="stylesheet" href="/css/meme.min.c3bcfb345691e69f6d82fcf31a7263867f0c0ce827ba234cd17e9c76189217ae.css"/>
+    <link rel="stylesheet" href="/css/meme.min.4332f184e33f1db2ed1e4f2049af0017cac1498d6b1794e0c04ec07b96ebb755.css"/>
 
     
     
-        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.3c6486e370c987b6e26ceefaa4b10d041c34650775046d5f5503510c8792f6fc.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script><script src="/js/meme.min.7c970300c27643b79c4d0efddfc75263268411ecd1b7a86d73da3212c33ed6f1.js"></script>
 
     
 
@@ -493,6 +493,25 @@
 
 
         
+    
+
+        
+            <div class="load-comments">
+                <div id="load-comments">加载评论</div>
+            </div>
+        
+
+        
+
+        
+            <div id="vcomments"></div>
+        
+
+        
+
+        
+    
+
 
 
     </div>
@@ -548,6 +567,65 @@
 
 
 
+
+    
+
+        
+
+        
+            <script>
+    function loadComments() {
+        if (typeof Valine === 'undefined') {
+            var getScript = (options) => {
+                var script = document.createElement('script');
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                Object.keys(options).forEach((key) => {
+                    script[key] = options[key];
+                });
+                document.body.appendChild(script);
+            };
+            getScript({
+                src: 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+                onload: () => {
+                    newValine();
+                }
+            });
+        } else {
+            newValine();
+        }
+    }
+    function newValine() {
+        new Valine({
+            el: '#vcomments',
+            appId: 'CrNjIJBAt0TrUIB13Qu9Iid6-MdYXbMMI',
+            appKey: 'aGKloxPI5iFXaDWmeuhFI1s9',
+            placeholder: 'Just go go',
+            path: location.pathname,
+            avatar: 'mm',
+            meta: ["nick","mail","link"],
+            pageSize:  10 ,
+            lang: 'zh-cn',
+            visitor:  false ,
+            highlight:  true ,
+            avatarForce:  false ,
+            recordIP:  false ,
+            serverURLs: '',
+            emojiCDN: '',
+            emojiMaps: {},
+            enableQQ:  false ,
+            requiredFields: []
+        });
+    }
+</script>
+
+        
+
+        
+
+        
+
+    
 
 
 
