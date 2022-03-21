@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.94.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.95.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -942,13 +942,14 @@ group最好不要将权限设置为writable，以免密钥失效。</p>
     function newWaline() {
         new Waline({
             el: '#waline',
+            dark: 'html[data-theme="dark"]',
             serverURL: 'waline.baohengtao.com',
-            placeholder: '请填写正确的昵称和邮箱，方便接收评论回复信息哦',
+            placeholder: '欢迎评论~😁 ',
             meta: ["nick","mail","link"],
             pageSize:  10 ,
             lang: 'zh-cn',
             highlight:  true ,
-            requiredFields: ["nick","mail"]
+            requiredFields: ["nick"]
         });
     }
 </script>
