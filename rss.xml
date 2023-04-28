@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Fri, 28 Apr 2023 19:11:12 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 28 Apr 2023 19:15:29 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -365,7 +365,7 @@
 &lt;th&gt;CRate&lt;/th&gt;
 &lt;th&gt;NChan&lt;/th&gt;
 &lt;th&gt;Data Rate (Mbps) SDur=13.6us (Nss=2)&lt;/th&gt;
-&lt;th&gt;11ac Max Rate (Nss=8)&lt;/th&gt;
+&lt;th&gt;11ax Max Rate (Nss=8)&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -420,7 +420,7 @@
 &lt;th&gt;CRate&lt;/th&gt;
 &lt;th&gt;NChan&lt;/th&gt;
 &lt;th&gt;Data Rate (Mbps) SDur=13.6us (Nss=4)&lt;/th&gt;
-&lt;th&gt;11ac Max Rate (Nss=16)&lt;/th&gt;
+&lt;th&gt;11be Max Rate (Nss=16)&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
