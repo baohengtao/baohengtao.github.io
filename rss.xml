@@ -10,17 +10,384 @@
         <title>Cooper&#39;s Zone</title>
         <link>https://baohengtao.com/</link>
         <description>Happy Everyday</description>
-        <generator>Hugo 0.107.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.111.3 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
         
         
         
-        <lastBuildDate>Mon, 05 Dec 2022 23:52:18 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 28 Apr 2023 17:42:28 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
+        
+            <item>
+                <title>Wi-Fi (802.11) PHY Data Rates</title>
+                <link>https://baohengtao.com/tech/wifi-speed/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/wifi-speed/</guid>
+                <pubDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</pubDate>
+                
+                
+                
+                    <description>&lt;h2 id=&#34;modulation-with-dssscck&#34;&gt;Modulation with DSSS/CCK&lt;/h2&gt;
+&lt;p&gt;DSSS/CCK data symbol is formed by spreading and modulating the data bits. The data rate depends on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Chips per second (CSec) = 11,000,000&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chips per symbol (CSym) = 11 (DSSS) or 8 (DSSS with CCK)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wi-Fi 0 and 1 use this technology.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Wi-Fi 0&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11 (1997)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 1 to 2&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wi-Fi 1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11b (1999)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 1 to 11&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chips per second&lt;/th&gt;
+&lt;th&gt;Chips per symbol&lt;/th&gt;
+&lt;th&gt;Bits per symbol&lt;/th&gt;
+&lt;th&gt;Data Rate (Mbps)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;11,000,000&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11,000,000&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11,000,000&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11,000,000&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;modulation-with-ofdm&#34;&gt;Modulation with OFDM&lt;/h2&gt;
+&lt;p&gt;DSSS/CCK uses the entire available bandwidth as one single channel. OFDM divides the channel into multiple(overlapping) sub-channels. The data rate depends on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Symbol duration (in other words symbols per second) (SDur)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Symbol duration depends on &amp;quot;Guard Interval&amp;quot; between symbols.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OFDM Symbol Duration is 3.2us and Guard Interval Duration is 0.4us or  0.8us, so SDur is equal 3.6us or 4us&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bits per symbol (NBits)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Coding rate (CRate)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;Some bits are used for error correction and do not carry data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Number of sub-channels (NChan)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;Depends on channel width(20/40/80/160)&lt;/li&gt;
+&lt;li&gt;11n/11ac have more &lt;a href=&#34;http://chimera.labs.oreilly.com/books/1234000001739/ch02.html#radio_channel_layout&#34;&gt;sub-channels&lt;/a&gt; in the same bandwidth compared to 11a/11g&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The formula for data rate is:&lt;/p&gt;
+&lt;p&gt;​	$Data Rate = (1/SDur)\times(NBits\times CRate)\times NChan$&lt;/p&gt;
+&lt;h3 id=&#34;11a11g&#34;&gt;11a/11g&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Wi-Fi 2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11a (1999)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 6 to 54&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wi-Fi 3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11g (2003)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 6 to 54&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Modulation&lt;/th&gt;
+&lt;th&gt;NBits&lt;/th&gt;
+&lt;th&gt;CRate&lt;/th&gt;
+&lt;th&gt;NChan&lt;/th&gt;
+&lt;th&gt;SDur (micro sec)&lt;/th&gt;
+&lt;th&gt;Data Rate (Mbps)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;BPSK&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1/2&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BPSK&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;3/4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QPSK&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1/2&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QPSK&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3/4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16-QAM&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;1/2&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16-QAM&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;3/4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;64-QAM&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2/3&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;64-QAM&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;3/4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;Note: The above table shows date rates for 20MHz channel width. 5,10 MHz channel widths are not shown.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;11n11ac-&#34;&gt;**11n/11ac **&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Wi-Fi 4
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11n (2008)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 72 to 600&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 2.4/5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Channel Width&lt;/th&gt;
+&lt;th&gt;NBits&lt;/th&gt;
+&lt;th&gt;CRate&lt;/th&gt;
+&lt;th&gt;NChan&lt;/th&gt;
+&lt;th&gt;Data Rate (Mbps) SDur=3.6us (Nss=1)&lt;/th&gt;
+&lt;th&gt;11n Max Rate (Nss=4)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;20 Mhz&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;52&lt;/td&gt;
+&lt;td&gt;72.2&lt;/td&gt;
+&lt;td&gt;288.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40 Mhz&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;108&lt;/td&gt;
+&lt;td&gt;150&lt;/td&gt;
+&lt;td&gt;600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Wi-Fi 5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IEEE standard: 802.11ac (2014)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Maximum link rate (Mbit/s): 433 to 6933&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Radio frequency (GHz): 5&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Channel Width&lt;/th&gt;
+&lt;th&gt;NBits&lt;/th&gt;
+&lt;th&gt;CRate&lt;/th&gt;
+&lt;th&gt;NChan&lt;/th&gt;
+&lt;th&gt;Data Rate (Mbps) SDur=3.6us (Nss=1)&lt;/th&gt;
+&lt;th&gt;11ac Max Rate (Nss=8)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;20 Mhz&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;52&lt;/td&gt;
+&lt;td&gt;96.3&lt;/td&gt;
+&lt;td&gt;577.8 (Nss=6)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40 Mhz&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;108&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;80 Mhz&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;234&lt;/td&gt;
+&lt;td&gt;433.3&lt;/td&gt;
+&lt;td&gt;3466.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;160 Mhz&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;468&lt;/td&gt;
+&lt;td&gt;866.7&lt;/td&gt;
+&lt;td&gt;6933.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;modulation-with-ofdma&#34;&gt;Modulation with OFDMA&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wi-Fi 6
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11ax (2019)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 574 to 9608&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 2.4/5/6&lt;/li&gt;
+&lt;li&gt;6GHz only avaliable in Wi-Fi 6E proposed at 2020&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://80211notes.blogspot.com/2013/08/wi-fi-80211-phy-data-rates.html&#34;&gt;Wi-Fi notebook: Wi-Fi (802.11) PHY Data Rates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://semfionetworks.com/blog/mcs-table-updated-with-80211ax-data-rates/&#34;&gt;MCS Table (Updated with 802.11ax Data Rates) – SemFio Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://baohengtao.com/tech/">tech</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://baohengtao.com/tags/wi-fi/">Wi-Fi</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>博客添加Waline评论功能</title>
