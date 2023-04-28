@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Fri, 28 Apr 2023 17:42:28 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 28 Apr 2023 18:58:23 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -103,8 +103,6 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Symbol duration (in other words symbols per second) (SDur)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Symbol duration depends on &amp;quot;Guard Interval&amp;quot; between symbols.&lt;/p&gt;
@@ -119,19 +117,19 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Coding rate (CRate)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;ul&gt;
 &lt;li&gt;Some bits are used for error correction and do not carry data&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Number of sub-channels (NChan)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Depends on channel width(20/40/80/160)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Depends on channel width(20/40/80/160)&lt;/li&gt;
-&lt;li&gt;11n/11ac have more &lt;a href=&#34;http://chimera.labs.oreilly.com/books/1234000001739/ch02.html#radio_channel_layout&#34;&gt;sub-channels&lt;/a&gt; in the same bandwidth compared to 11a/11g&lt;/li&gt;
+&lt;p&gt;11n/11ac have more &lt;a href=&#34;http://chimera.labs.oreilly.com/books/1234000001739/ch02.html#radio_channel_layout&#34;&gt;sub-channels&lt;/a&gt; in the same bandwidth compared to 11a/11g&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -235,7 +233,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;em&gt;Note: The above table shows date rates for 20MHz channel width. 5,10 MHz channel widths are not shown.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;11n11ac-&#34;&gt;**11n/11ac **&lt;/h3&gt;
+&lt;h3 id=&#34;11n11ac&#34;&gt;11n/11ac&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Wi-Fi 4
 &lt;ul&gt;
@@ -338,8 +336,19 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;modulation-with-ofdma&#34;&gt;Modulation with OFDMA&lt;/h2&gt;
+&lt;p&gt;There are some chagne in OFDMA compared to OFDM:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Wi-Fi 6
+&lt;li&gt;
+&lt;p&gt;A new symbol duration is used: 12.8µs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Different Guard Intervals are used: 0.8µs, 1.6µs and 3.2µs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The size and number of data subcarriers is not the same (especially with the different RU sizes introduced by OFDMA).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wi-Fi 6&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IEEE standard: 802.11ax (2019)&lt;/li&gt;
 &lt;li&gt;Maximum link rate (Mbit/s): 574 to 9608&lt;/li&gt;
@@ -348,10 +357,123 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Channel Width&lt;/th&gt;
+&lt;th&gt;NBits&lt;/th&gt;
+&lt;th&gt;CRate&lt;/th&gt;
+&lt;th&gt;NChan&lt;/th&gt;
+&lt;th&gt;Data Rate (Mbps) SDur=13.6us (Nss=2)&lt;/th&gt;
+&lt;th&gt;11ac Max Rate (Nss=8)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;20 Mhz&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;234&lt;/td&gt;
+&lt;td&gt;287&lt;/td&gt;
+&lt;td&gt;1147&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40 Mhz&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;468&lt;/td&gt;
+&lt;td&gt;574&lt;/td&gt;
+&lt;td&gt;2294&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;80 Mhz&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;980&lt;/td&gt;
+&lt;td&gt;1201&lt;/td&gt;
+&lt;td&gt;4804&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;160 Mhz&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;1960&lt;/td&gt;
+&lt;td&gt;2402&lt;/td&gt;
+&lt;td&gt;9608&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Wi-Fi 7
+&lt;ul&gt;
+&lt;li&gt;IEEE standard: 802.11be (2024)&lt;/li&gt;
+&lt;li&gt;Maximum link rate (Mbit/s): 1376 to 46120&lt;/li&gt;
+&lt;li&gt;Radio frequency (GHz): 2.4/5/6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Channel Width&lt;/th&gt;
+&lt;th&gt;NBits&lt;/th&gt;
+&lt;th&gt;CRate&lt;/th&gt;
+&lt;th&gt;NChan&lt;/th&gt;
+&lt;th&gt;Data Rate (Mbps) SDur=13.6us (Nss=4)&lt;/th&gt;
+&lt;th&gt;11ac Max Rate (Nss=16)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;20 Mhz&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;234&lt;/td&gt;
+&lt;td&gt;688&lt;/td&gt;
+&lt;td&gt;2753&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40 Mhz&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;468&lt;/td&gt;
+&lt;td&gt;1376&lt;/td&gt;
+&lt;td&gt;5506&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;80 Mhz&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;980&lt;/td&gt;
+&lt;td&gt;2882&lt;/td&gt;
+&lt;td&gt;11529&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;160 Mhz&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;1960&lt;/td&gt;
+&lt;td&gt;5765&lt;/td&gt;
+&lt;td&gt;23059&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;320 Mhz&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;5/6&lt;/td&gt;
+&lt;td&gt;3920&lt;/td&gt;
+&lt;td&gt;11529&lt;/td&gt;
+&lt;td&gt;46118&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://80211notes.blogspot.com/2013/08/wi-fi-80211-phy-data-rates.html&#34;&gt;Wi-Fi notebook: Wi-Fi (802.11) PHY Data Rates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://semfionetworks.com/blog/mcs-table-updated-with-80211ax-data-rates/&#34;&gt;MCS Table (Updated with 802.11ax Data Rates) – SemFio Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;more-to-read&#34;&gt;More to read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.duckware.com/tech/wifi-in-the-us.html&#34;&gt;Understand Wi-Fi 4/5/6/6E/7 (802.11 n/ac/ax/be)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
                 
