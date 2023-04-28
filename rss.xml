@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Fri, 28 Apr 2023 19:15:29 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 28 Apr 2023 20:56:06 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -323,7 +323,7 @@
 &lt;td&gt;5/6&lt;/td&gt;
 &lt;td&gt;234&lt;/td&gt;
 &lt;td&gt;433.3&lt;/td&gt;
-&lt;td&gt;3466.4&lt;/td&gt;
+&lt;td&gt;3467&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;160 Mhz&lt;/td&gt;
@@ -331,7 +331,7 @@
 &lt;td&gt;5/6&lt;/td&gt;
 &lt;td&gt;468&lt;/td&gt;
 &lt;td&gt;866.7&lt;/td&gt;
-&lt;td&gt;6933.6&lt;/td&gt;
+&lt;td&gt;6933&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -466,6 +466,83 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;maximum-link-rate-compare&#34;&gt;Maximum link rate compare&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Generation&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;NBits (log2)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;CRate&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Channel Width&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;NChan&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Symbol Duration (micro sec)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Number of Spatial Streams&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Data Rate (Mbps)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;802.11a/g&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3/4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;20 MHz&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;48&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;54&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;802.11n&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5/6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;40 MHz&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;108&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3.6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;802.11ac&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5/6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;160 MHz&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;468&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3.6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6933&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;802.11ax&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5/6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;160 MHz&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1960&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;13.6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9608&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;802.11be&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;12&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5/6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;320 MHz&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3920&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;13.6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;46118&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The parameters in the table are now represented as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NBits (log2): number of bits used for modulation&lt;/li&gt;
+&lt;li&gt;CRate: rate at which redundant bits are added for error correction&lt;/li&gt;
+&lt;li&gt;Channel Width: bandwidth of the channel&lt;/li&gt;
+&lt;li&gt;NChan: number of non-overlapping channels available&lt;/li&gt;
+&lt;li&gt;Symbol Duration (micro sec): time taken for a symbol to be transmitted&lt;/li&gt;
+&lt;li&gt;Number of Spatial Streams: number of independent data streams that can be transmitted simultaneously&lt;/li&gt;
+&lt;li&gt;Data Rate: theoretical maximum data rate&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://80211notes.blogspot.com/2013/08/wi-fi-80211-phy-data-rates.html&#34;&gt;Wi-Fi notebook: Wi-Fi (802.11) PHY Data Rates&lt;/a&gt;&lt;/li&gt;
