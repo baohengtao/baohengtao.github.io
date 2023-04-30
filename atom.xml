@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Cooper&#39;s Zone</title>
     <subtitle type="html">Happy Everyday</subtitle>
-    <updated>2023-04-30T15:39:19&#43;00:00</updated>
+    <updated>2023-04-30T15:52:33&#43;00:00</updated>
     <id>https://baohengtao.com/</id>
     <link rel="alternate" type="text/html" href="https://baohengtao.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://baohengtao.com/atom.xml" />
@@ -709,7 +709,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
 &lt;td&gt;+AIoT:583&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AX10000&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;BE10000&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;1376.4&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4 streams&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;5764.8+2882.4&lt;/td&gt;
