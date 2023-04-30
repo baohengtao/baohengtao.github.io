@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Cooper&#39;s Zone</title>
     <subtitle type="html">Happy Everyday</subtitle>
-    <updated>2023-04-30T15:52:33&#43;00:00</updated>
+    <updated>2023-04-30T17:16:50&#43;00:00</updated>
     <id>https://baohengtao.com/</id>
     <link rel="alternate" type="text/html" href="https://baohengtao.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://baohengtao.com/atom.xml" />
@@ -18,7 +18,7 @@
             <title type="text">Wi-Fi (802.11) PHY Data Rates</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/wifi-speed/" />
             <id>https://baohengtao.com/tech/wifi-speed/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2023-04-29T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -654,7 +654,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;AC2100&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;300&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;300&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;2 streams&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;1733&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4 streams @ 80MHZ&lt;/td&gt;
@@ -690,7 +690,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
 &lt;td style=&#34;text-align:center&#34;&gt;2 streams&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4804&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4 streams @ 160MHz&lt;/td&gt;
-&lt;td&gt;+AIoT:583&lt;/td&gt;
+&lt;td&gt;+AIoT:583&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;AX6000&lt;/td&gt;
@@ -705,23 +705,19 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
 &lt;td style=&#34;text-align:center&#34;&gt;1148&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4 streams&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4804+2402&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;4 streams @ 160MHz+ 4 streams @80MHz&lt;/td&gt;
-&lt;td&gt;+AIoT:583&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4 streams @ 160MHz+ 4 streams @80MHz&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;+AIoT:583&lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;BE10000&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;1376.4&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;4 streams&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;5764.8+2882.4&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;4 streams @ 160MHz+ 4 streams @80MHz&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4 streams @ 160MHz+ 4 streams @80MHz&lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
 &lt;td&gt;@4096QAM&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;802.11ac specifies operation in the 5 GHz band, hence operation in the 2.4 GHz band is specified by 802.11n for 802.11ac.&lt;/li&gt;
-&lt;li&gt;The AIoT antenna adds 583Mbps speed with its dual-frequency design of 2.4GHz (150Mbps at 802.11n@40MHz1) and 5GHz (433Mbps at 802.11ac@80MHz). However,  574Mbps in 2.4GHz seems cannot work with AIoT&#39;s 150Mbps at the same time, since there is only one 40MHz channel in 2.4GHz&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://80211notes.blogspot.com/2013/08/wi-fi-80211-phy-data-rates.html&#34;&gt;Wi-Fi notebook: Wi-Fi (802.11) PHY Data Rates&lt;/a&gt;&lt;/li&gt;
@@ -731,6 +727,20 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.duckware.com/tech/wifi-in-the-us.html&#34;&gt;Understand Wi-Fi 4/5/6/6E/7 (802.11 n/ac/ax/be)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;802.11ac specifies operation in the 5 GHz band, hence operation in the 2.4 GHz band is specified by 802.11n for 802.11ac.&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;The AIoT antenna adds 583Mbps speed with its dual-frequency design of 2.4GHz (150Mbps at 802.11n@40MHz1) and 5GHz (433Mbps at 802.11ac@80MHz). However,  574Mbps in 2.4GHz seems cannot work with AIoT&#39;s 150Mbps at the same time, since there is only one 40MHz channel in 2.4GHz&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Although the AX9000 and BE10000 routers enable dual-band connectivity in the 5GHz frequency range using channels in both the 5.2GHz and 5.8GHz bands, China has only one available 160MHz channel and it is in the 5.2GHz band. Therefore, having two 5GHz bands utilizing 160MHz channels simultaneously in this country is not feasible. Consequently, users in China must opt for a 160MHz + 80MHz channel configuration rather than a 160MHz + 160MHz combination.&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </content>
             
             
@@ -771,7 +781,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">博客添加Waline评论功能</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/comment-support/" />
             <id>https://baohengtao.com/tech/comment-support/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2022-03-21T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -979,7 +989,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">测试下评论系统</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/comment-test/" />
             <id>https://baohengtao.com/tech/comment-test/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2022-03-16T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1020,7 +1030,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">Global History</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/global-history/" />
             <id>https://baohengtao.com/study/global-history/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1177,7 +1187,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">Introducing Social Psychology</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/social-psychology-intro/" />
             <id>https://baohengtao.com/study/social-psychology-intro/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1277,7 +1287,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">Nutrients</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/nutrients/" />
             <id>https://baohengtao.com/study/nutrients/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1356,7 +1366,7 @@ Fiber is famous for its beneficial health effects but not listed in essential nu
             <title type="text">Social Thinking</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/social-thinking/" />
             <id>https://baohengtao.com/study/social-thinking/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1576,7 +1586,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">Rsync工具使用</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/use-rsync/" />
             <id>https://baohengtao.com/tech/use-rsync/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-06-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1837,7 +1847,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">配置Linux</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/linux-setup/" />
             <id>https://baohengtao.com/tech/linux-setup/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-31T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2054,7 +2064,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">添加相册功能</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/add-gallery-to-hugo/" />
             <id>https://baohengtao.com/tech/add-gallery-to-hugo/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-26T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2340,7 +2350,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">在 hugo 中嵌入 PDF</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hugo-pdf/" />
             <id>https://baohengtao.com/tech/hugo-pdf/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-26T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2542,7 +2552,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">博客的定位</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/life/blog-how/" />
             <id>https://baohengtao.com/life/blog-how/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2602,7 +2612,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">因果关系的三个层级</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/thebookofwhy/" />
             <id>https://baohengtao.com/study/thebookofwhy/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2654,7 +2664,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">自定义 Hugo Shortcodes 简码</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hugo-shortcodes/" />
             <id>https://baohengtao.com/tech/hugo-shortcodes/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2953,7 +2963,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">Github Repo</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/ah/" />
             <id>https://baohengtao.com/tech/ah/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-24T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3076,7 +3086,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">Hugo Front Matter</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hugo-front-matter/" />
             <id>https://baohengtao.com/tech/hugo-front-matter/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-24T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3233,7 +3243,7 @@ tocNum: on
             <title type="text">Pacman使用</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/pacman/" />
             <id>https://baohengtao.com/tech/pacman/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-05-21T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3409,7 +3419,7 @@ tocNum: on
             <title type="text">Shell Cases</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/shell-cases/" />
             <id>https://baohengtao.com/tech/shell-cases/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-22T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3476,7 +3486,7 @@ tocNum: on
             <title type="text">ZSH 插件配置2.0</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/zsh_plugin_update/" />
             <id>https://baohengtao.com/tech/zsh_plugin_update/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-21T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3918,7 +3928,7 @@ tocNum: on
             <title type="text">Archlinux 从安装到弃坑</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/archlinux/" />
             <id>https://baohengtao.com/tech/archlinux/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -4213,7 +4223,7 @@ zh_CN.UTF-8 UTF-8
             <title type="text">Emacs Cheatsheet</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/emacs-manual/" />
             <id>https://baohengtao.com/tech/emacs-manual/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-13T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -4547,7 +4557,7 @@ zh_CN.UTF-8 UTF-8
             <title type="text">Shortcut</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/shortcut/" />
             <id>https://baohengtao.com/tech/shortcut/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-13T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -4715,7 +4725,7 @@ takes you away from the home row.&lt;/p&gt;
             <title type="text">Vim 手册</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/vim-manual/" />
             <id>https://baohengtao.com/tech/vim-manual/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-13T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -5284,7 +5294,7 @@ takes you away from the home row.&lt;/p&gt;
             <title type="text">Vim 和 Emacs 配置文件路径</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/emacs-vim-config/" />
             <id>https://baohengtao.com/tech/emacs-vim-config/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-12T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -5434,7 +5444,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">Git Manual</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/gitmanual/" />
             <id>https://baohengtao.com/tech/gitmanual/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-04T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6041,7 +6051,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">Tmux Cheetsheet</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/tmux/" />
             <id>https://baohengtao.com/tech/tmux/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-04-04T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6220,7 +6230,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">SSL/TLS 协议</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/ssl-tls/" />
             <id>https://baohengtao.com/tech/ssl-tls/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-31T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6399,7 +6409,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">iTerm配置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/iterm/" />
             <id>https://baohengtao.com/tech/iterm/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-30T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6464,7 +6474,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">Nginx Manual</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/nginx_manul/" />
             <id>https://baohengtao.com/tech/nginx_manul/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-30T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6661,7 +6671,7 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
             <title type="text">Typora中的路径设置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/path-in-typora/" />
             <id>https://baohengtao.com/tech/path-in-typora/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-29T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6852,7 +6862,7 @@ typora-root-url: ../
             <title type="text">macOS 应用列表</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/mac_app/" />
             <id>https://baohengtao.com/tech/mac_app/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-26T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -7138,7 +7148,7 @@ typora-root-url: ../
             <title type="text">Hexo中的Markdown写作</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hexo-writing/" />
             <id>https://baohengtao.com/tech/hexo-writing/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -7756,17 +7766,17 @@ content
             <title type="text">Typora 使用</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/typora-manual/" />
             <id>https://baohengtao.com/tech/typora-manual/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
                     <uri>baohengtao.com</uri>
                     </author>
             <summary type="html">&lt;p&gt;Typora是一款强大的markdown编辑器, 支持数学公式直接输入, 支持「所见即所得」. 「数学公式」+「所见即所得」直接让TeXpad吃灰了.  最最最重要的是可以自己用CSS写主题, 这点很赞, 颜值即正义😎&lt;/p&gt;
-&lt;p&gt;语法部分见&lt;a href=&#34;https://baohengtao.com/posts/hexo-writing&#34;&gt;Hexo中的Markdown写作&lt;/a&gt;; 不过好像把语法部分拿走后这篇也没啥价值了... Anyway, 语法和软件的使用还是分开写比较好...&lt;/p&gt;……</summary>
+&lt;p&gt;语法部分见&lt;a href=&#34;https://baohengtao.com/tech/hexo-writing&#34;&gt;Hexo中的Markdown写作&lt;/a&gt;; 不过好像把语法部分拿走后这篇也没啥价值了... Anyway, 语法和软件的使用还是分开写比较好...&lt;/p&gt;……</summary>
             
                 <content type="html">&lt;p&gt;Typora是一款强大的markdown编辑器, 支持数学公式直接输入, 支持「所见即所得」. 「数学公式」+「所见即所得」直接让TeXpad吃灰了.  最最最重要的是可以自己用CSS写主题, 这点很赞, 颜值即正义😎&lt;/p&gt;
-&lt;p&gt;语法部分见&lt;a href=&#34;https://baohengtao.com/posts/hexo-writing&#34;&gt;Hexo中的Markdown写作&lt;/a&gt;; 不过好像把语法部分拿走后这篇也没啥价值了... Anyway, 语法和软件的使用还是分开写比较好...&lt;/p&gt;
+&lt;p&gt;语法部分见&lt;a href=&#34;https://baohengtao.com/tech/hexo-writing&#34;&gt;Hexo中的Markdown写作&lt;/a&gt;; 不过好像把语法部分拿走后这篇也没啥价值了... Anyway, 语法和软件的使用还是分开写比较好...&lt;/p&gt;
 &lt;h2 id=&#34;macos-特性&#34;&gt;macOS 特性&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;按住command和顶部文件名, 可以快速打开上级文件夹.&lt;/li&gt;
@@ -8028,7 +8038,7 @@ content
             <title type="text">Unix系统中的inode</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/understand-inode/" />
             <id>https://baohengtao.com/tech/understand-inode/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-20T23:06:56&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -8110,7 +8120,7 @@ content
             <title type="text">Exiftool 使用实例</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/exiftool-in-action/" />
             <id>https://baohengtao.com/tech/exiftool-in-action/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-17T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -8415,7 +8425,7 @@ content
             <title type="text">Exiftool 使用手册</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/exiftool-manual/" />
             <id>https://baohengtao.com/tech/exiftool-manual/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-17T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -9438,7 +9448,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">命令行工具</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/shell-tool/" />
             <id>https://baohengtao.com/tech/shell-tool/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-04T21:59:07&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -9574,7 +9584,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">ZSH 插件列表</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/zsh-plugin/" />
             <id>https://baohengtao.com/tech/zsh-plugin/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -9861,7 +9871,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">树莓派配置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/setup-rpi/" />
             <id>https://baohengtao.com/tech/setup-rpi/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-03-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -10128,7 +10138,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">Start Blogging</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/life/start-blogging/" />
             <id>https://baohengtao.com/life/start-blogging/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-02-02T17:15:48&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -10204,7 +10214,7 @@ Hello, world!</summary>
             <title type="text">心理学与生活</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/psych-in-life/" />
             <id>https://baohengtao.com/study/psych-in-life/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>2021-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -11872,7 +11882,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
             <title type="text">Jupyter中的快捷键</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/jupyter-shortcut/" />
             <id>https://baohengtao.com/tech/jupyter-shortcut/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>1900-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -11978,7 +11988,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
             <title type="text">Python 环境配置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/setup-python/" />
             <id>https://baohengtao.com/tech/setup-python/</id>
-            <updated>2023-04-30T23:38:24&#43;08:00</updated>
+            <updated>2023-05-01T00:54:53&#43;08:00</updated>
             <published>1900-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
