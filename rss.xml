@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Sun, 30 Apr 2023 17:50:21 &#43;0000</lastBuildDate>
+        <lastBuildDate>Wed, 03 May 2023 14:29:06 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -805,7 +805,7 @@ fatal: Could not read from remote repository.
 &lt;p&gt;802.11ac specifies operation in the 5 GHz band, hence operation in the 2.4 GHz band is specified by 802.11n for 802.11ac.&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;The AIoT antenna adds 583Mbps speed with its dual-frequency design of 2.4GHz (150Mbps at 802.11n@40MHz1) and 5GHz (433Mbps at 802.11ac@80MHz). However,  574Mbps in 2.4GHz seems cannot work with AIoT&#39;s 150Mbps at the same time, since there is only one 40MHz channel in 2.4GHz&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By utilizing a dual-frequency design comprising of 2.4GHz (150Mbps at 802.11n@40MHz1) and 5GHz (433Mbps at 802.11ac@80MHz), the AIoT antenna is capable of adding 583Mbps speed. Nonetheless, it is not possible to have both the 574Mbps in 2.4GHz and the 150Mbps at the same time due to the limited availability of a 40MHz channel in 2.4GHz.&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
 &lt;p&gt;Although the AX9000 and BE10000 routers enable dual-band connectivity in the 5GHz frequency range using channels in both the 5.2GHz and 5.8GHz bands, China has only one available 160MHz channel and it is in the 5.2GHz band. Therefore, having two 5GHz bands utilizing 160MHz channels simultaneously in this country is not feasible. Consequently, users in China must opt for a 160MHz + 80MHz channel configuration rather than a 160MHz + 160MHz combination.&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://baohengtao.com/tech/wifi-speed/#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
