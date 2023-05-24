@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://baohengtao.com/tags/git/</loc>
+    <loc>https://baohengtao.com/tags/network/</loc>
+    <lastmod>2023-05-24T18:36:38+08:00</lastmod>
+  </url><url>
+    <loc>https://baohengtao.com/tech/surge_dhcp/</loc>
     <lastmod>2023-05-24T18:36:38+08:00</lastmod>
   </url><url>
     <loc>https://baohengtao.com/tags/</loc>
     <lastmod>2023-05-24T18:36:38+08:00</lastmod>
   </url><url>
     <loc>https://baohengtao.com/tech/</loc>
+    <lastmod>2023-05-24T18:36:38+08:00</lastmod>
+  </url><url>
+    <loc>https://baohengtao.com/tags/git/</loc>
     <lastmod>2023-05-24T18:36:38+08:00</lastmod>
   </url><url>
     <loc>https://baohengtao.com/tech/github_proxy/</loc>
@@ -135,12 +141,6 @@
     <lastmod>2023-05-24T18:36:38+08:00</lastmod>
   </url><url>
     <loc>https://baohengtao.com/tech/archlinux/</loc>
-    <lastmod>2023-05-24T18:36:38+08:00</lastmod>
-  </url><url>
-    <loc>https://baohengtao.com/tags/network/</loc>
-    <lastmod>2023-05-24T18:36:38+08:00</lastmod>
-  </url><url>
-    <loc>https://baohengtao.com/tech/surge_snell/</loc>
     <lastmod>2023-05-24T18:36:38+08:00</lastmod>
   </url><url>
     <loc>https://baohengtao.com/tags/emacs/</loc>
