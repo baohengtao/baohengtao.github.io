@@ -15,7 +15,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>Unix系统中的inode | Cooper&#39;s Zone</title>
+    <title>Surge的DNS与DHCP | Cooper&#39;s Zone</title>
 
     <link rel="stylesheet" href="/css/meme.min.4332f184e33f1db2ed1e4f2049af0017cac1498d6b1794e0c04ec07b96ebb755.css"/>
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Cinzel&#43;Decorative:wght@700&amp;family=PT&#43;Serif&#43;Caption&amp;family=Lobster&amp;family=DM&#43;Serif&#43;Text&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Cinzel&#43;Decorative:wght@700&amp;family=PT&#43;Serif&#43;Caption&amp;family=Lobster&amp;family=DM&#43;Serif&#43;Text&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Bao Hengtao" /><meta name="description" content="每一个文件的诞生, 都需要向系统注册, 以宣告自己的到来; 而这些注册信息, 则存储在inode中. ……" />
+    <meta name="author" content="Bao Hengtao" /><meta name="description" content="  " />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -49,22 +49,22 @@
     
 
     
-    <link rel="canonical" href="https://baohengtao.com/tech/understand-inode/" />
+    <link rel="canonical" href="https://baohengtao.com/tech/surge_snell/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2021-03-20T23:06:56+00:00",
+        "datePublished": "2021-04-15T00:00:00+00:00",
         "dateModified": "2023-05-24T18:36:38+08:00",
-        "url": "https://baohengtao.com/tech/understand-inode/",
-        "headline": "Unix系统中的inode",
-        "description": "每一个文件的诞生, 都需要向系统注册, 以宣告自己的到来; 而这些注册信息, 则存储在inode中. ……",
+        "url": "https://baohengtao.com/tech/surge_snell/",
+        "headline": "Surge的DNS与DHCP",
+        "description": "  ",
         "inLanguage" : "zh-CN",
         "articleSection": "tech",
-        "wordCount":  1150 ,
-        "image": ["https://raw.githubusercontent.com/baohengtao/blog.img/master/uPic/understand-inode.png"],
+        "wordCount":  863 ,
+        "image": ["https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241610292.png","https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241713724.png","https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241757473.png","https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241820746.png","https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241826878.png"],
         "author": {
             "@type": "Person",
             "image": "https://baohengtao.com/icons/apple-touch-icon.png",
@@ -99,13 +99,13 @@
 
 
 
-<meta property="og:title" content="Unix系统中的inode" />
-<meta property="og:description" content="每一个文件的诞生, 都需要向系统注册, 以宣告自己的到来; 而这些注册信息, 则存储在inode中. ……" />
-<meta property="og:url" content="https://baohengtao.com/tech/understand-inode/" />
+<meta property="og:title" content="Surge的DNS与DHCP" />
+<meta property="og:description" content="  " />
+<meta property="og:url" content="https://baohengtao.com/tech/surge_snell/" />
 <meta property="og:site_name" content="Cooper&#39;s Zone" />
-<meta property="og:locale" content="zh" /><meta property="og:image" content="https://raw.githubusercontent.com/baohengtao/blog.img/master/uPic/understand-inode.png" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241610292.png" />
 <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-03-20T23:06:56&#43;00:00" />
+    <meta property="article:published_time" content="2021-04-15T00:00:00&#43;00:00" />
     <meta property="article:modified_time" content="2023-05-24T18:36:38&#43;08:00" />
     
     <meta property="article:section" content="tech" />
@@ -250,11 +250,12 @@
 
         <article class="content post h-entry" data-small-caps="true" data-align="justify" data-type="tech" data-toc-num="true">
 
-            <h1 class="post-title p-name">Unix系统中的inode</h1>
+            <h1 class="post-title p-name">Surge的DNS与DHCP</h1>
 
             
 
             
+                <div class="post-description p-summary"></div>
                 
             
 
@@ -264,7 +265,7 @@
 <div class="post-meta">
     
         
-        <time datetime="2021-03-20T23:06:56&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.3.20</time>
+        <time datetime="2021-04-15T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.4.15</time>
     
     
         
@@ -299,11 +300,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1150</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;863</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;3&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;2&nbsp;分钟</span>
     
     
     
@@ -313,47 +314,39 @@
 
             <nav class="contents">
   <ol class="toc">
-    <li><a id="contents:inode" href="#inode">inode</a></li>
-    <li><a id="contents:目录文件" href="#目录文件">目录文件</a></li>
-    <li><a id="contents:硬链接" href="#硬链接">硬链接</a></li>
-    <li><a id="contents:软链接" href="#软链接"><strong>软链接</strong></a></li>
+    <li><a id="contents:增强模式" href="#增强模式">增强模式</a>
+      <ol>
+        <li><a id="contents:网关模式" href="#网关模式">网关模式</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:ios设备上的表现" href="#ios设备上的表现">iOS设备上的表现</a></li>
   </ol>
 </nav><div class="post-body e-content">
-                <p>每一个文件的诞生, 都需要向系统注册, 以宣告自己的到来; 而这些注册信息, 则存储在inode中. <img src="https://raw.githubusercontent.com/baohengtao/blog.img/master/uPic/understand-inode.png" alt=""></p>
-<h2 id="inode"><a href="#inode" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:inode" class="headings">inode</a></h2>
-<p>每个文件的创建都对应着一个 inode(索引节点)的生成, 它记录着该文件的元信息:</p>
-<ul>
-<li>
-<p>文件的字节数</p>
-</li>
-<li>
-<p>文件的拥有者信息、读写权限</p>
-</li>
-<li>
-<p>文件的时间戳, 分别是: ctime指inode上一次变动的时间，mtime指文件内容上一次变动的时间，atime指文件上一次打开的时间。</p>
-</li>
-<li>
-<p>链接数, 即有多少文件名指向这个inode</p>
-</li>
-<li>
-<p>文件数据block的位置</p>
-</li>
-</ul>
-<p>每个inode都有一个号码, 操作系统用inode号码来识别不同文件. 当我们打开一个文件时, 系统会找到该文件的 inode 号码; 通过 inode 号码获取inode信息; 最后通过inode信息获取文件数据所在的block.</p>
-<h2 id="目录文件"><a href="#目录文件" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:目录文件" class="headings">目录文件</a></h2>
-<p>Unix/Linux 系统中, 目录 (directory) 也是一种文件. 打开目录, 实际上就是打开目录文件.</p>
-<p>目录文件是一系列目录项的列表. 每个目录项, 由两部分组成: 所包含文件的文件名, 以及该文件名的inode号码.</p>
-<p>因此, 目录文件的读和写权限, 都是针对目录文件本身. 如果只有读权限, 只能获取文件名, 无法获取其它信息, 因为其它信息都存储在inode节点中, 而读取inode节点内的信息需要目录文件的执行权限.</p>
-<h2 id="硬链接"><a href="#硬链接" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:硬链接" class="headings">硬链接</a></h2>
-<p>每个 inode 可以对应多个文件名. 当创建硬链接时, 相当于增加了一个指向该inode节点的链接数. 反过来, 当删除一个文件时, 则指向该文件的链接数减 1, 当链接数减少到0时, 表示没有文件指向这个inode, 系统就会回收这个inode号码, 以及其所对应block区域.</p>
-<p>创建目录时，默认会生成两个目录项：&quot;.&quot;和&quot;..&quot;。前者的inode号码就是当前目录的inode号码，等同于当前目录的&quot;硬链接&quot;；后者的inode号码就是当前目录的父目录的inode号码，等同于父目录的&quot;硬链接&quot;。所以，任何一个目录的&quot;硬链接&quot;总数，总是等于2加上它的子目录总数（含隐藏目录）。</p>
-<h2 id="软链接"><a href="#软链接" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:软链接" class="headings"><strong>软链接</strong></a></h2>
-<p>除了硬链接以外，还有一种特殊情况。</p>
-<p>文件A和文件B的inode号码虽然不一样，但是文件A的内容是文件B的路径。读取文件A时，系统会自动将访问者导向文件B。因此，无论打开哪一个文件，最终读取的都是文件B。这时，文件A就称为文件B的&quot;软链接&quot;（soft link）或者&quot;符号链接（symbolic link）。</p>
-<p>这意味着，文件A依赖于文件B而存在，如果删除了文件B，打开文件A就会报错：&quot;No such file or directory&quot;。这是软链接与硬链接最大的不同：文件A指向文件B的文件名，而不是文件B的inode号码，文件B的inode&quot;链接数&quot;不会因此发生变化。</p>
-<p>ln -s命令可以创建软链接。</p>
-<hr>
-<p>参考: <a href="http://www.ruanyifeng.com/blog/2011/12/inode.html" target="_blank" rel="noopener">Unix系统中的inode</a></p>
+                <p>若DNS设置为system, 在开启surge的DHCP server时, 会有如下错误. 提示需增加DNS.</p>
+<pre tabindex="0"><code>Please configure at least one DNS server in Surge&#39;s DNS settings. You cannot depend on the system&#39;s DNS settings if Surge acts as the DHCP server.
+</code></pre><p><img src="https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241610292.png" alt="No-DNS-prevent-dhcp"></p>
+<p>处于好奇,开始研究开启surge时dns的表现.</p>
+<p>为叙述方便, 假设「路由器地址」和「DNS地址」均为192.168.1.1</p>
+<h2 id="增强模式"><a href="#增强模式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:增强模式" class="headings">增强模式</a></h2>
+<p>在只开启代理模式时, DNS无变化, 为192.168.1.1. 开启增强模式时,  DNS 变为 198.18.0.2, 并有有如下提示:</p>
+<pre tabindex="0"><code>Some applications may not obey the system proxy settings. Using enhanced mode can make all applications handled by Surge.
+
+• Surge will setup a virtual network interface (VIF) and register as the default route. All DNS questions will get answers with a virtual IP in 198.18.0.0/15 block.
+</code></pre><p>所有的 DNS 查询都将被 VIF 接管, VIF 返回一个处于 198.18.0.0/15 网段的 Fake IP, 真正的 DNS 查询由 VIF 发往 DNS 设置.</p>
+<h3 id="网关模式"><a href="#网关模式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:网关模式" class="headings">网关模式</a></h3>
+<p>在开启网关模式时, 所有被接管设备的 system's DNS 变为 192.18.0.2, 并返回虚假IP, 图为iOS设备的DNS解析结果</p>
+<p><img src="https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241713724.png" alt="CleanShot 2023-05-24 at 17.12.39@2x"></p>
+<p>这也意味着, 若通过域名如&quot;device.local&quot;连接本地设备时, 因为得到的IP位于 198.18.0.0/15网段, 请求并不会直接发往本地设备, 而是发往网关,再由网关进行中转.</p>
+<p>当被接管设备开启Surge增强模式时, 情况发生了变化, 此时由于本地VIF已经被分配了192.18.0.2,  所以发往System's DNS(192.18.0.2)的请求无效. 需要另外设置DNS地址, 且该DNS地址必须经过网关. 如<code>8.8.8.8</code>. 此时网关会劫持 <code>8.8.8.8</code> 的DNS请求, 并返回 Fake IP</p>
+<p><img src="https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241757473.png" alt="DNS劫持"></p>
+<p>若设置了一个局域网内的DNS地址会发生什么呢? 由于此时网关无法接管DNS请求, 得到的流量都是指向一个个IP地址而没有域名信息 所以此时根据域名定义的分流规则会失效, 且无法看到流量的域名.</p>
+<p>当DNS设置为192.168.1.1时, 可以看到设备返回了Real IP, 而不是 198.18.0.0/15网段的Fake IP, 说明DNS解析未经手网关.</p>
+<p><img src="https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241820746.png" alt="CleanShot 2023-05-24 at 18.20.11@2x"></p>
+<p>可以从网关的设备请求列表看到, 其URL都是一个个IP地址, 而不包含Domain</p>
+<p><img src="https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241826878.png" alt="CleanShot 2023-05-24 at 18.25.36@2x"></p>
+<h2 id="ios设备上的表现"><a href="#ios设备上的表现" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:ios设备上的表现" class="headings">iOS设备上的表现</a></h2>
+<p>不同于macos, 开启Surge时DNS地址并未发生变化. 且被接管时的表现也未发生变化. 可能iOS上的运行机制有所不同, iOS上的Surge并未占用198.18.0.2.</p>
+
             </div>
 
             
@@ -400,7 +393,7 @@
                         
                             
                             <div class="gitinfo-item edit">
-                                <a href="https://github.com/baohengtao/hugo.meme/blob/main/content/tech/inode-understand.md" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon edit-icon"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>Edit Me?</a>
+                                <a href="https://github.com/baohengtao/hugo.meme/blob/main/content/tech/surge-dhcp.md" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon edit-icon"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>Edit Me?</a>
                             </div>
                         
                     
@@ -422,7 +415,7 @@
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://baohengtao.com/tech/understand-inode/&amp;text=Unix%e7%b3%bb%e7%bb%9f%e4%b8%ad%e7%9a%84inode&amp;hashtags=%e8%ae%a1%e7%ae%97%e6%9c%ba,&amp;via=baohengtao" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://baohengtao.com/tech/surge_snell/&amp;text=Surge%e7%9a%84DNS%e4%b8%8eDHCP&amp;hashtags=network,&amp;via=baohengtao" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
@@ -433,21 +426,21 @@
             
                 <div class="share-item telegram">
                     
-                    <a href="https://t.me/share/url?url=https://baohengtao.com/tech/understand-inode/&amp;text=Unix%e7%b3%bb%e7%bb%9f%e4%b8%ad%e7%9a%84inode" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                    <a href="https://t.me/share/url?url=https://baohengtao.com/tech/surge_snell/&amp;text=Surge%e7%9a%84DNS%e4%b8%8eDHCP" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item weibo">
                     
-                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://baohengtao.com/tech/understand-inode/&amp;title=Unix%e7%b3%bb%e7%bb%9f%e4%b8%ad%e7%9a%84inode&amp;pic=https://raw.githubusercontent.com/baohengtao/blog.img/master/uPic/understand-inode.png&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://baohengtao.com/tech/surge_snell/&amp;title=Surge%e7%9a%84DNS%e4%b8%8eDHCP&amp;pic=https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241610292.png&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://baohengtao.com/tech/understand-inode/&amp;name=Unix%e7%b3%bb%e7%bb%9f%e4%b8%ad%e7%9a%84inode&amp;text=%e6%af%8f%e4%b8%80%e4%b8%aa%e6%96%87%e4%bb%b6%e7%9a%84%e8%af%9e%e7%94%9f,%20%e9%83%bd%e9%9c%80%e8%a6%81%e5%90%91%e7%b3%bb%e7%bb%9f%e6%b3%a8%e5%86%8c,%20%e4%bb%a5%e5%ae%a3%e5%91%8a%e8%87%aa%e5%b7%b1%e7%9a%84%e5%88%b0%e6%9d%a5;%20%e8%80%8c%e8%bf%99%e4%ba%9b%e6%b3%a8%e5%86%8c%e4%bf%a1%e6%81%af,%20%e5%88%99%e5%ad%98%e5%82%a8%e5%9c%a8inode%e4%b8%ad.%20%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://baohengtao.com/tech/surge_snell/&amp;name=Surge%e7%9a%84DNS%e4%b8%8eDHCP&amp;text=%20%20" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
@@ -465,7 +458,7 @@
     const typeNumber = 0;
     const errorCorrectionLevel = 'L';
     const qr = qrcode(typeNumber, errorCorrectionLevel);
-    qr.addData('https:\/\/baohengtao.com\/tech\/understand-inode\/');
+    qr.addData('https:\/\/baohengtao.com\/tech\/surge_snell\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
 </script>
@@ -483,17 +476,6 @@
         
     
     
-        <div class="related-posts">
-            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
-            <ul class="related-list">
-                
-                    <li class="related-item">
-                        <a href="/tech/ssl-tls/" class="related-link">SSL/TLS 协议</a>
-                    </li>
-                
-            </ul>
-        </div>
-    
 
 
 
@@ -506,7 +488,7 @@
                 
                 
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>计算机</a>
+                    <a href="/tags/network/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>network</a>
                 
             
         </div>
@@ -517,7 +499,7 @@
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag" class="post-tag-link">#计算机</a></div>
+            <div class="post-tag"><a href="/tags/network/" rel="tag" class="post-tag-link">#network</a></div>
         
         
             <div class="post-category">
@@ -543,12 +525,12 @@
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/tech/typora-manual/" rel="prev">&lt; Typora 使用</a>
+                    <a href="/tech/archlinux/" rel="prev">&lt; Archlinux 从安装到弃坑</a>
                 </li>
             
             
                 <li class="post-nav-next">
-                    <a href="/tech/exiftool-in-action/" rel="next">Exiftool 使用实例 &gt;</a>
+                    <a href="/tech/emacs-manual/" rel="next">Emacs Cheatsheet &gt;</a>
                 </li>
             
         </ul>
