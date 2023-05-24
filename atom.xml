@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Cooper&#39;s Zone</title>
     <subtitle type="html">Happy Everyday</subtitle>
-    <updated>2023-05-24T11:32:26&#43;00:00</updated>
+    <updated>2023-05-24T11:44:57&#43;00:00</updated>
     <id>https://baohengtao.com/</id>
     <link rel="alternate" type="text/html" href="https://baohengtao.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://baohengtao.com/atom.xml" />
@@ -15,7 +15,7 @@
     
     <generator uri="https://gohugo.io/" version="0.112.1">Hugo</generator>
         <entry>
-            <title type="text">Surge的DNS与DHCP</title>
+            <title type="text">Surge 的 DNS 与 DHCP</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/surge_dhcp/" />
             <id>https://baohengtao.com/tech/surge_dhcp/</id>
             <updated>2023-05-24T18:36:38&#43;08:00</updated>
@@ -26,7 +26,7 @@
                     </author>
             <summary type="html">  </summary>
             
-                <content type="html">&lt;p&gt;若DNS设置为system, 在开启surge的DHCP server时, 会有如下错误. 提示需增加DNS.&lt;/p&gt;
+                <content type="html">&lt;p&gt;若 DNS 设置为 system, 在开启 surge 的 DHCP server 时，会有如下错误。提示需增加 DNS.&lt;/p&gt;
 
 
 
@@ -35,9 +35,9 @@
 
 
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241610292.png&#34; alt=&#34;No-DNS-prevent-dhcp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;处于好奇, 开始研究开启surge时dns的表现. 为叙述方便, 假设「路由器地址」和「DNS地址」均为192.168.1.1&lt;/p&gt;
+&lt;p&gt;处于好奇，开始研究开启 surge 时 dns 的表现。为叙述方便，假设「路由器地址」和「DNS 地址」均为 192.168.1.1&lt;/p&gt;
 &lt;h2 id=&#34;增强模式&#34;&gt;增强模式&lt;/h2&gt;
-&lt;p&gt;在只开启代理模式时, DNS无变化, 为192.168.1.1. 开启增强模式时,  DNS 变为 198.18.0.2, 并有有如下提示:&lt;/p&gt;
+&lt;p&gt;在只开启代理模式时，DNS 无变化，为 192.168.1.1. 开启增强模式时，DNS 变为 198.18.0.2, 并有有如下提示：&lt;/p&gt;
 
 
 
@@ -46,20 +46,20 @@
 &lt;p&gt;Surge will setup a virtual network interface (VIF) and register as the default route. All DNS questions will get answers with a virtual IP in 198.18.0.0/15 block.&lt;/p&gt;&lt;/div&gt;
 
 
-&lt;p&gt;所有的 DNS 查询都将被 VIF 接管, VIF 返回一个处于 198.18.0.0/15 网段的 Fake IP, 真正的 DNS 查询由 VIF 发往 DNS 设置.&lt;/p&gt;
+&lt;p&gt;所有的 DNS 查询都将被 VIF 接管，VIF 返回一个处于 198.18.0.0/15 网段的 Fake IP, 真正的 DNS 查询由 VIF 发往 DNS 设置。&lt;/p&gt;
 &lt;h3 id=&#34;网关模式&#34;&gt;网关模式&lt;/h3&gt;
-&lt;p&gt;在开启网关模式时, 所有被接管设备的 system&#39;s DNS 变为 192.18.0.2, 并返回虚假IP, 图为iOS设备的DNS解析结果&lt;/p&gt;
+&lt;p&gt;在开启网关模式时，所有被接管设备的 system&#39;s DNS 变为 192.18.0.2, 并返回虚假 IP, 图为 iOS 设备的 DNS 解析结果&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241713724.png&#34; alt=&#34;CleanShot 2023-05-24 at 17.12.39@2x&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这也意味着, 若通过域名如&amp;quot;device.local&amp;quot;连接本地设备时, 因为得到的IP位于 198.18.0.0/15网段, 请求并不会直接发往本地设备, 而是发往网关,再由网关进行中转.&lt;/p&gt;
-&lt;p&gt;当被接管设备开启Surge增强模式时, 情况发生了变化, 此时由于本地VIF已经被分配了192.18.0.2,  所以发往System&#39;s DNS(192.18.0.2)的请求无效. 需要另外设置DNS地址, 且该DNS地址必须经过网关. 如&lt;code&gt;8.8.8.8&lt;/code&gt;. 此时网关会劫持 &lt;code&gt;8.8.8.8&lt;/code&gt; 的DNS请求, 并返回 Fake IP&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241757473.png&#34; alt=&#34;DNS劫持&#34;&gt;&lt;/p&gt;
-&lt;p&gt;若设置了一个局域网内的DNS地址会发生什么呢? 由于此时网关无法接管DNS请求, 得到的流量都是指向一个个IP地址而没有域名信息 所以此时根据域名定义的分流规则会失效, 且无法看到流量的域名.&lt;/p&gt;
-&lt;p&gt;当DNS设置为192.168.1.1时, 可以看到设备返回了Real IP, 而不是 198.18.0.0/15网段的Fake IP, 说明DNS解析未经手网关.&lt;/p&gt;
+&lt;p&gt;这也意味着，若通过域名如&amp;quot;device.local&amp;quot;连接本地设备时，因为得到的 IP 位于 198.18.0.0/15 网段，请求并不会直接发往本地设备，而是发往网关，再由网关进行中转。&lt;/p&gt;
+&lt;p&gt;当被接管设备开启 Surge 增强模式时，情况发生了变化，此时由于本地 VIF 已经被分配了 192.18.0.2,  所以发往 System&#39;s DNS(192.18.0.2) 的请求无效。需要另外设置 DNS 地址，且该 DNS 地址必须经过网关。如&lt;code&gt;8.8.8.8&lt;/code&gt;. 此时网关会劫持 &lt;code&gt;8.8.8.8&lt;/code&gt; 的 DNS 请求，并返回 Fake IP&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241757473.png&#34; alt=&#34;DNS 劫持&#34;&gt;&lt;/p&gt;
+&lt;p&gt;若设置了一个局域网内的 DNS 地址会发生什么呢？由于此时网关无法接管 DNS 请求，得到的流量都是指向一个个 IP 地址而没有域名信息 所以此时根据域名定义的分流规则会失效，且无法看到流量的域名。&lt;/p&gt;
+&lt;p&gt;当 DNS 设置为 192.168.1.1 时，可以看到设备返回了 Real IP, 而不是 198.18.0.0/15 网段的 Fake IP, 说明 DNS 解析未经手网关。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241820746.png&#34; alt=&#34;CleanShot 2023-05-24 at 18.20.11@2x&#34;&gt;&lt;/p&gt;
-&lt;p&gt;可以从网关的设备请求列表看到, 其URL都是一个个IP地址, 而不包含Domain&lt;/p&gt;
+&lt;p&gt;可以从网关的设备请求列表看到，其 URL 都是一个个 IP 地址，而不包含 Domain&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/baohengtao/blog.img/master/piclist/202305241826878.png&#34; alt=&#34;CleanShot 2023-05-24 at 18.25.36@2x&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ios设备上的表现&#34;&gt;iOS设备上的表现&lt;/h2&gt;
-&lt;p&gt;不同于macos, 开启Surge时DNS地址并未发生变化. 且被接管时的表现也未发生变化. 可能iOS上的运行机制有所不同, iOS上的Surge并未占用198.18.0.2.&lt;/p&gt;
+&lt;h2 id=&#34;ios-设备上的表现&#34;&gt;iOS 设备上的表现&lt;/h2&gt;
+&lt;p&gt;不同于 macos, 开启 Surge 时 DNS 地址并未发生变化。且被接管时的表现也未发生变化。可能 iOS 上的运行机制有所不同，iOS 上的 Surge 并未占用 198.18.0.2.&lt;/p&gt;
 </content>
             
             
