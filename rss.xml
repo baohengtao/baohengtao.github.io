@@ -10,17 +10,196 @@
         <title>Cooper&#39;s Zone</title>
         <link>https://baohengtao.com/</link>
         <description>Happy Everyday</description>
-        <generator>Hugo 0.112.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.112.5 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
         
         
         
-        <lastBuildDate>Wed, 24 May 2023 11:44:57 &#43;0000</lastBuildDate>
+        <lastBuildDate>Tue, 30 May 2023 16:38:29 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
+        
+            <item>
+                <title>Creating  CA and Signing Certificates</title>
+                <link>https://baohengtao.com/tech/https-ca/</link>
+                <guid isPermaLink="true">https://baohengtao.com/tech/https-ca/</guid>
+                <pubDate>Wed, 31 May 2023 00:00:00 &#43;0000</pubDate>
+                
+                
+                
+                    <description>&lt;p&gt;The steps to generate a CA (Certificate Authority) with OpenSSL, using the RSA algorithm, with passphrase protection, along with detailed explanations of each step and its options:&lt;/p&gt;
+&lt;h2 id=&#34;generate-ca&#34;&gt;Generate CA&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Enter the following command to create a new private key and set a passphrase:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl genrsa -aes256 -out ca.key &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command generates an AES-256 encrypted RSA private key with a key length of 4096 bits and outputs it to a file named &lt;code&gt;ca.key&lt;/code&gt;. You&#39;ll be prompted to enter a passphrase twice. Choose a strong and unique passphrase that you can remember.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, you need to create a self-signed root CA certificate using the private key you just created. Enter the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -x509 -new -key ca.key -sha256 -days &lt;span class=&#34;m&#34;&gt;3650&lt;/span&gt; -out ca.crt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command creates a new self-signed CA certificate, signed with the private key created in step 2. The &lt;code&gt;-x509&lt;/code&gt; option specifies that the output is a self-signed certificate, &lt;code&gt;-new&lt;/code&gt; specifies that a new certificate is being created, &lt;code&gt;-key ca.key&lt;/code&gt; specifies the private key to be used to sign the certificate, &lt;code&gt;-sha256&lt;/code&gt; specifies the hash algorithm to be used to sign the certificate, &lt;code&gt;-days 3650&lt;/code&gt; specifies the validity period for the certificate (in this case, 10 years), and &lt;code&gt;-out ca.crt&lt;/code&gt; specifies the output file name for the certificate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Review the CA certificate you just created. You can use the following command to view the certificate contents:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in ca.crt -noout -text
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command displays the contents of the CA certificate in human-readable form. Verify that the information in the certificate looks correct.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;save-ca-as-p12&#34;&gt;save CA as P12&lt;/h3&gt;
+&lt;p&gt;Following command convert a CA (Certificate Authority) certificate to a P12 format:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl pkcs12 -export -out certificate.p12 -inkey ca.key -in ca.crt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In this command, &lt;code&gt;certificate.p12&lt;/code&gt; is the name of the output file that will contain the converted P12 certificate. &lt;code&gt;ca.key&lt;/code&gt; is the private key file that corresponds to the CA certificate. And &lt;code&gt;ca.crt&lt;/code&gt; is the original CA certificate file in PEM format. You will then be prompted to set a password for the P12 file.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&#34;https://nssurge.com/&#34;&gt;Surge&lt;/a&gt;, P12 is convert to text using base64:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;base64 -i certificate.p12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;you can recover it to &lt;code&gt;p12&lt;/code&gt; as following:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;BASE64-ENCODED-TEXT&amp;#34; | base64 -d &amp;gt; ca.p12
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;convert-p12-to-ca&#34;&gt;Convert P12 to CA&lt;/h3&gt;
+&lt;p&gt;you can recover &lt;code&gt;ca.p12&lt;/code&gt;  to &lt;code&gt;ca.key&lt;/code&gt; and &lt;code&gt;ca.crt&lt;/code&gt; using following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl pkcs12 -in ca.p12 -out ca.key -nocerts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl pkcs12 -in ca.p12 -out ca.crt -nokeys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;```&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The first command extracts the encrypted private key from the PKCS12 file and saves it to &lt;code&gt;ca.key&lt;/code&gt;. The &lt;code&gt;-nocerts&lt;/code&gt; option tells OpenSSL to exclude the certificate from the output. During the command execution, OpenSSL will prompt you to enter the password that was used to encrypt the private key.&lt;/p&gt;
+&lt;p&gt;The second command extracts the certificate from the PKCS12 file and saves it to &lt;code&gt;ca.crt&lt;/code&gt;. The &lt;code&gt;-nokeys&lt;/code&gt; option tells OpenSSL to exclude the private key from the output.&lt;/p&gt;
+&lt;h2 id=&#34;generate-and-sign-certificate--with-ca&#34;&gt;Generate and sign certificate  with CA&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Now that you have a CA certificate, you can use it to sign other certificates. To demonstrate, we&#39;ll create a new server certificate and sign it using our CA certificate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;First, we need to create a private key for the new server certificate. Enter the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl genrsa -out server.key &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command generates a new RSA private key with a key length of 2048 bits, and outputs it to a file named &lt;code&gt;server.key&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, we need to create a Certificate Signing Request (CSR) using the private key we just created. Enter the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -new -key server.key -out server.csr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command creates a new CSR using the private key &lt;code&gt;server.key&lt;/code&gt;, and outputs it to a file named &lt;code&gt;server.csr&lt;/code&gt;. During the CSR creation process, you&#39;ll be asked to enter information about your server, such as its Common Name (CN), Organization, and Location.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now that we have a CSR, we can sign it with our CA certificate. Enter the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -out server.crt -days &lt;span class=&#34;m&#34;&gt;365&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command signs the CSR using our CA certificate (&lt;code&gt;ca.crt&lt;/code&gt;) and private key (&lt;code&gt;ca.key&lt;/code&gt;). The &lt;code&gt;-in server.csr&lt;/code&gt; option specifies the input file to be signed, &lt;code&gt;-CA ca.crt&lt;/code&gt; specifies the CA certificate to use for signing, &lt;code&gt;-CAkey ca.key&lt;/code&gt; specifies the private key of the CA,  &lt;code&gt;-out server.crt&lt;/code&gt; specifies the output file name for the signed certificate, and &lt;code&gt;-days 365&lt;/code&gt; specifies the validity period for the signed certificate (in this case, 1 year).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Review the signed server certificate you just created. You can use the following command to view the certificate contents:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in server.crt -noout -text
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command displays the contents of the signed server certificate, including the information from your CSR, and the signature from the CA certificate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That&#39;s it! You now have a CA, a CA certificate, and a signed server certificate. Keep the CA and CA certificate safe and secure, as they will be required to sign other certificates.&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://baohengtao.com/tech/">tech</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://baohengtao.com/tags/network/">network</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Surge 的 DNS 与 DHCP</title>
@@ -6154,9 +6333,9 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
 &lt;p&gt;关于数字证书可以看 &lt;a href=&#34;https://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html&#34;&gt;数字签名是什么？ - 阮一峰的网络日志&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;我们可以通过以下命令生产数字证书。其中 pem 是公钥匙，key 是私钥。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;但是自签名的证书无法得到系统的验证， 会有风险提示。所以我们需要把自己当成机构， 自己给自己颁发证书， 同时将自己的根证书加入到系统中&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;但是自签名的证书无法得到系统的验证，会有风险提示。所以我们需要把自己当成机构，自己给自己颁发证书，同时将自己的根证书加入到系统中&lt;/p&gt;
 &lt;h2 id=&#34;自签发证书&#34;&gt;自签发证书&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;步骤一&lt;/strong&gt;: 让自己成为 Certificate Authority。 在这一步我们会生成两个文件，分别是私钥文件&lt;code&gt;myCA.key&lt;/code&gt;以及公钥&lt;code&gt;myCA.pem&lt;/code&gt;. 私钥用于签发证书，公钥用于验证证书。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤一&lt;/strong&gt;: 让自己成为 Certificate Authority。在这一步我们会生成两个文件，分别是私钥文件&lt;code&gt;myCA.key&lt;/code&gt;以及公钥&lt;code&gt;myCA.pem&lt;/code&gt;. 私钥用于签发证书，公钥用于验证证书。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
