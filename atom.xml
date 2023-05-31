@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Cooper&#39;s Zone</title>
     <subtitle type="html">Happy Everyday</subtitle>
-    <updated>2023-05-31T19:03:05&#43;00:00</updated>
+    <updated>2023-05-31T19:34:03&#43;00:00</updated>
     <id>https://baohengtao.com/</id>
     <link rel="alternate" type="text/html" href="https://baohengtao.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://baohengtao.com/atom.xml" />
@@ -18,7 +18,7 @@
             <title type="text">Creating  CA and Signing Certificates</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/https-ca/" />
             <id>https://baohengtao.com/tech/https-ca/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2023-05-31T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -70,26 +70,26 @@ Generate CA Enter the following command to create a new private key and set a pa
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[req]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_bits&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;4096&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_md&lt;/span&gt;            &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;sha256&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_keyfile&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;ca.key&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;distinguished_name&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;req_distinguished_name&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;x509_extensions&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;v3_ca&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;prompt&lt;/span&gt;                &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;no&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_bits&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;4096&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_md&lt;/span&gt;             &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;sha256&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_keyfile&lt;/span&gt;        &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;ca.key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;distinguished_name&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;req_distinguished_name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;x509_extensions&lt;/span&gt;        &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;v3_ca&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;prompt&lt;/span&gt;                 &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;no&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[req_distinguished_name]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;countryName&lt;/span&gt;			&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Country Name (2 letter code)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;stateOrProvinceName&lt;/span&gt;		&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;State or Province Name (full name)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;localityName&lt;/span&gt;			&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Locality Name (eg, city)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;0.organizationName&lt;/span&gt;		&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Organization Name (eg, company)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;organizationalUnitName&lt;/span&gt;		&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Organizational Unit Name (eg, section)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;commonName&lt;/span&gt;			&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Common Name (eg, fully qualified host name)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;emailAddress&lt;/span&gt;			&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Email Address&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;countryName&lt;/span&gt;            &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Country Name (2 letter code)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;stateOrProvinceName&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;State or Province Name (full name)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;localityName&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Locality Name (eg, city)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;0.organizationName&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Organization Name (eg, company)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;organizationalUnitName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Organizational Unit Name (eg, section)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;commonName&lt;/span&gt;             &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Common Name (eg, fully qualified host name)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;emailAddress&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Email Address&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[v3_ca]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;subjectKeyIdentifier&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;hash&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;authorityKeyIdentifier&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;keyid:always,issuer&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;basicConstraints&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;CA:true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;subjectKeyIdentifier&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;hash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;authorityKeyIdentifier&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;keyid:always,issuer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;basicConstraints&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;CA:true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The &lt;code&gt;[req]&lt;/code&gt; section is used to specify the default settings for certificate requests (req), and includes the following options:&lt;/p&gt;
@@ -215,7 +215,7 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default_keyfile&lt;/span&gt;        &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;server.key&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;distinguished_name&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;req_distinguished_name&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;x509_extensions&lt;/span&gt;        &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;v3_req&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;prompt&lt;/span&gt; 					  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;no&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;prompt&lt;/span&gt;                 &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;no&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[req_distinguished_name]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;countryName&lt;/span&gt;            &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Country Name (2 letter code)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;stateOrProvinceName&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;State or Province Name (full name)&lt;/span&gt;
@@ -244,7 +244,7 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;​	When creating an X.509 certificate with these options and values, the resulting certificate will include the specified SAN extension with the two domain names listed.&lt;/p&gt;
+&lt;p&gt;​   When creating an X.509 certificate with these options and values, the resulting certificate will include the specified SAN extension with the two domain names listed.&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Next, we need to create a Certificate Signing Request (CSR) using the private key we just created. Enter the following command:&lt;/p&gt;
@@ -255,7 +255,7 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -new -config server.san &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	-key server.key -out server.csr
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; -key server.key -out server.csr
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This command creates a new CSR using the private key &lt;code&gt;server.key&lt;/code&gt; and configuration file &lt;code&gt;server.san&lt;/code&gt; , and outputs it to a file named &lt;code&gt;server.csr&lt;/code&gt;.&lt;/p&gt;
@@ -332,7 +332,7 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
             <title type="text">Surge 的 DNS 与 DHCP</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/surge_dhcp/" />
             <id>https://baohengtao.com/tech/surge_dhcp/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2023-05-24T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -414,7 +414,7 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
             <title type="text">解决 GitHub 的 SSH 连接问题</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/github_proxy/" />
             <id>https://baohengtao.com/tech/github_proxy/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2023-05-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -488,7 +488,7 @@ fatal: Could not read from remote repository.
             <title type="text">Wi-Fi (802.11) PHY Data Rates</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/wifi-speed/" />
             <id>https://baohengtao.com/tech/wifi-speed/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2023-04-29T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1251,7 +1251,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">博客添加Waline评论功能</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/comment-support/" />
             <id>https://baohengtao.com/tech/comment-support/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2022-03-21T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1459,7 +1459,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">测试下评论系统</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/comment-test/" />
             <id>https://baohengtao.com/tech/comment-test/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2022-03-16T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1500,7 +1500,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">Global History</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/global-history/" />
             <id>https://baohengtao.com/study/global-history/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1657,7 +1657,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">Introducing Social Psychology</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/social-psychology-intro/" />
             <id>https://baohengtao.com/study/social-psychology-intro/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1757,7 +1757,7 @@ Bits per symbol (NBits) = 1 or 2 (DSSS), 4 or 8 (DSSS with CCK)</summary>
             <title type="text">Nutrients</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/nutrients/" />
             <id>https://baohengtao.com/study/nutrients/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -1836,7 +1836,7 @@ Fiber is famous for its beneficial health effects but not listed in essential nu
             <title type="text">Social Thinking</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/social-thinking/" />
             <id>https://baohengtao.com/study/social-thinking/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2022-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2056,7 +2056,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">Rsync工具使用</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/use-rsync/" />
             <id>https://baohengtao.com/tech/use-rsync/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-06-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2317,7 +2317,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">配置Linux</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/linux-setup/" />
             <id>https://baohengtao.com/tech/linux-setup/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-31T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2534,7 +2534,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">添加相册功能</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/add-gallery-to-hugo/" />
             <id>https://baohengtao.com/tech/add-gallery-to-hugo/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-26T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -2820,7 +2820,7 @@ Likewise, secure self-esteem can be adaptive. When we believe in our positive po
             <title type="text">在 hugo 中嵌入 PDF</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hugo-pdf/" />
             <id>https://baohengtao.com/tech/hugo-pdf/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-26T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3022,7 +3022,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">博客的定位</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/life/blog-how/" />
             <id>https://baohengtao.com/life/blog-how/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3082,7 +3082,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">因果关系的三个层级</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/thebookofwhy/" />
             <id>https://baohengtao.com/study/thebookofwhy/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3134,7 +3134,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">自定义 Hugo Shortcodes 简码</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hugo-shortcodes/" />
             <id>https://baohengtao.com/tech/hugo-shortcodes/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3433,7 +3433,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">Github Repo</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/ah/" />
             <id>https://baohengtao.com/tech/ah/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-24T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3556,7 +3556,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             <title type="text">Hugo Front Matter</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hugo-front-matter/" />
             <id>https://baohengtao.com/tech/hugo-front-matter/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-24T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3713,7 +3713,7 @@ tocNum: on
             <title type="text">Pacman使用</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/pacman/" />
             <id>https://baohengtao.com/tech/pacman/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-05-21T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3889,7 +3889,7 @@ tocNum: on
             <title type="text">Shell Cases</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/shell-cases/" />
             <id>https://baohengtao.com/tech/shell-cases/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-22T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -3956,7 +3956,7 @@ tocNum: on
             <title type="text">ZSH 插件配置2.0</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/zsh_plugin_update/" />
             <id>https://baohengtao.com/tech/zsh_plugin_update/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-21T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -4398,7 +4398,7 @@ tocNum: on
             <title type="text">Archlinux 从安装到弃坑</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/archlinux/" />
             <id>https://baohengtao.com/tech/archlinux/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-15T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -4693,7 +4693,7 @@ zh_CN.UTF-8 UTF-8
             <title type="text">Emacs Cheatsheet</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/emacs-manual/" />
             <id>https://baohengtao.com/tech/emacs-manual/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-13T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -5027,7 +5027,7 @@ zh_CN.UTF-8 UTF-8
             <title type="text">Shortcut</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/shortcut/" />
             <id>https://baohengtao.com/tech/shortcut/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-13T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -5195,7 +5195,7 @@ takes you away from the home row.&lt;/p&gt;
             <title type="text">Vim 手册</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/vim-manual/" />
             <id>https://baohengtao.com/tech/vim-manual/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-13T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -5764,7 +5764,7 @@ takes you away from the home row.&lt;/p&gt;
             <title type="text">Vim 和 Emacs 配置文件路径</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/emacs-vim-config/" />
             <id>https://baohengtao.com/tech/emacs-vim-config/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-12T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -5914,7 +5914,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">Git Manual</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/gitmanual/" />
             <id>https://baohengtao.com/tech/gitmanual/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-04T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6521,7 +6521,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">Tmux Cheetsheet</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/tmux/" />
             <id>https://baohengtao.com/tech/tmux/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-04-04T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6700,7 +6700,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">SSL/TLS 协议</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/ssl-tls/" />
             <id>https://baohengtao.com/tech/ssl-tls/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-31T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6879,7 +6879,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">iTerm配置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/iterm/" />
             <id>https://baohengtao.com/tech/iterm/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-30T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -6944,7 +6944,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
             <title type="text">Nginx Manual</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/nginx_manul/" />
             <id>https://baohengtao.com/tech/nginx_manul/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-30T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -7141,7 +7141,7 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
             <title type="text">Typora中的路径设置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/path-in-typora/" />
             <id>https://baohengtao.com/tech/path-in-typora/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-29T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -7332,7 +7332,7 @@ typora-root-url: ../
             <title type="text">macOS 应用列表</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/mac_app/" />
             <id>https://baohengtao.com/tech/mac_app/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-26T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -7618,7 +7618,7 @@ typora-root-url: ../
             <title type="text">Hexo中的Markdown写作</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/hexo-writing/" />
             <id>https://baohengtao.com/tech/hexo-writing/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -8236,7 +8236,7 @@ content
             <title type="text">Typora 使用</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/typora-manual/" />
             <id>https://baohengtao.com/tech/typora-manual/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -8508,7 +8508,7 @@ content
             <title type="text">Unix系统中的inode</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/understand-inode/" />
             <id>https://baohengtao.com/tech/understand-inode/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-20T23:06:56&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -8590,7 +8590,7 @@ content
             <title type="text">Exiftool 使用实例</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/exiftool-in-action/" />
             <id>https://baohengtao.com/tech/exiftool-in-action/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-17T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -8895,7 +8895,7 @@ content
             <title type="text">Exiftool 使用手册</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/exiftool-manual/" />
             <id>https://baohengtao.com/tech/exiftool-manual/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-17T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -9918,7 +9918,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">命令行工具</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/shell-tool/" />
             <id>https://baohengtao.com/tech/shell-tool/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-04T21:59:07&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -10054,7 +10054,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">ZSH 插件列表</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/zsh-plugin/" />
             <id>https://baohengtao.com/tech/zsh-plugin/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -10341,7 +10341,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">树莓派配置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/setup-rpi/" />
             <id>https://baohengtao.com/tech/setup-rpi/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-03-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -10608,7 +10608,7 @@ group最好不要将权限设置为writable，以免密钥失效。&lt;/p&gt;
             <title type="text">Start Blogging</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/life/start-blogging/" />
             <id>https://baohengtao.com/life/start-blogging/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-02-02T17:15:48&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -10684,7 +10684,7 @@ Hello, world!</summary>
             <title type="text">心理学与生活</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/study/psych-in-life/" />
             <id>https://baohengtao.com/study/psych-in-life/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>2021-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -12352,7 +12352,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
             <title type="text">Jupyter中的快捷键</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/jupyter-shortcut/" />
             <id>https://baohengtao.com/tech/jupyter-shortcut/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>1900-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
@@ -12458,7 +12458,7 @@ Attributions are judgments about the causes of outcomes. It can vary in three di
             <title type="text">Python 环境配置</title>
             <link rel="alternate" type="text/html" href="https://baohengtao.com/tech/setup-python/" />
             <id>https://baohengtao.com/tech/setup-python/</id>
-            <updated>2023-05-31T00:37:54&#43;08:00</updated>
+            <updated>2023-06-01T03:33:22&#43;08:00</updated>
             <published>1900-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>Bao Hengtao</name>
