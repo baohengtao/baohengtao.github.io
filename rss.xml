@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Wed, 31 May 2023 19:34:03 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 01 Jun 2023 15:27:39 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -32,21 +32,8 @@
                 
                     <description>&lt;p&gt;The steps to generate a CA (Certificate Authority) with OpenSSL, using the RSA algorithm, with passphrase protection, along with detailed explanations of each step and its options:&lt;/p&gt;
 &lt;h2 id=&#34;generate-ca&#34;&gt;Generate CA&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Enter the following command to create a new private key and set a passphrase:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl genrsa -aes256 -out ca.key &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This command generates an AES-256 encrypted RSA private key with a key length of 4096 bits and outputs it to a file named &lt;code&gt;ca.key&lt;/code&gt;. You&#39;ll be prompted to enter a passphrase twice. Choose a strong and unique passphrase that you can remember.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Next,  we need create a config file &lt;code&gt;ca.conf&lt;/code&gt; to include the information about CA. The &lt;code&gt;ca.conf&lt;/code&gt; file looks like:&lt;/p&gt;
+&lt;h3 id=&#34;creating-caconf&#34;&gt;Creating &lt;code&gt;ca.conf&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;First,  we need create a config file &lt;code&gt;ca.conf&lt;/code&gt; to include the information about CA. The &lt;code&gt;ca.conf&lt;/code&gt; file looks like:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -106,21 +93,66 @@
 &lt;/ul&gt;
 &lt;p&gt;The &lt;code&gt;[req_distinguished_name]&lt;/code&gt; section is used to specify the DN to use for the certificate. This section includes options for various components of the DN, such as country name, state or province name, locality name, organization name, and common name.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;[v3_ca]&lt;/code&gt; section is used to specify the extensions to include in the X.509 certificate. This section includes options for various extensions, such as the subject key identifier, the authority key identifier, and the basic constraints. In this example, the X.509 certificate is specified as a CA certificate (i.e., it can sign other certificates) with the basic constraints option set to &amp;quot;CA:true&amp;quot;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Next, you need to create a self-signed root CA certificate using the private key you just created. Enter the following command:&lt;/p&gt;
+&lt;h3 id=&#34;creating-cakey-and-cacrt&#34;&gt;Creating &lt;code&gt;ca.key&lt;/code&gt; and &lt;code&gt;ca.crt&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Enter the following command to create a self-signed Certificate Authority (CA) with a private key:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -x509 -new -key ca.key -sha256 -days &lt;span class=&#34;m&#34;&gt;3650&lt;/span&gt; -out ca.crt
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req  -x509 -new -sha256 -days &lt;span class=&#34;m&#34;&gt;3650&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-config ca.conf -keyout ca.key -out ca.crt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This command creates a new self-signed CA certificate, signed with the private key created in step 2. The &lt;code&gt;-x509&lt;/code&gt; option specifies that the output is a self-signed certificate, &lt;code&gt;-new&lt;/code&gt; specifies that a new certificate is being created, &lt;code&gt;-key ca.key&lt;/code&gt; specifies the private key to be used to sign the certificate, &lt;code&gt;-sha256&lt;/code&gt; specifies the hash algorithm to be used to sign the certificate, &lt;code&gt;-days 3650&lt;/code&gt; specifies the validity period for the certificate (in this case, 10 years), and &lt;code&gt;-out ca.crt&lt;/code&gt; specifies the output file name for the certificate.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This command uses the &lt;code&gt;req&lt;/code&gt; subcommand of the OpenSSL tool to generate a self-signed x509 certificate for the Certificate Authority with 3650 days validity.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;req&lt;/code&gt; subcommand specifies that we are generating a certificate signing request.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Review the CA certificate you just created. You can use the following command to view the certificate contents:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;-new&lt;/code&gt; option specifies that we want to generate a new certificate rather than renewing an existing one.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;-x509&lt;/code&gt; option specifies that a new Certificate Authority certificate should be created rather than a certificate signing request (CSR).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;-sha256&lt;/code&gt; option specifies that SHA256 should be used as the message digest for the certificate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;-days 3650&lt;/code&gt; option specifies the validity period for the certificate (in this case, 10 years)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;-config ca.conf&lt;/code&gt; option specifies the configuration file to use. This file provides additional details about the Certificate Authority, such as its name, location, and other settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;-keyout ca.key&lt;/code&gt; option specifies the output file for the private key of the CA.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;-out ca.crt&lt;/code&gt; option specifies the output file for the CA certificate.
+Once the command is executed, an X.509 self-signed certificate for the Certificate Authority will be generated, and the private key for the CA will be stored in the &lt;code&gt;ca.key&lt;/code&gt; file with the CA certificate stored in the &lt;code&gt;ca.crt&lt;/code&gt; file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The command is also equavilant to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# generates an AES-256 encrypted RSA private key with a key length of 4096 bits&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl genrsa -aes256 -out ca.key &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create a self-signed root CA certificate using the private key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -x509 -new -sha256 -days &lt;span class=&#34;m&#34;&gt;3650&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-config ca.conf -key ca.key -out ca.crt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can use the following command to view the certificate contents:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -130,8 +162,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This command displays the contents of the CA certificate in human-readable form. Verify that the information in the certificate looks correct.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;h3 id=&#34;save-ca-as-p12&#34;&gt;save CA as P12&lt;/h3&gt;
 &lt;p&gt;Following command convert a CA (Certificate Authority) certificate to a P12 format:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -172,21 +202,8 @@
 &lt;p&gt;The second command extracts the certificate from the PKCS12 file and saves it to &lt;code&gt;ca.crt&lt;/code&gt;. The &lt;code&gt;-nokeys&lt;/code&gt; option tells OpenSSL to exclude the private key from the output.&lt;/p&gt;
 &lt;h2 id=&#34;generate-and-sign-certificate--with-ca&#34;&gt;Generate and sign certificate  with CA&lt;/h2&gt;
 &lt;p&gt;Now that you have a CA certificate, you can use it to sign other certificates. To demonstrate, we&#39;ll create a new server certificate and sign it using our CA certificate.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;First, we need to create a private key for the new server certificate. Enter the following command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl genrsa -out server.key &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This command generates a new RSA private key with a key length of 2048 bits, and outputs it to a file named &lt;code&gt;server.key&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Next, we need create a config file &lt;code&gt;server.san&lt;/code&gt; with a Subject Alternative Name (SAN) extension to include the information about your server, such as its Common Name (CN), Organization, and Location.
+&lt;h3 id=&#34;creating-serversan&#34;&gt;Creating &lt;code&gt;server.san&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;First, we need create a config file &lt;code&gt;server.san&lt;/code&gt; with a Subject Alternative Name (SAN) extension to include the information about your server, such as its Common Name (CN), Organization, and Location.
 The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -243,27 +260,45 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;[ alt_names ]&lt;/code&gt; section specifies the alternative names to include in the SAN extension. In this case, it lists two domains:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;DNS.1&lt;/code&gt;: This specifies the primary domain name to include, which is &lt;code&gt;example.com&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DNS.2&lt;/code&gt;: This specifies an additional domain name to include, which is &lt;code&gt;www.example.com&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DNS.2&lt;/code&gt;: This specifies an additional domain name to include, which is &lt;code&gt;www.example.com&lt;/code&gt;.
+​&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;​   When creating an X.509 certificate with these options and values, the resulting certificate will include the specified SAN extension with the two domain names listed.&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
+&lt;p&gt;When creating an X.509 certificate with these options and values, the resulting certificate will include the specified SAN extension with the two domain names listed.&lt;/p&gt;
+&lt;h3 id=&#34;creating-serverkey-and-servercsr&#34;&gt;Creating &lt;code&gt;server.key&lt;/code&gt; and &lt;code&gt;server.csr&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Enter the following command to create a private key and certificate signing request (CSR) for a server with the subject alternative name (SAN) specified:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -new -newkey rsa:2048 -nodes -config server.san -keyout server.key -out server.csr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command generates a new RSA private key of 2048 bits and a Certificate Signing Request (CSR) for a server with the subject alternative name (SAN) specified in the configuration file &lt;code&gt;server.san&lt;/code&gt;. The private key is saved in the &lt;code&gt;server.key&lt;/code&gt; file, and the CSR is saved in the &lt;code&gt;server.csr&lt;/code&gt; file.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Next, we need to create a Certificate Signing Request (CSR) using the private key we just created. Enter the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;newkey rsa:2048&lt;/code&gt; option specifies that a new RSA key pair will be generated with a key size of 2048 bits.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;nodes&lt;/code&gt; option specifies that the private key should not be encrypted with a passphrase.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The command is also equavilant to:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -new -config server.san &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; -key server.key -out server.csr
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl genrsa -out server.key &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl req -new -config server.san &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;   -key server.key -out server.csr
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This command creates a new CSR using the private key &lt;code&gt;server.key&lt;/code&gt; and configuration file &lt;code&gt;server.san&lt;/code&gt; , and outputs it to a file named &lt;code&gt;server.csr&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;creating-servercrt&#34;&gt;Creating &lt;code&gt;server.crt&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Now that we have a CSR, we can sign it with our CA certificate. Enter the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -280,8 +315,6 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This command signs the CSR using our CA certificate (&lt;code&gt;ca.crt&lt;/code&gt;) and private key (&lt;code&gt;ca.key&lt;/code&gt;). The &lt;code&gt;-in server.csr&lt;/code&gt; option specifies the input file to be signed, &lt;code&gt;-CA ca.crt&lt;/code&gt; specifies the CA certificate to use for signing, &lt;code&gt;-CAkey ca.key&lt;/code&gt; specifies the private key of the CA,  &lt;code&gt;-CAcreateserial&lt;/code&gt; specifies that a new serial number file should be created for the signed certificate,  &lt;code&gt;-out server.crt&lt;/code&gt; specifies the output file name for the signed certificate, and &lt;code&gt;-days 365&lt;/code&gt; specifies the validity period for the signed certificate (in this case, 1 year).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Review the signed server certificate you just created. You can use the following command to view the certificate contents:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -292,8 +325,6 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This command displays the contents of the signed server certificate, including the information from your CSR, and the signature from the CA certificate.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;p&gt;That&#39;s it! You now have a CA, a CA certificate, and a signed server certificate. Keep the CA and CA certificate safe and secure, as they will be required to sign other certificates.&lt;/p&gt;
 </description>
                 
