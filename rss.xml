@@ -17,7 +17,7 @@
         
         
         
-        <lastBuildDate>Fri, 02 Jun 2023 11:56:21 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 02 Jun 2023 12:10:43 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://baohengtao.com/rss.xml" />
         
@@ -307,16 +307,23 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -req -in server.csr &lt;span class=&#34;se&#34;&gt;\
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -req -days &lt;span class=&#34;m&#34;&gt;365&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-in server.csr -out server.crt &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-CA ca.crt -CAkey ca.key -CAcreateserial &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-out server.crt -days &lt;span class=&#34;m&#34;&gt;365&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-extensions v3_req -extfile server.san
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This command signs the CSR using our CA certificate (&lt;code&gt;ca.crt&lt;/code&gt;) and private key (&lt;code&gt;ca.key&lt;/code&gt;). The &lt;code&gt;-in server.csr&lt;/code&gt; option specifies the input file to be signed, &lt;code&gt;-CA ca.crt&lt;/code&gt; specifies the CA certificate to use for signing, &lt;code&gt;-CAkey ca.key&lt;/code&gt; specifies the private key of the CA,  &lt;code&gt;-CAcreateserial&lt;/code&gt; specifies that a new serial number file should be created for the signed certificate,  &lt;code&gt;-out server.crt&lt;/code&gt; specifies the output file name for the signed certificate, and &lt;code&gt;-days 365&lt;/code&gt; specifies the validity period for the signed certificate (in this case, 1 year).&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This command signs the CSR using our CA certificate (&lt;code&gt;ca.crt&lt;/code&gt;) and private key (&lt;code&gt;ca.key&lt;/code&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-req&lt;/code&gt; specifies that the input file is a Certificate Signing Request (CSR).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-days 365&lt;/code&gt; specifies the validity period for the signed certificate (in this case, 1 year).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-in server.csr&lt;/code&gt; option specifies the input file to be signed.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-out server.crt&lt;/code&gt; specifies the output file name for the signed certificate.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-CA ca.crt&lt;/code&gt; specifies the CA certificate to use for signing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-CAkey ca.key&lt;/code&gt; specifies the private key of the CA.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-CAcreateserial&lt;/code&gt; specifies that a new serial number file should be created for the signed certificate.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Review the signed server certificate you just created. You can use the following command to view the certificate contents:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -410,14 +417,12 @@ The &lt;code&gt;server.san&lt;/code&gt; file may look like:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -req -in server.csr &lt;span class=&#34;se&#34;&gt;\
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -req -days &lt;span class=&#34;m&#34;&gt;365&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-in server.csr -out server.crt  &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-CA ca.crt -CAkey ca.key -CAcreateserial &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-out server.crt -days &lt;span class=&#34;m&#34;&gt;365&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-extensions v3_req -extfile server.san
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;View &lt;code&gt;server.crt&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
