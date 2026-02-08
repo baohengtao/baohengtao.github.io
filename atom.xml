@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Cooper&#39;s Zone</title>
     <subtitle type="html">Happy Everyday</subtitle>
-    <updated>2026-02-08T16:51:44&#43;00:00</updated>
+    <updated>2026-02-08T17:05:35&#43;00:00</updated>
     <id>https://baohengtao.github.io/</id>
     <link rel="alternate" type="text/html" href="https://baohengtao.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://baohengtao.github.io/atom.xml" />
@@ -651,7 +651,7 @@ fatal: Could not read from remote repository.
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/git/" term="Git" label="Git" />
+                                <category scheme="https://baohengtao.github.io/tags/git/" term="git" label="git" />
                             
                         
                     
@@ -5738,7 +5738,7 @@ Emacs Cheatsheet</title>
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/emacs/" term="Emacs" label="Emacs" />
+                                <category scheme="https://baohengtao.github.io/tags/emacs/" term="emacs" label="emacs" />
                             
                         
                     
@@ -6646,7 +6646,7 @@ lrwxr-xr-x  .vim@ ⇒ dotfile.vim
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/emacs/" term="Emacs" label="Emacs" />
+                                <category scheme="https://baohengtao.github.io/tags/emacs/" term="emacs" label="emacs" />
                             
                         
                             
@@ -7268,7 +7268,7 @@ Git Manual</title>
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/git/" term="Git" label="Git" />
+                                <category scheme="https://baohengtao.github.io/tags/git/" term="git" label="git" />
                             
                         
                     
@@ -8051,7 +8051,7 @@ typora-root-url: ../
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/markdown/" term="Markdown" label="Markdown" />
+                                <category scheme="https://baohengtao.github.io/tags/markdown/" term="markdown" label="markdown" />
                             
                         
                     
@@ -9057,7 +9057,7 @@ content
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/markdown/" term="Markdown" label="Markdown" />
+                                <category scheme="https://baohengtao.github.io/tags/markdown/" term="markdown" label="markdown" />
                             
                         
                     
@@ -9338,7 +9338,7 @@ Typora 使用</title>
                             
                             
                             
-                                <category scheme="https://baohengtao.github.io/tags/markdown/" term="Markdown" label="Markdown" />
+                                <category scheme="https://baohengtao.github.io/tags/markdown/" term="markdown" label="markdown" />
                             
                         
                     
